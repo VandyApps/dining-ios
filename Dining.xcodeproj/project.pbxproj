@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2DFB157160508B300EF44FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DFB156160508B300EF44FF /* UIKit.framework */; };
+		D2DFB159160508B300EF44FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DFB158160508B300EF44FF /* Foundation.framework */; };
+		D2DFB15B160508B300EF44FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DFB15A160508B300EF44FF /* CoreGraphics.framework */; };
+		D2DFB161160508B300EF44FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB15F160508B300EF44FF /* InfoPlist.strings */; };
+		D2DFB163160508B300EF44FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DFB162160508B300EF44FF /* main.m */; };
+		D2DFB167160508B300EF44FF /* VMDiningAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DFB166160508B300EF44FF /* VMDiningAppDelegate.m */; };
+		D2DFB16A160508B300EF44FF /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB168160508B300EF44FF /* MainStoryboard_iPhone.storyboard */; };
+		D2DFB16D160508B300EF44FF /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB16B160508B300EF44FF /* MainStoryboard_iPad.storyboard */; };
+		D2DFB170160508B300EF44FF /* VMDiningListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DFB16F160508B300EF44FF /* VMDiningListViewController.m */; };
+		D2DFB172160508B300EF44FF /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB171160508B300EF44FF /* first.png */; };
+		D2DFB174160508B300EF44FF /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB173160508B300EF44FF /* first@2x.png */; };
+		D2DFB177160508B300EF44FF /* VMDiningSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DFB176160508B300EF44FF /* VMDiningSecondViewController.m */; };
+		D2DFB179160508B300EF44FF /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB178160508B300EF44FF /* second.png */; };
+		D2DFB17B160508B300EF44FF /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB17A160508B300EF44FF /* second@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D2DFB152160508B300EF44FF /* Dining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dining.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2DFB156160508B300EF44FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D2DFB158160508B300EF44FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2DFB15A160508B300EF44FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D2DFB15E160508B300EF44FF /* Dining-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dining-Info.plist"; sourceTree = "<group>"; };
+		D2DFB160160508B300EF44FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D2DFB162160508B300EF44FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D2DFB164160508B300EF44FF /* Dining-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dining-Prefix.pch"; sourceTree = "<group>"; };
+		D2DFB165160508B300EF44FF /* VMDiningAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMDiningAppDelegate.h; sourceTree = "<group>"; };
+		D2DFB166160508B300EF44FF /* VMDiningAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMDiningAppDelegate.m; sourceTree = "<group>"; };
+		D2DFB169160508B300EF44FF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		D2DFB16C160508B300EF44FF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		D2DFB16E160508B300EF44FF /* VMDiningListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMDiningListViewController.h; sourceTree = "<group>"; };
+		D2DFB16F160508B300EF44FF /* VMDiningListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMDiningListViewController.m; sourceTree = "<group>"; };
+		D2DFB171160508B300EF44FF /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		D2DFB173160508B300EF44FF /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		D2DFB175160508B300EF44FF /* VMDiningSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMDiningSecondViewController.h; sourceTree = "<group>"; };
+		D2DFB176160508B300EF44FF /* VMDiningSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMDiningSecondViewController.m; sourceTree = "<group>"; };
+		D2DFB178160508B300EF44FF /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		D2DFB17A160508B300EF44FF /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2DFB14F160508B300EF44FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2DFB157160508B300EF44FF /* UIKit.framework in Frameworks */,
+				D2DFB159160508B300EF44FF /* Foundation.framework in Frameworks */,
+				D2DFB15B160508B300EF44FF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2DFB147160508B200EF44FF = {
+			isa = PBXGroup;
+			children = (
+				D2DFB15C160508B300EF44FF /* Dining */,
+				D2DFB155160508B300EF44FF /* Frameworks */,
+				D2DFB153160508B300EF44FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2DFB153160508B300EF44FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2DFB152160508B300EF44FF /* Dining.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2DFB155160508B300EF44FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2DFB156160508B300EF44FF /* UIKit.framework */,
+				D2DFB158160508B300EF44FF /* Foundation.framework */,
+				D2DFB15A160508B300EF44FF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2DFB15C160508B300EF44FF /* Dining */ = {
+			isa = PBXGroup;
+			children = (
+				D2DFB165160508B300EF44FF /* VMDiningAppDelegate.h */,
+				D2DFB166160508B300EF44FF /* VMDiningAppDelegate.m */,
+				D2DFB168160508B300EF44FF /* MainStoryboard_iPhone.storyboard */,
+				D2DFB16B160508B300EF44FF /* MainStoryboard_iPad.storyboard */,
+				D2DFB16E160508B300EF44FF /* VMDiningListViewController.h */,
+				D2DFB16F160508B300EF44FF /* VMDiningListViewController.m */,
+				D2DFB171160508B300EF44FF /* first.png */,
+				D2DFB173160508B300EF44FF /* first@2x.png */,
+				D2DFB175160508B300EF44FF /* VMDiningSecondViewController.h */,
+				D2DFB176160508B300EF44FF /* VMDiningSecondViewController.m */,
+				D2DFB178160508B300EF44FF /* second.png */,
+				D2DFB17A160508B300EF44FF /* second@2x.png */,
+				D2DFB15D160508B300EF44FF /* Supporting Files */,
+			);
+			path = Dining;
+			sourceTree = "<group>";
+		};
+		D2DFB15D160508B300EF44FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2DFB15E160508B300EF44FF /* Dining-Info.plist */,
+				D2DFB15F160508B300EF44FF /* InfoPlist.strings */,
+				D2DFB162160508B300EF44FF /* main.m */,
+				D2DFB164160508B300EF44FF /* Dining-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2DFB151160508B300EF44FF /* Dining */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2DFB17E160508B300EF44FF /* Build configuration list for PBXNativeTarget "Dining" */;
+			buildPhases = (
+				D2DFB14E160508B300EF44FF /* Sources */,
+				D2DFB14F160508B300EF44FF /* Frameworks */,
+				D2DFB150160508B300EF44FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dining;
+			productName = Dining;
+			productReference = D2DFB152160508B300EF44FF /* Dining.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2DFB149160508B200EF44FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VMDining;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = VandyMobile;
+			};
+			buildConfigurationList = D2DFB14C160508B200EF44FF /* Build configuration list for PBXProject "Dining" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D2DFB147160508B200EF44FF;
+			productRefGroup = D2DFB153160508B300EF44FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2DFB151160508B300EF44FF /* Dining */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2DFB150160508B300EF44FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2DFB161160508B300EF44FF /* InfoPlist.strings in Resources */,
+				D2DFB16A160508B300EF44FF /* MainStoryboard_iPhone.storyboard in Resources */,
+				D2DFB16D160508B300EF44FF /* MainStoryboard_iPad.storyboard in Resources */,
+				D2DFB172160508B300EF44FF /* first.png in Resources */,
+				D2DFB174160508B300EF44FF /* first@2x.png in Resources */,
+				D2DFB179160508B300EF44FF /* second.png in Resources */,
+				D2DFB17B160508B300EF44FF /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2DFB14E160508B300EF44FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2DFB163160508B300EF44FF /* main.m in Sources */,
+				D2DFB167160508B300EF44FF /* VMDiningAppDelegate.m in Sources */,
+				D2DFB170160508B300EF44FF /* VMDiningListViewController.m in Sources */,
+				D2DFB177160508B300EF44FF /* VMDiningSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D2DFB15F160508B300EF44FF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2DFB160160508B300EF44FF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D2DFB168160508B300EF44FF /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2DFB169160508B300EF44FF /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		D2DFB16B160508B300EF44FF /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2DFB16C160508B300EF44FF /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2DFB17C160508B300EF44FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2DFB17D160508B300EF44FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2DFB17F160508B300EF44FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dining/Dining-Prefix.pch";
+				INFOPLIST_FILE = "Dining/Dining-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D2DFB180160508B300EF44FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dining/Dining-Prefix.pch";
+				INFOPLIST_FILE = "Dining/Dining-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2DFB14C160508B200EF44FF /* Build configuration list for PBXProject "Dining" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2DFB17C160508B300EF44FF /* Debug */,
+				D2DFB17D160508B300EF44FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2DFB17E160508B300EF44FF /* Build configuration list for PBXNativeTarget "Dining" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2DFB17F160508B300EF44FF /* Debug */,
+				D2DFB180160508B300EF44FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2DFB149160508B200EF44FF /* Project object */;
+}
