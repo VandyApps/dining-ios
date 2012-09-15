@@ -1,18 +1,18 @@
 //
-//  VMDiningSecondViewController.m
+//  VMDiningMapViewController.m
 //  Dining
 //
 //  Created by Scott Andrus on 9/15/12.
 //  Copyright (c) 2012 VandyMobile. All rights reserved.
 //
 
-#import "VMDiningSecondViewController.h"
+#import "VMDiningMapViewController.h"
 
-@interface VMDiningSecondViewController ()
+@interface VMDiningMapViewController ()
 
 @end
 
-@implementation VMDiningSecondViewController
+@implementation VMDiningMapViewController
 
 - (void)viewDidLoad
 {

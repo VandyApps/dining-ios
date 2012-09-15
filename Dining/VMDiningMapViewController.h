@@ -1,5 +1,5 @@
 //
-//  VMDiningSecondViewController.h
+//  VMDiningMapViewController.h
 //  Dining
 //
 //  Created by Scott Andrus on 9/15/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VMDiningSecondViewController : UIViewController
+@interface VMDiningMapViewController : UIViewController
 
 @end

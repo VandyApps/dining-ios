@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D240B2081605155200BD5B03 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D240B2071605155200BD5B03 /* MapKit.framework */; };
 		D2DFB157160508B300EF44FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DFB156160508B300EF44FF /* UIKit.framework */; };
 		D2DFB159160508B300EF44FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DFB158160508B300EF44FF /* Foundation.framework */; };
 		D2DFB15B160508B300EF44FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DFB15A160508B300EF44FF /* CoreGraphics.framework */; };
@@ -18,12 +19,13 @@
 		D2DFB170160508B300EF44FF /* VMDiningListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DFB16F160508B300EF44FF /* VMDiningListViewController.m */; };
 		D2DFB172160508B300EF44FF /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB171160508B300EF44FF /* first.png */; };
 		D2DFB174160508B300EF44FF /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB173160508B300EF44FF /* first@2x.png */; };
-		D2DFB177160508B300EF44FF /* VMDiningSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DFB176160508B300EF44FF /* VMDiningSecondViewController.m */; };
+		D2DFB177160508B300EF44FF /* VMDiningMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DFB176160508B300EF44FF /* VMDiningMapViewController.m */; };
 		D2DFB179160508B300EF44FF /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB178160508B300EF44FF /* second.png */; };
 		D2DFB17B160508B300EF44FF /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB17A160508B300EF44FF /* second@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D240B2071605155200BD5B03 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D2DFB152160508B300EF44FF /* Dining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2DFB156160508B300EF44FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D2DFB158160508B300EF44FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,8 +42,8 @@
 		D2DFB16F160508B300EF44FF /* VMDiningListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMDiningListViewController.m; sourceTree = "<group>"; };
 		D2DFB171160508B300EF44FF /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		D2DFB173160508B300EF44FF /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		D2DFB175160508B300EF44FF /* VMDiningSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMDiningSecondViewController.h; sourceTree = "<group>"; };
-		D2DFB176160508B300EF44FF /* VMDiningSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMDiningSecondViewController.m; sourceTree = "<group>"; };
+		D2DFB175160508B300EF44FF /* VMDiningMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMDiningMapViewController.h; sourceTree = "<group>"; };
+		D2DFB176160508B300EF44FF /* VMDiningMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMDiningMapViewController.m; sourceTree = "<group>"; };
 		D2DFB178160508B300EF44FF /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		D2DFB17A160508B300EF44FF /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D240B2081605155200BD5B03 /* MapKit.framework in Frameworks */,
 				D2DFB157160508B300EF44FF /* UIKit.framework in Frameworks */,
 				D2DFB159160508B300EF44FF /* Foundation.framework in Frameworks */,
 				D2DFB15B160508B300EF44FF /* CoreGraphics.framework in Frameworks */,
@@ -63,6 +66,7 @@
 		D2DFB147160508B200EF44FF = {
 			isa = PBXGroup;
 			children = (
+				D240B2071605155200BD5B03 /* MapKit.framework */,
 				D2DFB15C160508B300EF44FF /* Dining */,
 				D2DFB155160508B300EF44FF /* Frameworks */,
 				D2DFB153160508B300EF44FF /* Products */,
@@ -98,8 +102,8 @@
 				D2DFB16F160508B300EF44FF /* VMDiningListViewController.m */,
 				D2DFB171160508B300EF44FF /* first.png */,
 				D2DFB173160508B300EF44FF /* first@2x.png */,
-				D2DFB175160508B300EF44FF /* VMDiningSecondViewController.h */,
-				D2DFB176160508B300EF44FF /* VMDiningSecondViewController.m */,
+				D2DFB175160508B300EF44FF /* VMDiningMapViewController.h */,
+				D2DFB176160508B300EF44FF /* VMDiningMapViewController.m */,
 				D2DFB178160508B300EF44FF /* second.png */,
 				D2DFB17A160508B300EF44FF /* second@2x.png */,
 				D2DFB15D160508B300EF44FF /* Supporting Files */,
@@ -190,7 +194,7 @@
 				D2DFB163160508B300EF44FF /* main.m in Sources */,
 				D2DFB167160508B300EF44FF /* VMDiningAppDelegate.m in Sources */,
 				D2DFB170160508B300EF44FF /* VMDiningListViewController.m in Sources */,
-				D2DFB177160508B300EF44FF /* VMDiningSecondViewController.m in Sources */,
+				D2DFB177160508B300EF44FF /* VMDiningMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +320,7 @@
 				D2DFB180160508B300EF44FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
