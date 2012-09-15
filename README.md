@@ -1,4 +1,13 @@
 dining-ios
 ==========
 
-Vanderbilt Dining Project 2012
+VandyMobile Dining Project 2012 - iOS
+
+Program Manager: Scott Andrus
+
+Team:
+Ashley Shan
+David Krenz
+James Tiller
+Amanda Hatfield
+Jackie McCartney
