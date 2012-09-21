@@ -10,4 +10,7 @@
 
 @interface VMDiningListViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray *dataSource;
+
 @end

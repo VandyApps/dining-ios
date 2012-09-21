@@ -14,6 +14,10 @@
 
 @implementation VMDiningListViewController
 
+@synthesize tableView;
+
+@synthesize dataSource = _dataSource;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -22,8 +26,17 @@
 
 - (void)viewDidUnload
 {
+    [self setTableView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
