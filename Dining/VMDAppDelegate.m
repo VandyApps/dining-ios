@@ -7,6 +7,8 @@
 //
 
 #import "VMDAppDelegate.h"
+#import "DLocation.h"
+#import "VMDListViewController.h"
 
 @implementation VMDAppDelegate
 
@@ -16,6 +18,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    DLocation *dLocation = [NSEntityDescription insertNewObjectForEntityForName:@"DLocation" inManagedObjectContext:context];
+    
+    [dLocation setValue:@"Test Name" forKey:@"name"];
+    [dLocation setValue:[NSNumber numberWithBool:YES] forKey:@"isOnCampus"];
+    [dLocation setValue:@"YO!!!!!!" forKey:@"detailDescription"];
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"DLocation" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    
+    for (NSManagedObject *location in fetchedObjects) {
+        NSLog(@"Name: %@", [location valueForKey:@"name"]);
+    }
+    
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UINavigationController *listNC = (UINavigationController *)[tabBarController.viewControllers objectAtIndex:0];
+    VMDListViewController *listVC = [listNC.viewControllers objectAtIndex:0];
+    listVC.managedObjectContext = self.managedObjectContext;
     
     return YES;
 }
@@ -101,6 +128,26 @@
     }
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Dining.sqlite"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
+        NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"DiningDBCreator" ofType:@"sqlite"]];
+        NSError* err = nil;
+        
+        if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&err]) {
+            NSLog(@"Oops, could copy preloaded data");
+        }
+    }
+    
+//    NSString *storePath = storeURL.path;
+//    
+//    // Put down default db if it doesn't already exist
+//    NSFileManager *fileManager = [NSFileManager defaultManager];
+//    if (![fileManager fileExistsAtPath:storePath]) {
+//        NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:@"diningDBComplete" ofType:@"sqlite"];
+//        if (defaultStorePath) {
+//            [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
+//        }
+//    }
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

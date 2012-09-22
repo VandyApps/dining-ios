@@ -11,6 +11,8 @@
 @interface VMDListViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 @property (strong, nonatomic) NSArray *dataSource;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end

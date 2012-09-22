@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
-        <!--List View Controller - First-->
+        <!--List View Controller - List-->
         <scene sceneID="11">
             <objects>
-                <viewController title="First" id="2" customClass="VMDListViewController" sceneMemberID="viewController">
+                <viewController title="List" id="2" customClass="VMDListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,6 +28,10 @@
                                         </view>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="sQZ-S3-UUr"/>
+                                    <outlet property="delegate" destination="2" id="Hr1-j6-toi"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" id="20v-5B-mC7">
                                 <rect key="frame" x="12" y="12" width="296" height="64"/>
@@ -46,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="1179" y="-138"/>
         </scene>
-        <!--Map View Controller - Second-->
+        <!--Map View Controller - Map-->
         <scene sceneID="13">
             <objects>
-                <viewController title="Second" id="3" customClass="VMDMapViewController" sceneMemberID="viewController">
+                <viewController title="Map" id="3" customClass="VMDMapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +101,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="SxW-W3-5fS">
+                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="2" kind="relationship" relationship="rootViewController" id="VcZ-Hq-Eb2"/>
                     </connections>

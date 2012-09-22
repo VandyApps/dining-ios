@@ -27,6 +27,8 @@
 		D20D43B6160E241A00D954B3 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20D43B4160E241A00D954B3 /* MainStoryboard_iPad.storyboard */; };
 		D20D43B7160E241A00D954B3 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20D43B5160E241A00D954B3 /* MainStoryboard_iPhone.storyboard */; };
 		D20D43B9160E26D200D954B3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D43B8160E26D200D954B3 /* MapKit.framework */; };
+		D20D43CE160E39D600D954B3 /* DLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D43CD160E39D600D954B3 /* DLocation.m */; };
+		D20D4404160E7E0300D954B3 /* DiningDBCreator.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D20D4403160E7E0300D954B3 /* DiningDBCreator.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,9 @@
 		D20D43B4160E241A00D954B3 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		D20D43B5160E241A00D954B3 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		D20D43B8160E26D200D954B3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D20D43CC160E39D600D954B3 /* DLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLocation.h; sourceTree = "<group>"; };
+		D20D43CD160E39D600D954B3 /* DLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLocation.m; sourceTree = "<group>"; };
+		D20D4403160E7E0300D954B3 /* DiningDBCreator.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DiningDBCreator.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +125,7 @@
 		D20D438D160E239300D954B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D20D4403160E7E0300D954B3 /* DiningDBCreator.sqlite */,
 				D20D438E160E239300D954B3 /* Dining-Info.plist */,
 				D20D438F160E239300D954B3 /* InfoPlist.strings */,
 				D20D4392160E239300D954B3 /* main.m */,
@@ -147,6 +153,8 @@
 			children = (
 				D20D4395160E239300D954B3 /* VMDAppDelegate.h */,
 				D20D4396160E239300D954B3 /* VMDAppDelegate.m */,
+				D20D43CC160E39D600D954B3 /* DLocation.h */,
+				D20D43CD160E39D600D954B3 /* DLocation.m */,
 			);
 			name = "App Delegate";
 			sourceTree = "<group>";
@@ -240,6 +248,7 @@
 				D20D43B1160E23DC00D954B3 /* second@2x.png in Resources */,
 				D20D43B6160E241A00D954B3 /* MainStoryboard_iPad.storyboard in Resources */,
 				D20D43B7160E241A00D954B3 /* MainStoryboard_iPhone.storyboard in Resources */,
+				D20D4404160E7E0300D954B3 /* DiningDBCreator.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +264,7 @@
 				D20D43A0160E239300D954B3 /* Dining.xcdatamodeld in Sources */,
 				D20D43B2160E23DC00D954B3 /* VMDListViewController.m in Sources */,
 				D20D43B3160E23DC00D954B3 /* VMDMapViewController.m in Sources */,
+				D20D43CE160E39D600D954B3 /* DLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
