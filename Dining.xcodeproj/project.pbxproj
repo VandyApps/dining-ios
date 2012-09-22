@@ -154,8 +154,8 @@
 		D20D43C1160E2BFB00D954B3 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				D20D43B4160E241A00D954B3 /* MainStoryboard_iPad.storyboard */,
 				D20D43B5160E241A00D954B3 /* MainStoryboard_iPhone.storyboard */,
+				D20D43B4160E241A00D954B3 /* MainStoryboard_iPad.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
