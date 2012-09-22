@@ -1,18 +1,22 @@
 //
-//  VMDiningMapViewController.m
+//  VMDListViewController.m
 //  Dining
 //
 //  Created by Scott Andrus on 9/15/12.
 //  Copyright (c) 2012 VandyMobile. All rights reserved.
 //
 
-#import "VMDiningMapViewController.h"
+#import "VMDListViewController.h"
 
-@interface VMDiningMapViewController ()
+@interface VMDListViewController ()
 
 @end
 
-@implementation VMDiningMapViewController
+@implementation VMDListViewController
+
+@synthesize tableView;
+
+@synthesize dataSource = _dataSource;
 
 - (void)viewDidLoad
 {
@@ -22,8 +26,17 @@
 
 - (void)viewDidUnload
 {
+    [self setTableView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

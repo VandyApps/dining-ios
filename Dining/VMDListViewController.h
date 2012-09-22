@@ -1,5 +1,5 @@
 //
-//  VMDiningListViewController.h
+//  VMDListViewController.h
 //  Dining
 //
 //  Created by Scott Andrus on 9/15/12.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VMDiningListViewController : UIViewController
+@interface VMDListViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *dataSource;
