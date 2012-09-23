@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VMDListViewController : UIViewController
+@interface VMDListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

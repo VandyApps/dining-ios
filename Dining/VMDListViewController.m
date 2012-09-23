@@ -8,7 +8,7 @@
 
 #import "VMDListViewController.h"
 #import "DLocation.h"
-#import <sqlite3.h>
+#import "VMDLocationDetailVC.h"
 
 @interface VMDListViewController ()
 
@@ -26,7 +26,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.navigationController.title = self.tabBarController.tabBarItem.title;
+//    self.navigationController.title = self.tabBarController.tabBarItem.title;
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"DLocation" inManagedObjectContext:self.managedObjectContext];
@@ -52,6 +52,12 @@
     }
 }
 
+#pragma mark - User interface
+
+- (void)customizeUI {
+
+}
+
 #pragma mark - UITableView Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -68,7 +74,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"VMDiningCell";
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (!cell) {
@@ -80,6 +86,29 @@
     cell.textLabel.text = location.name;
     
     return cell;
+}
+
+#pragma mark - UITableView Delegate
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+#pragma mark - Storyboard segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+        VMDLocationDetailVC *destination = [segue destinationViewController];
+        destination.title = [[self.dataSource objectAtIndex:[self.tableView indexPathForCell:sender].row] name];
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        
+        // Deselect the row
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+        
+//        DLocation *loc = [self.dataSource objectAtIndex:indexPath.row];
+    
+//        destination.location = loc;
 }
 
 @end

@@ -29,6 +29,11 @@
 		D20D43B9160E26D200D954B3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D43B8160E26D200D954B3 /* MapKit.framework */; };
 		D20D43CE160E39D600D954B3 /* DLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D43CD160E39D600D954B3 /* DLocation.m */; };
 		D20D4404160E7E0300D954B3 /* DiningDBCreator.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D20D4403160E7E0300D954B3 /* DiningDBCreator.sqlite */; };
+		D20D4407160E80AC00D954B3 /* VMDLocationDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D4406160E80AC00D954B3 /* VMDLocationDetailVC.m */; };
+		D20D4417160E879F00D954B3 /* blackoverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D4414160E879F00D954B3 /* blackoverlay.png */; };
+		D20D4418160E879F00D954B3 /* Featheringill.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D20D4415160E879F00D954B3 /* Featheringill.jpeg */; };
+		D20D4419160E879F00D954B3 /* titleoverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D4416160E879F00D954B3 /* titleoverlay.png */; };
+		D20D441B160E87AD00D954B3 /* VandyMobileBackgroundCanvas@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D441A160E87AD00D954B3 /* VandyMobileBackgroundCanvas@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +66,12 @@
 		D20D43CC160E39D600D954B3 /* DLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLocation.h; sourceTree = "<group>"; };
 		D20D43CD160E39D600D954B3 /* DLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLocation.m; sourceTree = "<group>"; };
 		D20D4403160E7E0300D954B3 /* DiningDBCreator.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DiningDBCreator.sqlite; sourceTree = "<group>"; };
+		D20D4405160E80AC00D954B3 /* VMDLocationDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDLocationDetailVC.h; sourceTree = "<group>"; };
+		D20D4406160E80AC00D954B3 /* VMDLocationDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDLocationDetailVC.m; sourceTree = "<group>"; };
+		D20D4414160E879F00D954B3 /* blackoverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackoverlay.png; sourceTree = "<group>"; };
+		D20D4415160E879F00D954B3 /* Featheringill.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Featheringill.jpeg; sourceTree = "<group>"; };
+		D20D4416160E879F00D954B3 /* titleoverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleoverlay.png; sourceTree = "<group>"; };
+		D20D441A160E87AD00D954B3 /* VandyMobileBackgroundCanvas@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VandyMobileBackgroundCanvas@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				D20D439E160E239300D954B3 /* Dining.xcdatamodeld */,
+				D20D4408160E80B100D954B3 /* Location Detail VC */,
 				D20D43C3160E2C1300D954B3 /* List VC */,
 				D20D43C2160E2C0C00D954B3 /* Map VC */,
 				D20D43C1160E2BFB00D954B3 /* Storyboards */,
@@ -137,6 +149,10 @@
 		D20D43BA160E26EF00D954B3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D20D4414160E879F00D954B3 /* blackoverlay.png */,
+				D20D4415160E879F00D954B3 /* Featheringill.jpeg */,
+				D20D4416160E879F00D954B3 /* titleoverlay.png */,
+				D20D441A160E87AD00D954B3 /* VandyMobileBackgroundCanvas@2x.png */,
 				D20D4398160E239300D954B3 /* Default.png */,
 				D20D439A160E239300D954B3 /* Default@2x.png */,
 				D20D439C160E239300D954B3 /* Default-568h@2x.png */,
@@ -184,6 +200,15 @@
 				D20D43AB160E23DB00D954B3 /* VMDListViewController.m */,
 			);
 			name = "List VC";
+			sourceTree = "<group>";
+		};
+		D20D4408160E80B100D954B3 /* Location Detail VC */ = {
+			isa = PBXGroup;
+			children = (
+				D20D4405160E80AC00D954B3 /* VMDLocationDetailVC.h */,
+				D20D4406160E80AC00D954B3 /* VMDLocationDetailVC.m */,
+			);
+			name = "Location Detail VC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +274,10 @@
 				D20D43B6160E241A00D954B3 /* MainStoryboard_iPad.storyboard in Resources */,
 				D20D43B7160E241A00D954B3 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D20D4404160E7E0300D954B3 /* DiningDBCreator.sqlite in Resources */,
+				D20D4417160E879F00D954B3 /* blackoverlay.png in Resources */,
+				D20D4418160E879F00D954B3 /* Featheringill.jpeg in Resources */,
+				D20D4419160E879F00D954B3 /* titleoverlay.png in Resources */,
+				D20D441B160E87AD00D954B3 /* VandyMobileBackgroundCanvas@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +294,7 @@
 				D20D43B2160E23DC00D954B3 /* VMDListViewController.m in Sources */,
 				D20D43B3160E23DC00D954B3 /* VMDMapViewController.m in Sources */,
 				D20D43CE160E39D600D954B3 /* DLocation.m in Sources */,
+				D20D4407160E80AC00D954B3 /* VMDLocationDetailVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
