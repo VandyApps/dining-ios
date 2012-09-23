@@ -2,7 +2,7 @@
 //  UIViewController+Overview.h
 //
 //  Created by Scott Andrus on 8/9/12.
-//  Copyright (c) 2012 Tapatory, LLC. All rights reserved.
+//  Copyright (c) 2012 VandyMobile. All rights reserved.
 //
 
 /* This class is intended to provide an interface for presenting opaque modal view controllers, dubbed "OverviewControllers". The OverviewDelegate is entirely optional and provides the opportunity to allow delegate setting and custom background image layouts. */

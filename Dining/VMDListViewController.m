@@ -9,6 +9,9 @@
 #import "VMDListViewController.h"
 #import "DLocation.h"
 #import "VMDLocationDetailVC.h"
+#import "SAImageManipulator.h"
+
+#import <QuartzCore/QuartzCore.h>
 
 @interface VMDListViewController ()
 
@@ -32,11 +35,15 @@
     NSError *error;
     self.dataSource = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
+    [self customizeUI];
+    
 }
 
 - (void)viewDidUnload
 {
     [self setTableView:nil];
+    [self setFeaturedCellContainerView:nil];
+    [self setFeaturedCellView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -44,7 +51,7 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+        return (interfaceOrientation == UIInterfaceOrientationPortrait);
     } else {
         return YES;
     }
@@ -53,7 +60,14 @@
 #pragma mark - User interface
 
 - (void)customizeUI {
-
+    self.featuredCellContainerView.layer.borderColor = [[UIColor darkTextColor] CGColor];
+    self.featuredCellContainerView.layer.borderWidth = .5;
+    
+    self.featuredCellView.layer.cornerRadius = 8;
+    self.featuredCellView.layer.borderColor = [[UIColor darkTextColor] CGColor];
+    self.featuredCellView.layer.borderWidth = .5;
+//    [SAImageManipulator addShadowToView:self.featuredCellView withOpacity:.8 radius:2 andOffset:CGSizeMake(-1, -1)];
+    
 }
 
 #pragma mark - UITableView Data Source

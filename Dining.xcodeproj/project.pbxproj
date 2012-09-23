@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2024C0B160E99CA000BAE1A /* SASizer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2024C0A160E99CA000BAE1A /* SASizer.m */; };
 		D20D4385160E239300D954B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D4384160E239300D954B3 /* UIKit.framework */; };
 		D20D4387160E239300D954B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D4386160E239300D954B3 /* Foundation.framework */; };
 		D20D4389160E239300D954B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D4388160E239300D954B3 /* CoreGraphics.framework */; };
@@ -43,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D2024C09160E99CA000BAE1A /* SASizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASizer.h; sourceTree = "<group>"; };
+		D2024C0A160E99CA000BAE1A /* SASizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASizer.m; sourceTree = "<group>"; };
 		D20D4380160E239300D954B3 /* Dining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20D4384160E239300D954B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D20D4386160E239300D954B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -236,6 +239,8 @@
 				D20D441D160E8C8900D954B3 /* SAImageManipulator.m */,
 				D20D442B160E8CE600D954B3 /* OBGradientView.h */,
 				D20D442C160E8CE600D954B3 /* OBGradientView.m */,
+				D2024C09160E99CA000BAE1A /* SASizer.h */,
+				D2024C0A160E99CA000BAE1A /* SASizer.m */,
 				D20D4429160E8C9300D954B3 /* Categories */,
 			);
 			name = Utilities;
@@ -353,6 +358,7 @@
 				D20D4427160E8C8900D954B3 /* UIViewController+Overview.m in Sources */,
 				D20D4428160E8C8900D954B3 /* UIView+Frame.m in Sources */,
 				D20D442D160E8CE600D954B3 /* OBGradientView.m in Sources */,
+				D2024C0B160E99CA000BAE1A /* SASizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

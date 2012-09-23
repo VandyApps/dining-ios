@@ -2,7 +2,7 @@
 //  UIImage+Color.h
 //
 //  Created by Scott Andrus on 8/9/12.
-//  Copyright (c) 2012 Tapatory, LLC. All rights reserved.
+//  Copyright (c) 2012 VandyMobile. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
