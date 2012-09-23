@@ -26,7 +26,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-//    self.navigationController.title = self.tabBarController.tabBarItem.title;
+    self.title = self.tabBarItem.title;
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"DLocation" inManagedObjectContext:self.managedObjectContext];
@@ -84,6 +84,7 @@
     // Configure the cell...
     DLocation *location = [self.dataSource objectAtIndex:indexPath.row];
     cell.textLabel.text = location.name;
+    cell.detailTextLabel.text = location.type;
     
     return cell;
 }
