@@ -19,6 +19,17 @@
 
 @synthesize location = _location;
 
+typedef enum weekdays
+{
+    Sunday = 0,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday
+} Weekday;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -50,7 +61,8 @@
     [self setDayLabel:nil];
     [self setDateLabel:nil];
     [self setHoursLabel:nil];
-    [self setTitleOverlayImageView:nil];
+    [self setTitleOverlayView:nil];
+    [self setTypeLabel:nil];
     [super viewDidUnload];
 }
 
@@ -60,16 +72,14 @@
     
     self.nameLabel.text = self.location.name;
     self.nameLabel.size = [self.nameLabel.text sizeWithFont:self.nameLabel.font constrainedToSize:CGSizeMake(200, self.nameLabel.height)];
-
-    self.titleOverlayImageView.image = [[UIImage imageNamed:@"blackoverlay.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 6, 0, 6)];
     
     if (self.nameLabel.width > 111) {
-        self.titleOverlayImageView.width = self.nameLabel.width + 11;
+        self.titleOverlayView.width = self.nameLabel.width + 15;
     } else {
-        self.titleOverlayImageView.width = 123;
+        self.titleOverlayView.width = 125;
     }
     
-    self.titleOverlayImageView.layer.cornerRadius = 5;
+    self.titleOverlayView.layer.cornerRadius = 10;
     
     self.dateScrollView.layer.borderColor = [[UIColor blackColor] CGColor];
     self.dateScrollView.layer.borderWidth = .5;
@@ -94,7 +104,7 @@
         aDayLabel = [[UILabel alloc] init];
         [self.dateScrollView addSubview:aDayLabel];
         [aDayLabel setFrame:CGRectMake(self.dayLabel.left + self.dateScrollView.width * i, self.dayLabel.top, self.dayLabel.width, self.dayLabel.height)];
-        aDayLabel.textColor = [UIColor darkGrayColor];
+        aDayLabel.textColor = [UIColor darkTextColor];
         aDayLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20.0];
         aDayLabel.backgroundColor = [UIColor clearColor];
         aDayLabel.textAlignment = UITextAlignmentCenter;

@@ -12,6 +12,7 @@
 @interface VMDLocationDetailVC : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *typeLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *coverImageView;
 
 @property (strong, nonatomic) IBOutlet UIScrollView *dateScrollView;
@@ -19,7 +20,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *hoursLabel;
 
-@property (strong, nonatomic) IBOutlet UIImageView *titleOverlayImageView;
+@property (strong, nonatomic) IBOutlet UIView *titleOverlayView;
 
 @property (strong, nonatomic) DLocation *location;
 
