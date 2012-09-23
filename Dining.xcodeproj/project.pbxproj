@@ -34,6 +34,12 @@
 		D20D4418160E879F00D954B3 /* Featheringill.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D20D4415160E879F00D954B3 /* Featheringill.jpeg */; };
 		D20D4419160E879F00D954B3 /* titleoverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D4416160E879F00D954B3 /* titleoverlay.png */; };
 		D20D441B160E87AD00D954B3 /* VandyMobileBackgroundCanvas@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D441A160E87AD00D954B3 /* VandyMobileBackgroundCanvas@2x.png */; };
+		D20D4425160E8C8900D954B3 /* SAImageManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D441D160E8C8900D954B3 /* SAImageManipulator.m */; };
+		D20D4426160E8C8900D954B3 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D441E160E8C8900D954B3 /* UIImage+Color.m */; };
+		D20D4427160E8C8900D954B3 /* UIViewController+Overview.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D4421160E8C8900D954B3 /* UIViewController+Overview.m */; };
+		D20D4428160E8C8900D954B3 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D4422160E8C8900D954B3 /* UIView+Frame.m */; };
+		D20D442D160E8CE600D954B3 /* OBGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D442C160E8CE600D954B3 /* OBGradientView.m */; };
+		D20D442F160E8D0400D954B3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D442E160E8D0400D954B3 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +78,17 @@
 		D20D4415160E879F00D954B3 /* Featheringill.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Featheringill.jpeg; sourceTree = "<group>"; };
 		D20D4416160E879F00D954B3 /* titleoverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleoverlay.png; sourceTree = "<group>"; };
 		D20D441A160E87AD00D954B3 /* VandyMobileBackgroundCanvas@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VandyMobileBackgroundCanvas@2x.png"; sourceTree = "<group>"; };
+		D20D441D160E8C8900D954B3 /* SAImageManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAImageManipulator.m; sourceTree = "<group>"; };
+		D20D441E160E8C8900D954B3 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		D20D441F160E8C8900D954B3 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		D20D4420160E8C8900D954B3 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		D20D4421160E8C8900D954B3 /* UIViewController+Overview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Overview.m"; sourceTree = "<group>"; };
+		D20D4422160E8C8900D954B3 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		D20D4423160E8C8900D954B3 /* UIViewController+Overview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Overview.h"; sourceTree = "<group>"; };
+		D20D4424160E8C8900D954B3 /* SAImageManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAImageManipulator.h; sourceTree = "<group>"; };
+		D20D442B160E8CE600D954B3 /* OBGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBGradientView.h; sourceTree = "<group>"; };
+		D20D442C160E8CE600D954B3 /* OBGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBGradientView.m; sourceTree = "<group>"; };
+		D20D442E160E8D0400D954B3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D20D442F160E8D0400D954B3 /* QuartzCore.framework in Frameworks */,
 				D20D43B9160E26D200D954B3 /* MapKit.framework in Frameworks */,
 				D20D4385160E239300D954B3 /* UIKit.framework in Frameworks */,
 				D20D4387160E239300D954B3 /* Foundation.framework in Frameworks */,
@@ -110,6 +128,7 @@
 		D20D4383160E239300D954B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D20D442E160E8D0400D954B3 /* QuartzCore.framework */,
 				D20D43B8160E26D200D954B3 /* MapKit.framework */,
 				D20D4384160E239300D954B3 /* UIKit.framework */,
 				D20D4386160E239300D954B3 /* Foundation.framework */,
@@ -122,7 +141,8 @@
 		D20D438C160E239300D954B3 /* Dining */ = {
 			isa = PBXGroup;
 			children = (
-				D20D439E160E239300D954B3 /* Dining.xcdatamodeld */,
+				D20D442A160E8CAB00D954B3 /* Data Model */,
+				D20D441C160E8C5900D954B3 /* Utilities */,
 				D20D4408160E80B100D954B3 /* Location Detail VC */,
 				D20D43C3160E2C1300D954B3 /* List VC */,
 				D20D43C2160E2C0C00D954B3 /* Map VC */,
@@ -169,8 +189,6 @@
 			children = (
 				D20D4395160E239300D954B3 /* VMDAppDelegate.h */,
 				D20D4396160E239300D954B3 /* VMDAppDelegate.m */,
-				D20D43CC160E39D600D954B3 /* DLocation.h */,
-				D20D43CD160E39D600D954B3 /* DLocation.m */,
 			);
 			name = "App Delegate";
 			sourceTree = "<group>";
@@ -209,6 +227,41 @@
 				D20D4406160E80AC00D954B3 /* VMDLocationDetailVC.m */,
 			);
 			name = "Location Detail VC";
+			sourceTree = "<group>";
+		};
+		D20D441C160E8C5900D954B3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D20D4424160E8C8900D954B3 /* SAImageManipulator.h */,
+				D20D441D160E8C8900D954B3 /* SAImageManipulator.m */,
+				D20D442B160E8CE600D954B3 /* OBGradientView.h */,
+				D20D442C160E8CE600D954B3 /* OBGradientView.m */,
+				D20D4429160E8C9300D954B3 /* Categories */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		D20D4429160E8C9300D954B3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D20D441F160E8C8900D954B3 /* UIImage+Color.h */,
+				D20D441E160E8C8900D954B3 /* UIImage+Color.m */,
+				D20D4420160E8C8900D954B3 /* UIView+Frame.h */,
+				D20D4422160E8C8900D954B3 /* UIView+Frame.m */,
+				D20D4423160E8C8900D954B3 /* UIViewController+Overview.h */,
+				D20D4421160E8C8900D954B3 /* UIViewController+Overview.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		D20D442A160E8CAB00D954B3 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				D20D439E160E239300D954B3 /* Dining.xcdatamodeld */,
+				D20D43CC160E39D600D954B3 /* DLocation.h */,
+				D20D43CD160E39D600D954B3 /* DLocation.m */,
+			);
+			name = "Data Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +348,11 @@
 				D20D43B3160E23DC00D954B3 /* VMDMapViewController.m in Sources */,
 				D20D43CE160E39D600D954B3 /* DLocation.m in Sources */,
 				D20D4407160E80AC00D954B3 /* VMDLocationDetailVC.m in Sources */,
+				D20D4425160E8C8900D954B3 /* SAImageManipulator.m in Sources */,
+				D20D4426160E8C8900D954B3 /* UIImage+Color.m in Sources */,
+				D20D4427160E8C8900D954B3 /* UIViewController+Overview.m in Sources */,
+				D20D4428160E8C8900D954B3 /* UIView+Frame.m in Sources */,
+				D20D442D160E8CE600D954B3 /* OBGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -65,7 +65,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jbS-b2-qb0"/>
+                    <navigationItem key="navigationItem" title="List" id="jbS-b2-qb0"/>
                     <connections>
                         <outlet property="tableView" destination="WcT-Cy-vZi" id="QNG-gX-2f2"/>
                     </connections>
@@ -87,7 +87,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Featheringill.jpeg" id="XUg-uv-pwl">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
+                                <rect key="frame" x="0.0" y="-1" width="320" height="116"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view alpha="0.60000000000000009" contentMode="scaleToFill" id="Wfn-Bp-kwZ">
@@ -251,6 +251,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dP9-wm-8Qf"/>
                     <connections>
+                        <outlet property="coverImageView" destination="XUg-uv-pwl" id="nuR-4l-efT"/>
                         <outlet property="nameLabel" destination="BGi-sc-zuY" id="dEm-nm-skg"/>
                     </connections>
                 </viewController>
@@ -273,7 +274,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3J9-DD-LHb"/>
+                    <navigationItem key="navigationItem" title="Map" id="3J9-DD-LHb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
@@ -357,6 +358,7 @@
         <class className="VMDLocationDetailVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDLocationDetailVC.h"/>
             <relationships>
+                <relationship kind="outlet" name="coverImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
             </relationships>
         </class>

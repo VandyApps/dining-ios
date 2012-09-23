@@ -26,8 +26,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.title = self.tabBarItem.title;
-    
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"DLocation" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
@@ -99,17 +97,17 @@
 #pragma mark - Storyboard segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-        VMDLocationDetailVC *destination = [segue destinationViewController];
-        destination.title = [[self.dataSource objectAtIndex:[self.tableView indexPathForCell:sender].row] name];
-        
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-        
-        // Deselect the row
-        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-        
-//        DLocation *loc = [self.dataSource objectAtIndex:indexPath.row];
+    VMDLocationDetailVC *destination = [segue destinationViewController];
+    destination.title = [[self.dataSource objectAtIndex:[self.tableView indexPathForCell:sender].row] name];
     
-//        destination.location = loc;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    
+    // Deselect the row
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    // Set the destination's location property
+    DLocation *loc = [self.dataSource objectAtIndex:indexPath.row];
+    destination.location = loc;
 }
 
 @end

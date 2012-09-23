@@ -19,9 +19,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    
     UINavigationController *listNC = (UINavigationController *)[tabBarController.viewControllers objectAtIndex:0];
     VMDListViewController *listVC = [listNC.viewControllers objectAtIndex:0];
     listVC.managedObjectContext = self.managedObjectContext;
+    listNC.title = listNC.tabBarItem.title;
+    
+    UINavigationController *mapNC = (UINavigationController *)[tabBarController.viewControllers objectAtIndex:1];
+//    VMDListViewController *mapVC = [mapNC.viewControllers objectAtIndex:0];
+//    listVC.managedObjectContext = self.managedObjectContext;
+    mapNC.title = mapNC.tabBarItem.title;
     
     return YES;
 }
