@@ -9,6 +9,7 @@
 #import "VMDAppDelegate.h"
 #import "DLocation.h"
 #import "VMDListViewController.h"
+#import "SAImageManipulator.h"
 
 @implementation VMDAppDelegate
 

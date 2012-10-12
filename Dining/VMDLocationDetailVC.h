@@ -9,19 +9,26 @@
 #import <UIKit/UIKit.h>
 #import "DLocation.h"
 
-@interface VMDLocationDetailVC : UIViewController
+@interface VMDLocationDetailVC : UIViewController <UIScrollViewDelegate>
 
+// Up top
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *typeLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *coverImageView;
 
+// Middle
 @property (strong, nonatomic) IBOutlet UIScrollView *dateScrollView;
 @property (strong, nonatomic) IBOutlet UILabel *dayLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *hoursLabel;
-
+@property (strong, nonatomic) IBOutlet UIButton *dateLeftButton;
+@property (strong, nonatomic) IBOutlet UIButton *dateRightButton;
 @property (strong, nonatomic) IBOutlet UIView *titleOverlayView;
 
+// Data model object
 @property (strong, nonatomic) DLocation *location;
+
+// To keep track of the currently selected weekday
+@property int currentlySelectedWeekday;
 
 @end
