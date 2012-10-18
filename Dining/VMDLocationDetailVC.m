@@ -103,6 +103,70 @@ typedef enum weekdays
     [self setupDateScrollView];
 }
 
+/**
+ * Generates a String array from a String containing a comma- and semicolon-separated list of times
+ * @param _in: a String containing a list of open and close times (e.g. "10:00,14:00;17:30,23:30")
+ * @return: a String array containing the time values split up (e.g. {"10:00","14:00","17:30","23:30"})
+ */
+- (NSArray *)parseHoursFromString:(NSString *)string {
+    //    String[] ret = {null,null,null,null};
+    
+    if (!string) {
+        return nil;
+    }
+    
+    // Create a blank mutable array
+    NSMutableArray *ret = [NSMutableArray arrayWithCapacity:4];
+    
+    for (int i = 0; i < [string length]; i++){
+        
+        
+//        if (_in.charAt(i)== ','){
+//            ret[0]= _in.substring(0, i);//once you reach the first comma, break off the first start hour into ret[0]
+        
+        // Once you reach the first comma, break off the first start hour into ret[0]
+        if ([string characterAtIndex:i] == ',') {
+            [ret setObject:[string substringToIndex:i] atIndexedSubscript:0];
+            
+//            for (int x = i; x < _in.length();x++){
+//                if (_in.charAt(x) == ';'){//if you hit a semicolon, there are two start and end times today.
+//                                          //Don't worry, we'll use recursion!
+            
+            // if you hit a semicolon, there are two start and end times today.
+            // Don't worry, we'll use recursion!
+            for (int x = i; x < [string length]; x++) {
+                if ([string characterAtIndex:x] == ';') {
+            
+//                    ret[1] = _in.substring(i+1,x);
+//                    String[] tmp2 = parseHours(_in.substring(x+1));
+//                    ret[2] = tmp2[0]; ret[3] = tmp2[1];
+//                    break;
+                    [ret setObject:[string substringWithRange:NSRangeFromString([NSString stringWithFormat:@"%d+1, %d", i, x])] atIndexedSubscript:1];
+                    
+                    NSArray *tmp2 = [self parseHoursFromString:[string substringToIndex:(x + 1)]];
+                    
+                    [ret setObject:[tmp2 objectAtIndex:0] atIndexedSubscript:2];
+                    [ret setObject:[tmp2 objectAtIndex:1] atIndexedSubscript:3];
+                    
+                    break;
+        
+                }
+                // If you hit the end of the string and haven't found a semicolon, don't worry!
+                // There are only one set of hours for today.
+                else if (x == [string length] - 1) {
+                    
+//                    ret[1] = _in.substring(i+1);//grab the second hour string into ret[2] -
+                                                //don't worry about ret[3] and ret[4], we'll check for null later
+                    [ret setObject:[string substringToIndex:([string length] - 1)] atIndexedSubscript:1];
+                }
+            }
+            break;
+        }
+    }
+    
+    return [ret copy];
+}
+
 // Sets up the date scrollview for the current day of the week and date
 - (void)setupDateScrollView {
     
@@ -156,28 +220,38 @@ typedef enum weekdays
             aWeekday -= 7;
         }
         
+        // Hours
+        NSString *someHours;
+        
         // Set the label's text based on the offset
         switch (aWeekday) {
             case Sunday:
                 aDayLabel.text = @"Sunday";
+                someHours = self.location.sundayHours;
                 break;
             case Monday:
                 aDayLabel.text = @"Monday";
+                someHours = self.location.mondayHours;
                 break;
             case Tuesday:
                 aDayLabel.text = @"Tuesday";
+                someHours = self.location.tuesdayHours;
                 break;
             case Wednesday:
                 aDayLabel.text = @"Wednesday";
+                someHours = self.location.wednesdayHours;
                 break;
             case Thursday:
                 aDayLabel.text = @"Thursday";
+                someHours = self.location.thursdayHours;
                 break;
             case Friday:
                 aDayLabel.text = @"Friday";
+                someHours = self.location.fridayHours;
                 break;
             case Saturday:
                 aDayLabel.text = @"Saturday";
+                someHours = self.location.saturdayHours;
                 break;
                 
             default:
@@ -214,7 +288,9 @@ typedef enum weekdays
         anHoursLabel.textAlignment = UITextAlignmentCenter;
         
         // TODO: Get the hours from the location object
-        anHoursLabel.text = @"8 AM - 9 PM";
+//        anHoursLabel.text = @"8 AM - 9 PM";
+        NSArray *hoursArray = [self parseHoursFromString:someHours];
+        anHoursLabel.text = [NSString stringWithFormat:@"%@ - %@", [hoursArray objectAtIndex:0], [hoursArray objectAtIndex:1]];
     }
     
     // Keep track of the currently selected weekday
