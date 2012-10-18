@@ -24,17 +24,17 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize dataSource = _dataSource;
 
+#pragma mark - UIViewController lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
+    // Fetch the data from the Core Data context
+    [self fetchDataFromContext];
     
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"DLocation" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    NSError *error;
-    self.dataSource = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
+    // Customize the UI
     [self customizeUI];
     
 }
@@ -57,17 +57,42 @@
     }
 }
 
+#pragma mark - Core Data
+
+// Grabs the data from Core Data
+- (void)fetchDataFromContext {
+    
+    // New fetch request object
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    // Derive an entitity description for DLocation from the context
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"DLocation" inManagedObjectContext:self.managedObjectContext];
+    
+    // Set the fetch request's entity property to be that entity
+    [fetchRequest setEntity:entity];
+    
+    // Fetch the data from the context, set it to the dataSource array
+    NSError *error;
+    self.dataSource = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+}
+
 #pragma mark - User interface
 
+// Private method to customize the UI. Typically called in viewDidLoad
 - (void)customizeUI {
+    // Set borders and corner radius for cell container view and cell view
     self.featuredCellContainerView.layer.borderColor = [[UIColor darkTextColor] CGColor];
     self.featuredCellContainerView.layer.borderWidth = .5;
     
     self.featuredCellView.layer.cornerRadius = 8;
     self.featuredCellView.layer.borderColor = [[UIColor darkTextColor] CGColor];
     self.featuredCellView.layer.borderWidth = .5;
+    
+    // TODO: Make this less buggy
 //    [SAImageManipulator addShadowToView:self.featuredCellView withOpacity:.8 radius:2 andOffset:CGSizeMake(-1, -1)];
     
+    // Set a tabbar gradient
+    [SAImageManipulator setGradientBackgroundImageForView:self.tabBarController.tabBar withTopColor:nil andBottomColor:nil];
 }
 
 #pragma mark - UITableView Data Source
@@ -86,9 +111,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // Try to dequeue a reusable cell
     static NSString *CellIdentifier = @"VMDiningCell";
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    // If we can't, then allocate and initialize a new one
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
@@ -103,17 +130,20 @@
 
 #pragma mark - UITableView Delegate
 
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//}
 
 #pragma mark - Storyboard segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the destination view controller from the segue
     VMDLocationDetailVC *destination = [segue destinationViewController];
+    
+    // Set the title
     destination.title = [[self.dataSource objectAtIndex:[self.tableView indexPathForCell:sender].row] name];
     
+    // Grab the index of the object selected
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     
     // Deselect the row

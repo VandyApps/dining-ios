@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
         <!--List View Controller - List-->
@@ -182,54 +182,63 @@
                                 <rect key="frame" x="-1" y="112" width="322" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Saturday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3ae-j7-aaV">
-                                        <rect key="frame" x="96" y="7" width="128" height="32"/>
+                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Saturday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3ae-j7-aaV">
+                                        <rect key="frame" x="61" y="5" width="201" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="8 AM - 9 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m5H-ZK-NIp">
-                                        <rect key="frame" x="113" y="53" width="95" height="21"/>
+                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="8 AM - 9 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m5H-ZK-NIp">
+                                        <rect key="frame" x="114" y="53" width="95" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="September 22, 2012" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="flU-gT-vab">
-                                        <rect key="frame" x="79" y="32" width="164" height="21"/>
+                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="September 22, 2012" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="flU-gT-vab">
+                                        <rect key="frame" x="79" y="34" width="164" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mIe-yD-xAV">
+                                        <rect key="frame" x="270" y="20" width="39" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title=">">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dateRightPressed" destination="57b-sy-ASY" eventType="touchUpInside" id="Doi-bb-UW1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ld7-bZ-Q54">
+                                        <rect key="frame" x="14" y="20" width="39" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="&lt;">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dateLeftPressed" destination="57b-sy-ASY" eventType="touchUpInside" id="MBU-yb-JQy"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="57b-sy-ASY" id="e1Y-fq-Yjc"/>
+                                </connections>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mIe-yD-xAV">
-                                <rect key="frame" x="272" y="132" width="39" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title=">">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ld7-bZ-Q54">
-                                <rect key="frame" x="9" y="132" width="39" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="&lt;">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" id="o5j-mZ-Ba6">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="o5j-mZ-Ba6">
                                 <rect key="frame" x="-1" y="197" width="322" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
@@ -244,6 +253,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="mealRightPressed" destination="57b-sy-ASY" eventType="touchUpInside" id="yyY-hu-az0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZTe-ZT-c8F">
                                         <rect key="frame" x="7" y="21" width="39" height="120"/>
@@ -256,16 +268,19 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="mealLeftPressed" destination="57b-sy-ASY" eventType="touchUpInside" id="PxZ-KE-AC3"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lunch" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qjT-wm-Fgz">
-                                        <rect key="frame" x="96" y="7" width="128" height="32"/>
+                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lunch" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qjT-wm-Fgz">
+                                        <rect key="frame" x="97" y="21" width="128" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Specials:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D9V-FV-f3P">
-                                        <rect key="frame" x="124" y="38" width="73" height="24"/>
+                                        <rect key="frame" x="124" y="47" width="73" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -301,9 +316,15 @@
                     <connections>
                         <outlet property="coverImageView" destination="XUg-uv-pwl" id="nuR-4l-efT"/>
                         <outlet property="dateLabel" destination="flU-gT-vab" id="iJe-FY-lel"/>
+                        <outlet property="dateLeftButton" destination="Ld7-bZ-Q54" id="niZ-sG-aMy"/>
+                        <outlet property="dateRightButton" destination="mIe-yD-xAV" id="8qi-Tb-CAj"/>
                         <outlet property="dateScrollView" destination="Xqv-JP-gfZ" id="0LJ-0p-HOe"/>
                         <outlet property="dayLabel" destination="3ae-j7-aaV" id="R8d-Nc-wT3"/>
                         <outlet property="hoursLabel" destination="m5H-ZK-NIp" id="GpE-4p-XJe"/>
+                        <outlet property="mealLabel" destination="qjT-wm-Fgz" id="aq3-ux-ckd"/>
+                        <outlet property="mealLeftBurron" destination="ZTe-ZT-c8F" id="CxW-qN-JJL"/>
+                        <outlet property="mealRightButton" destination="wgU-lV-jCD" id="YJS-Q2-PsM"/>
+                        <outlet property="mealScrollView" destination="o5j-mZ-Ba6" id="xnL-ni-5oR"/>
                         <outlet property="nameLabel" destination="BGi-sc-zuY" id="dEm-nm-skg"/>
                         <outlet property="titleOverlayView" destination="Rf9-Qn-SmZ" id="HyG-Ze-k8T"/>
                         <outlet property="typeLabel" destination="pff-Sp-jNP" id="hfj-1g-v9K"/>
@@ -360,7 +381,7 @@
         <scene sceneID="wmT-cg-vmd">
             <objects>
                 <navigationController id="xKX-30-mHL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="List" image="117-todo.png" id="7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iNI-qZ-P5c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -384,7 +405,7 @@
         <scene sceneID="1Ot-so-MNb">
             <objects>
                 <navigationController id="sRb-tz-de8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="103-map.png" id="6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DyB-DZ-oeH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -402,10 +423,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="103-map.png" width="26" height="21"/>
+        <image name="117-todo.png" width="18" height="19"/>
         <image name="Featheringill.jpeg" width="640" height="330"/>
         <image name="VandyMobileBackgroundCanvas@2x.png" width="640" height="734"/>
-        <image name="first" width="16" height="16"/>
-        <image name="second" width="16" height="16"/>
     </resources>
     <classes>
         <class className="VMDListViewController" superclassName="UIViewController">
@@ -421,11 +442,18 @@
             <relationships>
                 <relationship kind="outlet" name="coverImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLeftButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="dateRightButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="dateScrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="dayLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="hoursLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mealLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mealLeftBurron" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mealRightButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mealScrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="titleOverlayView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="typeLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="VMDMapViewController" superclassName="UIViewController">
