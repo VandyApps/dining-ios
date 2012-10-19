@@ -452,6 +452,7 @@
                 <relationship kind="outlet" name="mealRightButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="mealScrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="testHour" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="titleOverlayView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="typeLabel" candidateClass="UILabel"/>
             </relationships>
