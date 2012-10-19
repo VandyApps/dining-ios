@@ -265,7 +265,7 @@ typedef enum meals
     
     // Format the date to a shortened mode
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MM-dd-yy"];
+    [formatter setDateFormat:@"MM-dd"];
     
     // Create some label pointers to be used in creating the weekday labels
     //UILabel *aDayLabel;
@@ -328,33 +328,11 @@ typedef enum meals
             aMealLabel.text = [NSString stringWithFormat:@"%@ (Now)", aMealLabel.text];
         }
         
-        /*// Create date labels
-        aDateLabel = [[UILabel alloc] init];
-        [self.dateScrollView addSubview:aDateLabel];
-        [aDateLabel setFrame:CGRectMake(self.dateLabel.left + self.dateScrollView.width * (i + 3), self.dateLabel.top, self.dateLabel.width, self.dateLabel.height)];
+        if (i == 1 && aMealPeriod == 1) {
+            aMealLabel.text = [NSString stringWithFormat:@"%@ (Tomorrow)", aMealLabel.text];
+        }
         
-        // Date label properties
-        aDateLabel.textColor = [UIColor darkTextColor];
-        aDateLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14.0];
-        aDateLabel.backgroundColor = [UIColor clearColor];
-        aDateLabel.textAlignment = UITextAlignmentCenter;
-        
-        // Set the text
-        aDateLabel.text = [formatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:i * 24 * 60 * 60]];
-        
-        // Create hours labels
-        anHoursLabel = [[UILabel alloc] init];
-        [self.dateScrollView addSubview:anHoursLabel];
-        [anHoursLabel setFrame:CGRectMake(self.hoursLabel.left + self.dateScrollView.width * (i + 3), self.hoursLabel.top, self.hoursLabel.width, self.hoursLabel.height)];
-        
-        // Hours label properties
-        anHoursLabel.textColor = [UIColor darkGrayColor];
-        anHoursLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14.0];
-        anHoursLabel.backgroundColor = [UIColor clearColor];
-        anHoursLabel.textAlignment = UITextAlignmentCenter;
-        
-        // TODO: Get the hours from the location object
-        anHoursLabel.text = @"8 AM - 9 PM";*/
+       
     }
     
     self.currentlySelectedMealPeriod = aMealPeriod;
