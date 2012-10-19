@@ -281,6 +281,8 @@ typedef enum meals
         mealTime = 3;
     }
     
+    int aMealPeriod;
+    
     // From -1 (Last period) to 1 (next period)
     for (int i = -1; i < 2; ++i) {
         
@@ -299,12 +301,12 @@ typedef enum meals
         //NSString *hrStr = [NSString stringWithFormat:@"%d", hour];
         //_testHour.text = hrStr;
         
-        int aMealPeriod = i + 2;
-        /*if (aMealPeriod < 1) {
-            mealTime += 3;
-        } else if (hour > 3) {
-            mealTime -= 3;
-        }*/
+        int aMealPeriod = mealTime + i;
+        if (aMealPeriod < 1) {
+            aMealPeriod+= 3;
+        } else if (aMealPeriod > 3) {
+            aMealPeriod -= 3;
+        }
         
         // Set the label's text based on the offset
         switch (aMealPeriod) {
@@ -355,7 +357,7 @@ typedef enum meals
         anHoursLabel.text = @"8 AM - 9 PM";*/
     }
     
-    self.currentlySelectedMealPeriod = mealTime;
+    self.currentlySelectedMealPeriod = aMealPeriod;
     
 }
 
@@ -393,6 +395,12 @@ typedef enum meals
     CGFloat pageWidth = self.dateScrollView.width;
     int page = floor((self.dateScrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     self.currentlySelectedWeekday = page;
+    
+    // Update the page when more than 50% of the previous/next page is visible
+    CGFloat mealPageWidth = self.mealScrollView.width;
+    int mealPage = floor((self.mealScrollView.contentOffset.x - mealPageWidth / 2) / mealPageWidth) + 1;
+    self.currentlySelectedMealPeriod = mealPage;
+    
     
     
 }
