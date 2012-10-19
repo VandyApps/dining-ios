@@ -262,7 +262,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="E6O-Ew-PMC" kind="push" id="zSA-ex-J4f"/>
+                                    <segue destination="E6O-Ew-PMC" kind="push" identifier="menuSeque" id="zSA-ex-J4f"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ld7-bZ-Q54">
