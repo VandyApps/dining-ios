@@ -86,11 +86,10 @@ typedef enum meals
     [self setDateLeftButton:nil];
     [self setDateRightButton:nil];
     [self setMealScrollView:nil];
-
     [self setMealLabel:nil];
     [self setMealRightButton:nil];
     [self setMealLeftBurron:nil];
-    
+
     [super viewDidUnload];
 }
 
@@ -164,6 +163,7 @@ typedef enum meals
 // Sets up the date scrollview for the current day of the week and date
 - (void)setupDateScrollView {
     
+    
     // Set the initial content size to be 7 times as wide for 7 days
     [self.dateScrollView setContentSize:CGSizeMake(self.dateScrollView.width * 7, self.dateScrollView.height)];
     
@@ -176,10 +176,10 @@ typedef enum meals
     
     NSInteger weekday = [weekdayComponents weekday];
     
-//    NSInteger hour = [weekdayComponents hour];
- //   NSInteger day = [weekdayComponents day];
-//    NSInteger month = [weekdayComponents month];
-//    NSInteger year = [weekdayComponents year];
+    //    NSInteger hour = [weekdayComponents hour];
+    //    NSInteger day = [weekdayComponents day];
+    //    NSInteger month = [weekdayComponents month];
+    //    NSInteger year = [weekdayComponents year];
     
     // Format the date to a shortened mode
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -189,8 +189,8 @@ typedef enum meals
     UILabel *aDayLabel;
     UILabel *aDateLabel;
     UILabel *anHoursLabel;
-
-    // From -3 (three days ago) to 3 (three days from now) 
+    
+    // From -3 (three days ago) to 3 (three days from now)
     for (int i = -3; i < 4; ++i) {
         
         // Create day label
@@ -287,7 +287,6 @@ typedef enum meals
         anHoursLabel.text = [NSString stringWithFormat:@"%@ - %@", [hoursArray objectAtIndex:0], [hoursArray objectAtIndex:1]];
     }
     
-    
     // Keep track of the currently selected weekday
     self.currentlySelectedWeekday = weekday;
 }
@@ -304,16 +303,16 @@ typedef enum meals
     NSDateComponents *weekdayComponents =
     [gregorian components:(NSHourCalendarUnit | NSWeekdayCalendarUnit | NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit) fromDate:now];
     
-   // NSInteger weekday = [weekdayComponents weekday];
+    //NSInteger weekday = [weekdayComponents weekday];
     
-    //NSInteger hour = [weekdayComponents hour];
+    NSInteger hour = [weekdayComponents hour];
     //   NSInteger day = [weekdayComponents day];
     //    NSInteger month = [weekdayComponents month];
     //    NSInteger year = [weekdayComponents year];
     
     // Format the date to a shortened mode
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MM-dd-yy"];
+    [formatter setDateFormat:@"MM-dd"];
     
     // Create some label pointers to be used in creating the weekday labels
     //UILabel *aDayLabel;
@@ -322,12 +321,14 @@ typedef enum meals
     UILabel *aMealLabel;
     
     //convert hours to meal period
-    /*int mealTime = 1;
-    if (hour > 11 && hour < 5) {
+    int mealTime = 1;
+    if (hour > 11 && hour < 17) {
         mealTime = 2;
-    } else if (hour > 5) {
+    } else if (hour > 17) {
         mealTime = 3;
-    }*/
+    }
+    
+    int aMealPeriod;
     
     // From -1 (Last period) to 1 (next period)
     for (int i = -1; i < 2; ++i) {
@@ -344,14 +345,15 @@ typedef enum meals
         aMealLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20.0];
         aMealLabel.backgroundColor = [UIColor clearColor];
         aMealLabel.textAlignment = UITextAlignmentCenter;
-        //aMealLabel.text = @"FOO";
+        //NSString *hrStr = [NSString stringWithFormat:@"%d", hour];
+        //_testHour.text = hrStr;
         
-        int aMealPeriod = i + 2;
-        /*if (aMealPeriod < 1) {
-            mealTime += 3;
-        } else if (hour > 3) {
-            mealTime -= 3;
-        }*/
+        int aMealPeriod = mealTime + i;
+        if (aMealPeriod < 1) {
+            aMealPeriod+= 3;
+        } else if (aMealPeriod > 3) {
+            aMealPeriod -= 3;
+        }
         
         // Set the label's text based on the offset
         switch (aMealPeriod) {
@@ -373,38 +375,14 @@ typedef enum meals
             aMealLabel.text = [NSString stringWithFormat:@"%@ (Now)", aMealLabel.text];
         }
         
-        /*// Create date labels
-        aDateLabel = [[UILabel alloc] init];
-        [self.dateScrollView addSubview:aDateLabel];
-        [aDateLabel setFrame:CGRectMake(self.dateLabel.left + self.dateScrollView.width * (i + 3), self.dateLabel.top, self.dateLabel.width, self.dateLabel.height)];
+        if (i == 1 && aMealPeriod == 1) {
+            aMealLabel.text = [NSString stringWithFormat:@"%@ (Tomorrow)", aMealLabel.text];
+        }
         
-        // Date label properties
-        aDateLabel.textColor = [UIColor darkTextColor];
-        aDateLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14.0];
-        aDateLabel.backgroundColor = [UIColor clearColor];
-        aDateLabel.textAlignment = UITextAlignmentCenter;
-        
-        // Set the text
-        aDateLabel.text = [formatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:i * 24 * 60 * 60]];
-        
-        // Create hours labels
-        anHoursLabel = [[UILabel alloc] init];
-        [self.dateScrollView addSubview:anHoursLabel];
-        [anHoursLabel setFrame:CGRectMake(self.hoursLabel.left + self.dateScrollView.width * (i + 3), self.hoursLabel.top, self.hoursLabel.width, self.hoursLabel.height)];
-        
-        // Hours label properties
-        anHoursLabel.textColor = [UIColor darkGrayColor];
-        anHoursLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14.0];
-        anHoursLabel.backgroundColor = [UIColor clearColor];
-        anHoursLabel.textAlignment = UITextAlignmentCenter;
-        
-        // TODO: Get the hours from the location object
-        anHoursLabel.text = @"8 AM - 9 PM";*/
+       
     }
     
-    
-    // Keep track of the currently selected weekday
-   // self.currentlySelectedMealPeriod = mealTime;
+    self.currentlySelectedMealPeriod = aMealPeriod;
     
 }
 
@@ -442,6 +420,12 @@ typedef enum meals
     CGFloat pageWidth = self.dateScrollView.width;
     int page = floor((self.dateScrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     self.currentlySelectedWeekday = page;
+    
+    // Update the page when more than 50% of the previous/next page is visible
+    CGFloat mealPageWidth = self.mealScrollView.width;
+    int mealPage = floor((self.mealScrollView.contentOffset.x - mealPageWidth / 2) / mealPageWidth) + 1;
+    self.currentlySelectedMealPeriod = mealPage;
+    
     
     
 }
