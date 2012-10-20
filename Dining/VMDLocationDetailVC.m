@@ -126,6 +126,41 @@ typedef enum meals
     [self setupMealScrollView];
 }
 
+// Generates a String array from a String containing a comma- and semicolon-separated list of times
+// Ported from Matt's Android code
+- (NSArray *)parseHoursFromString:(NSString *)string {
+
+    if ([string isEqualToString:@"null"]) {
+        return nil;
+    }
+    
+    NSArray *semicolonArray = [string componentsSeparatedByString:@";"];
+    NSArray *commaArray;
+    NSMutableArray *result = [NSMutableArray array];
+    for (NSString *timeRange in semicolonArray) {
+        commaArray = [timeRange componentsSeparatedByString:@","];
+        for (NSString *time in commaArray) {
+            [result addObject:time];
+        }
+    }
+    
+    // Time formatter to accept those strings
+    NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
+    [timeFormatter setDateFormat:@"k:mm"];
+    
+    NSMutableArray *dateHoursArray = [NSMutableArray array];
+    for (NSString *str in result) {
+        [dateHoursArray addObject:[timeFormatter dateFromString:str]];
+    }
+    
+    [timeFormatter setDateFormat:@"h:mm a"];
+    for (size_t i = 0; i < dateHoursArray.count; ++i) {
+        [result replaceObjectAtIndex:i withObject:[timeFormatter stringFromDate:[dateHoursArray objectAtIndex:i]]];
+    }
+    
+    return [result copy];
+}
+
 // Sets up the date scrollview for the current day of the week and date
 - (void)setupDateScrollView {
     
@@ -148,7 +183,7 @@ typedef enum meals
     
     // Format the date to a shortened mode
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MM-dd-yy"];
+    [formatter setDateFormat:@"MMMM d, yyyy"];
     
     // Create some label pointers to be used in creating the weekday labels
     UILabel *aDayLabel;
@@ -179,28 +214,38 @@ typedef enum meals
             aWeekday -= 7;
         }
         
+        // Hours
+        NSString *someHours;
+        
         // Set the label's text based on the offset
         switch (aWeekday) {
             case Sunday:
                 aDayLabel.text = @"Sunday";
+                someHours = self.location.sundayHours;
                 break;
             case Monday:
                 aDayLabel.text = @"Monday";
+                someHours = self.location.mondayHours;
                 break;
             case Tuesday:
                 aDayLabel.text = @"Tuesday";
+                someHours = self.location.tuesdayHours;
                 break;
             case Wednesday:
                 aDayLabel.text = @"Wednesday";
+                someHours = self.location.wednesdayHours;
                 break;
             case Thursday:
                 aDayLabel.text = @"Thursday";
+                someHours = self.location.thursdayHours;
                 break;
             case Friday:
                 aDayLabel.text = @"Friday";
+                someHours = self.location.fridayHours;
                 break;
             case Saturday:
                 aDayLabel.text = @"Saturday";
+                someHours = self.location.saturdayHours;
                 break;
                 
             default:
@@ -236,8 +281,10 @@ typedef enum meals
         anHoursLabel.backgroundColor = [UIColor clearColor];
         anHoursLabel.textAlignment = UITextAlignmentCenter;
         
-        // TODO: Get the hours from the location object
-        anHoursLabel.text = @"8 AM - 9 PM";
+        // Grab the object's hours separated into an array
+        NSArray *hoursArray = [self parseHoursFromString:someHours];
+        
+        anHoursLabel.text = [NSString stringWithFormat:@"%@ - %@", [hoursArray objectAtIndex:0], [hoursArray objectAtIndex:1]];
     }
     
     
