@@ -111,7 +111,7 @@ typedef enum weekdays
 - (NSArray *)parseHoursFromString:(NSString *)string {
     //    String[] ret = {null,null,null,null};
     
-    if (!string) {
+    if ([string isEqualToString:@"null"]) {
         return nil;
     }
     
@@ -157,7 +157,7 @@ typedef enum weekdays
                     
 //                    ret[1] = _in.substring(i+1);//grab the second hour string into ret[2] -
                                                 //don't worry about ret[3] and ret[4], we'll check for null later
-                    [ret setObject:[string substringToIndex:([string length] - 1)] atIndexedSubscript:1];
+                    [ret setObject:[string substringFromIndex:(i + 1)] atIndexedSubscript:1];
                 }
             }
             break;
