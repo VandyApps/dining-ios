@@ -16,6 +16,13 @@
 		D2024C21160EB718000BAE1A /* 179-notepad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2024C1F160EB718000BAE1A /* 179-notepad@2x.png */; };
 		D2024C24160EB77F000BAE1A /* 117-todo.png in Resources */ = {isa = PBXBuildFile; fileRef = D2024C22160EB77F000BAE1A /* 117-todo.png */; };
 		D2024C25160EB77F000BAE1A /* 117-todo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2024C23160EB77F000BAE1A /* 117-todo@2x.png */; };
+		D2028BD2163343BF00D20CDB /* DropShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D2028BD0163343BF00D20CDB /* DropShadow.png */; };
+		D2028BD3163343BF00D20CDB /* DropShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2028BD1163343BF00D20CDB /* DropShadow@2x.png */; };
+		D2028BD81633477D00D20CDB /* frontViewControllerDropShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D2028BD41633477D00D20CDB /* frontViewControllerDropShadow.png */; };
+		D2028BD91633477D00D20CDB /* frontViewControllerDropShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2028BD51633477D00D20CDB /* frontViewControllerDropShadow@2x.png */; };
+		D2028BDA1633477D00D20CDB /* JSSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2028BD71633477D00D20CDB /* JSSlidingViewController.m */; };
+		D2028BDD1633488A00D20CDB /* VMDMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2028BDC1633488A00D20CDB /* VMDMenuViewController.xib */; };
+		D2028BE0163348AA00D20CDB /* VMDMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2028BDF163348AA00D20CDB /* VMDMenuViewController.m */; };
 		D20D4385160E239300D954B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D4384160E239300D954B3 /* UIKit.framework */; };
 		D20D4387160E239300D954B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D4386160E239300D954B3 /* Foundation.framework */; };
 		D20D4389160E239300D954B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D4388160E239300D954B3 /* CoreGraphics.framework */; };
@@ -45,6 +52,7 @@
 		D20D4428160E8C8900D954B3 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D4422160E8C8900D954B3 /* UIView+Frame.m */; };
 		D20D442D160E8CE600D954B3 /* OBGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D442C160E8CE600D954B3 /* OBGradientView.m */; };
 		D20D442F160E8D0400D954B3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D442E160E8D0400D954B3 /* QuartzCore.framework */; };
+		D26BCCA216434D32007030DD /* VMDMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D26BCCA116434D32007030DD /* VMDMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +66,15 @@
 		D2024C1F160EB718000BAE1A /* 179-notepad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "179-notepad@2x.png"; sourceTree = "<group>"; };
 		D2024C22160EB77F000BAE1A /* 117-todo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "117-todo.png"; sourceTree = "<group>"; };
 		D2024C23160EB77F000BAE1A /* 117-todo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "117-todo@2x.png"; sourceTree = "<group>"; };
+		D2028BD0163343BF00D20CDB /* DropShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DropShadow.png; sourceTree = "<group>"; };
+		D2028BD1163343BF00D20CDB /* DropShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DropShadow@2x.png"; sourceTree = "<group>"; };
+		D2028BD41633477D00D20CDB /* frontViewControllerDropShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frontViewControllerDropShadow.png; sourceTree = "<group>"; };
+		D2028BD51633477D00D20CDB /* frontViewControllerDropShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frontViewControllerDropShadow@2x.png"; sourceTree = "<group>"; };
+		D2028BD61633477D00D20CDB /* JSSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSlidingViewController.h; sourceTree = "<group>"; };
+		D2028BD71633477D00D20CDB /* JSSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSlidingViewController.m; sourceTree = "<group>"; };
+		D2028BDC1633488A00D20CDB /* VMDMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMDMenuViewController.xib; sourceTree = "<group>"; };
+		D2028BDE163348AA00D20CDB /* VMDMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDMenuViewController.h; sourceTree = "<group>"; };
+		D2028BDF163348AA00D20CDB /* VMDMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDMenuViewController.m; sourceTree = "<group>"; };
 		D20D4380160E239300D954B3 /* Dining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20D4384160E239300D954B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D20D4386160E239300D954B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +117,8 @@
 		D20D442B160E8CE600D954B3 /* OBGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBGradientView.h; sourceTree = "<group>"; };
 		D20D442C160E8CE600D954B3 /* OBGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBGradientView.m; sourceTree = "<group>"; };
 		D20D442E160E8D0400D954B3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D26BCCA016434D32007030DD /* VMDMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDMenu.h; sourceTree = "<group>"; };
+		D26BCCA116434D32007030DD /* VMDMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +138,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2028BDB163347FB00D20CDB /* JSSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D2028BD41633477D00D20CDB /* frontViewControllerDropShadow.png */,
+				D2028BD51633477D00D20CDB /* frontViewControllerDropShadow@2x.png */,
+				D2028BD61633477D00D20CDB /* JSSlidingViewController.h */,
+				D2028BD71633477D00D20CDB /* JSSlidingViewController.m */,
+			);
+			name = JSSlidingViewController;
+			sourceTree = "<group>";
+		};
 		D20D4375160E239300D954B3 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +210,8 @@
 		D20D43BA160E26EF00D954B3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D2028BD0163343BF00D20CDB /* DropShadow.png */,
+				D2028BD1163343BF00D20CDB /* DropShadow@2x.png */,
 				D2024C22160EB77F000BAE1A /* 117-todo.png */,
 				D2024C23160EB77F000BAE1A /* 117-todo@2x.png */,
 				D2024C1E160EB718000BAE1A /* 179-notepad.png */,
@@ -247,6 +279,10 @@
 		D20D441C160E8C5900D954B3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D2028BDE163348AA00D20CDB /* VMDMenuViewController.h */,
+				D2028BDF163348AA00D20CDB /* VMDMenuViewController.m */,
+				D2028BDC1633488A00D20CDB /* VMDMenuViewController.xib */,
+				D2028BDB163347FB00D20CDB /* JSSlidingViewController */,
 				D20D4424160E8C8900D954B3 /* SAImageManipulator.h */,
 				D20D441D160E8C8900D954B3 /* SAImageManipulator.m */,
 				D20D442B160E8CE600D954B3 /* OBGradientView.h */,
@@ -277,6 +313,8 @@
 				D20D439E160E239300D954B3 /* Dining.xcdatamodeld */,
 				D20D43CC160E39D600D954B3 /* DLocation.h */,
 				D20D43CD160E39D600D954B3 /* DLocation.m */,
+				D26BCCA016434D32007030DD /* VMDMenu.h */,
+				D26BCCA116434D32007030DD /* VMDMenu.m */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -352,6 +390,11 @@
 				D2024C21160EB718000BAE1A /* 179-notepad@2x.png in Resources */,
 				D2024C24160EB77F000BAE1A /* 117-todo.png in Resources */,
 				D2024C25160EB77F000BAE1A /* 117-todo@2x.png in Resources */,
+				D2028BD2163343BF00D20CDB /* DropShadow.png in Resources */,
+				D2028BD3163343BF00D20CDB /* DropShadow@2x.png in Resources */,
+				D2028BD81633477D00D20CDB /* frontViewControllerDropShadow.png in Resources */,
+				D2028BD91633477D00D20CDB /* frontViewControllerDropShadow@2x.png in Resources */,
+				D2028BDD1633488A00D20CDB /* VMDMenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +418,9 @@
 				D20D4428160E8C8900D954B3 /* UIView+Frame.m in Sources */,
 				D20D442D160E8CE600D954B3 /* OBGradientView.m in Sources */,
 				D2024C0B160E99CA000BAE1A /* SASizer.m in Sources */,
+				D2028BDA1633477D00D20CDB /* JSSlidingViewController.m in Sources */,
+				D2028BE0163348AA00D20CDB /* VMDMenuViewController.m in Sources */,
+				D26BCCA216434D32007030DD /* VMDMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

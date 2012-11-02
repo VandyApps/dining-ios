@@ -129,7 +129,7 @@ typedef enum meals
 // Ported from Matt's Android code
 - (NSArray *)parseHoursFromString:(NSString *)string {
 
-    if ([string isEqualToString:@"null"]) {
+    if ([string isEqualToString:@"null\n"] || [string isEqualToString:@"null"]) {
         return nil;
     }
     
@@ -172,14 +172,10 @@ typedef enum meals
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *weekdayComponents =
-    [gregorian components:(NSHourCalendarUnit | NSWeekdayCalendarUnit | NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit) fromDate:now];
+    [gregorian components:(NSHourCalendarUnit | NSWeekdayCalendarUnit) fromDate:now];
     
     NSInteger weekday = [weekdayComponents weekday];
-    
-    //    NSInteger hour = [weekdayComponents hour];
-    //    NSInteger day = [weekdayComponents day];
-    //    NSInteger month = [weekdayComponents month];
-    //    NSInteger year = [weekdayComponents year];
+//    NSInteger hour = [weekdayComponents hour];
     
     // Format the date to a shortened mode
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -283,8 +279,16 @@ typedef enum meals
         
         // Grab the object's hours separated into an array
         NSArray *hoursArray = [self parseHoursFromString:someHours];
-        
-        anHoursLabel.text = [NSString stringWithFormat:@"%@ - %@", [hoursArray objectAtIndex:0], [hoursArray objectAtIndex:1]];
+        if (hoursArray) {
+            anHoursLabel.text = [NSString stringWithFormat:@"%@ - %@", [hoursArray objectAtIndex:0], [hoursArray objectAtIndex:1]];
+            
+            if (hoursArray.count > 2) {
+                anHoursLabel.text = [NSString stringWithFormat:@"%@, %@ - %@", anHoursLabel.text, [hoursArray objectAtIndex:2], [hoursArray objectAtIndex:3]];
+            }
+        }
+         
+        // If there are no hours, lol it's closed
+        else anHoursLabel.text = @"Closed";
     }
     
     // Keep track of the currently selected weekday

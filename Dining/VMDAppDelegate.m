@@ -27,9 +27,15 @@
     listNC.title = listNC.tabBarItem.title;
     
     UINavigationController *mapNC = (UINavigationController *)[tabBarController.viewControllers objectAtIndex:1];
-//    VMDListViewController *mapVC = [mapNC.viewControllers objectAtIndex:0];
-//    listVC.managedObjectContext = self.managedObjectContext;
     mapNC.title = mapNC.tabBarItem.title;
+    
+    self.frontVC = tabBarController;
+    self.backVC = [[VMDMenuViewController alloc] initWithNibName:@"VMDMenuViewController" bundle:nil];
+    
+    self.viewController = [[JSSlidingViewController alloc] initWithFrontViewController:self.frontVC backViewController:self.backVC];
+    self.viewController.delegate = self;
+    
+    self.window.rootViewController = self.viewController;
     
     return YES;
 }

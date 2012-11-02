@@ -81,12 +81,8 @@
 // Private method to customize the UI. Typically called in viewDidLoad
 - (void)customizeUI {
     // Set borders and corner radius for cell container view and cell view
-    self.featuredCellContainerView.layer.borderColor = [[UIColor darkTextColor] CGColor];
-    self.featuredCellContainerView.layer.borderWidth = .5;
-    
-    self.featuredCellView.layer.cornerRadius = 8;
-    self.featuredCellView.layer.borderColor = [[UIColor darkTextColor] CGColor];
-    self.featuredCellView.layer.borderWidth = .5;
+//    self.featuredCellContainerView.layer.borderColor = [[UIColor darkTextColor] CGColor];
+//    self.featuredCellContainerView.layer.borderWidth = .5;
     
     // TODO: Make this less buggy
 //    [SAImageManipulator addShadowToView:self.featuredCellView withOpacity:.8 radius:2 andOffset:CGSizeMake(-1, -1)];
