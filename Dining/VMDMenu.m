@@ -10,4 +10,15 @@
 
 @implementation VMDMenu
 
+- (id)initWithLocation:(DLocation *)location date:(NSDate *)date content:(NSDictionary *)mealPeriods
+{
+    self = [super init];
+    if (self) {
+        self.location = location;
+        self.date = date;
+        self.mealPeriods = mealPeriods;
+    }
+    return self;
+}
+
 @end
