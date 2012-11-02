@@ -14,4 +14,6 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSDictionary *nutrition;
 
+- (id)initWithName:(NSString *)name category:(NSString *)category nutrition:(NSDictionary *)nutrition;
+
 @end
