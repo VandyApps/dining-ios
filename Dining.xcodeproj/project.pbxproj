@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021E34BD16435ACB00463D96 /* VMDItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 021E34BC16435ACB00463D96 /* VMDItem.m */; };
 		D2024C0B160E99CA000BAE1A /* SASizer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2024C0A160E99CA000BAE1A /* SASizer.m */; };
 		D2024C18160EB6AE000BAE1A /* 113-navigation.png in Resources */ = {isa = PBXBuildFile; fileRef = D2024C16160EB6AE000BAE1A /* 113-navigation.png */; };
 		D2024C19160EB6AE000BAE1A /* 113-navigation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2024C17160EB6AE000BAE1A /* 113-navigation@2x.png */; };
@@ -56,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021E34BB16435ACB00463D96 /* VMDItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDItem.h; sourceTree = "<group>"; };
+		021E34BC16435ACB00463D96 /* VMDItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDItem.m; sourceTree = "<group>"; };
 		D2024C09160E99CA000BAE1A /* SASizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASizer.h; sourceTree = "<group>"; };
 		D2024C0A160E99CA000BAE1A /* SASizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASizer.m; sourceTree = "<group>"; };
 		D2024C16160EB6AE000BAE1A /* 113-navigation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "113-navigation.png"; sourceTree = "<group>"; };
@@ -310,6 +313,8 @@
 		D20D442A160E8CAB00D954B3 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				021E34BB16435ACB00463D96 /* VMDItem.h */,
+				021E34BC16435ACB00463D96 /* VMDItem.m */,
 				D20D439E160E239300D954B3 /* Dining.xcdatamodeld */,
 				D20D43CC160E39D600D954B3 /* DLocation.h */,
 				D20D43CD160E39D600D954B3 /* DLocation.m */,
@@ -421,6 +426,7 @@
 				D2028BDA1633477D00D20CDB /* JSSlidingViewController.m in Sources */,
 				D2028BE0163348AA00D20CDB /* VMDMenuViewController.m in Sources */,
 				D26BCCA216434D32007030DD /* VMDMenu.m in Sources */,
+				021E34BD16435ACB00463D96 /* VMDItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
