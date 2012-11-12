@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		021E34BD16435ACB00463D96 /* VMDItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 021E34BC16435ACB00463D96 /* VMDItem.m */; };
+		0262A9721651807900391641 /* VMDMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0262A9711651807900391641 /* VMDMenuTableViewController.m */; };
 		D2024C0B160E99CA000BAE1A /* SASizer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2024C0A160E99CA000BAE1A /* SASizer.m */; };
 		D2024C18160EB6AE000BAE1A /* 113-navigation.png in Resources */ = {isa = PBXBuildFile; fileRef = D2024C16160EB6AE000BAE1A /* 113-navigation.png */; };
 		D2024C19160EB6AE000BAE1A /* 113-navigation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2024C17160EB6AE000BAE1A /* 113-navigation@2x.png */; };
@@ -59,6 +60,10 @@
 /* Begin PBXFileReference section */
 		021E34BB16435ACB00463D96 /* VMDItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDItem.h; sourceTree = "<group>"; };
 		021E34BC16435ACB00463D96 /* VMDItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDItem.m; sourceTree = "<group>"; };
+		025536D416517F1E007F922A /* VMDMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMDMenuViewController.h; sourceTree = "<group>"; };
+		025536D516517F1E007F922A /* VMDMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMDMenuViewController.m; sourceTree = "<group>"; };
+		0262A9701651807900391641 /* VMDMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDMenuTableViewController.h; sourceTree = "<group>"; };
+		0262A9711651807900391641 /* VMDMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDMenuTableViewController.m; sourceTree = "<group>"; };
 		D2024C09160E99CA000BAE1A /* SASizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASizer.h; sourceTree = "<group>"; };
 		D2024C0A160E99CA000BAE1A /* SASizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASizer.m; sourceTree = "<group>"; };
 		D2024C16160EB6AE000BAE1A /* 113-navigation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "113-navigation.png"; sourceTree = "<group>"; };
@@ -141,6 +146,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		025536CA16517E5F007F922A /* Menu VC */ = {
+			isa = PBXGroup;
+			children = (
+				025536D416517F1E007F922A /* VMDMenuViewController.h */,
+				025536D516517F1E007F922A /* VMDMenuViewController.m */,
+			);
+			name = "Menu VC";
+			sourceTree = "<group>";
+		};
+		0262A9731651807C00391641 /* Menu Table VC */ = {
+			isa = PBXGroup;
+			children = (
+				0262A9701651807900391641 /* VMDMenuTableViewController.h */,
+				0262A9711651807900391641 /* VMDMenuTableViewController.m */,
+			);
+			name = "Menu Table VC";
+			sourceTree = "<group>";
+		};
 		D2028BDB163347FB00D20CDB /* JSSlidingViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +213,8 @@
 				D20D4408160E80B100D954B3 /* Location Detail VC */,
 				D20D43C3160E2C1300D954B3 /* List VC */,
 				D20D43C2160E2C0C00D954B3 /* Map VC */,
+				025536CA16517E5F007F922A /* Menu VC */,
+				0262A9731651807C00391641 /* Menu Table VC */,
 				D20D43BB160E271800D954B3 /* App Delegate */,
 				D20D43C1160E2BFB00D954B3 /* Storyboards */,
 				D20D43BA160E26EF00D954B3 /* Images */,
@@ -427,6 +452,7 @@
 				D2028BE0163348AA00D20CDB /* VMDMenuViewController.m in Sources */,
 				D26BCCA216434D32007030DD /* VMDMenu.m in Sources */,
 				021E34BD16435ACB00463D96 /* VMDItem.m in Sources */,
+				0262A9721651807900391641 /* VMDMenuTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

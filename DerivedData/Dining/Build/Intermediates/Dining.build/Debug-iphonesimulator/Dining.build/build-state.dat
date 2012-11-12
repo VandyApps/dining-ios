@@ -1,0 +1,1213 @@
+TDining
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Info.plist" Dining/Dining-Info.plist
+cDataModelVersionCompile "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining.momd" "/Users/odormody/Documents/iOS Development/dining-ios/Dining/Dining.xcdatamodeld"
+cProcessPCH "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch.pth" Dining/Dining-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/main.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/main.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDAppDelegate.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDAppDelegate.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDListViewController.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDListViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMapViewController.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMapViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/DLocation.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/DLocation.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDLocationDetailVC.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDLocationDetailVC.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SAImageManipulator.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/SAImageManipulator.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIImage+Color.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIImage+Color.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIViewController+Overview.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIViewController+Overview.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIView+Frame.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIView+Frame.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/OBGradientView.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/OBGradientView.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SASizer.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/SASizer.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/JSSlidingViewController.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/JSSlidingViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenu.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenu.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDItem.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDItem.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuTableViewController.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuTableViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining" normal i386
+cGenerateDSYMFile "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app.dSYM" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining"
+cCopyStringsFile "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/en.lproj/InfoPlist.strings" Dining/en.lproj/InfoPlist.strings
+cCpResource Dining/Default.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default.png
+cCpResource Dining/Default@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default@2x.png
+cCpResource Dining/Default-568h@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default-568h@2x.png
+cCompileStoryboard "/Users/odormody/Documents/iOS Development/dining-ios/Dining/MainStoryboard_iPad.storyboard"
+cCompileStoryboard "/Users/odormody/Documents/iOS Development/dining-ios/Dining/MainStoryboard_iPhone.storyboard"
+cCpResource Dining/DiningDBCreator.sqlite DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DiningDBCreator.sqlite
+cCpResource Dining/blackoverlay.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/blackoverlay.png
+cCpResource Dining/Featheringill.jpeg DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Featheringill.jpeg
+cCpResource Dining/titleoverlay.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/titleoverlay.png
+cCpResource Dining/VandyMobileBackgroundCanvas@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/VandyMobileBackgroundCanvas@2x.png
+cCpResource Dining/113-navigation.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/113-navigation.png
+cCpResource Dining/113-navigation@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/113-navigation@2x.png
+cCpResource Dining/103-map.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/103-map.png
+cCpResource Dining/103-map@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/103-map@2x.png
+cCpResource Dining/179-notepad.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/179-notepad.png
+cCpResource Dining/179-notepad@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/179-notepad@2x.png
+cCpResource Dining/117-todo.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/117-todo.png
+cCpResource Dining/117-todo@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/117-todo@2x.png
+cCpResource Dining/DropShadow.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DropShadow.png
+cCpResource Dining/DropShadow@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DropShadow@2x.png
+cCpResource Dining/frontViewControllerDropShadow.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/frontViewControllerDropShadow.png
+cCpResource Dining/frontViewControllerDropShadow@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/frontViewControllerDropShadow@2x.png
+cCompileXIB "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.xib"
+cTouch "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk
+c0000000050986C250000000000000110
+t1352166437
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+c00000000506BAA4B000000000030BB10
+t1349233227
+s3193616
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.h
+c00000000506BAA4A000000000000053B
+t1349233226
+s1339
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000506BAA4B0000000000228FD0
+t1349233227
+s2265040
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000506BAA4D00000000003DCEF0
+t1349233229
+s4050672
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c00000000506BAA4C00000000000015F7
+t1349233228
+s5623
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/MapKit.framework/MapKit
+c00000000506BAA5000000000000F5690
+t1349233232
+s1005200
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c00000000506BAA5200000000001D57A0
+t1349233234
+s1922976
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c00000000506BAA520000000000000E8D
+t1349233234
+s3725
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c00000000506BAA550000000000AB3D60
+t1349233237
+s11222368
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/usr/include/Availability.h
+c00000000506BAA690000000000001B54
+t1349233257
+s6996
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/DLocation.o
+t1352746949
+s3584
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/Dining.LinkFileList
+c0000000050A1490F0000000000000BD7
+t1352747279
+s3031
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/JSSlidingViewController.o
+t1352746949
+s188104
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/OBGradientView.o
+t1352746949
+s80084
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SAImageManipulator.o
+t1352746949
+s93104
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SASizer.o
+t1352746949
+s73348
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIImage+Color.o
+t1352746949
+s11552
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIView+Frame.o
+t1352746949
+s85252
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIViewController+Overview.o
+t1352746949
+s86208
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDAppDelegate.o
+t1352747099
+s113732
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDItem.o
+t1352746949
+s8252
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDListViewController.o
+t1352746949
+s105028
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDLocationDetailVC.o
+t1352746949
+s153952
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMapViewController.o
+t1352746949
+s78912
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenu.o
+t1352746949
+s16060
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuTableViewController.o
+t1352747279
+s72704
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController-4A9A0FFFF468BD48.o
+t1352746845
+s72536
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController.o
+t1352747099
+s68724
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/main.o
+t1352747098
+s3340
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch.pth
+t1352746949
+s5066336
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app
+t1352747483
+s1020
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app.dSYM
+t1352747279
+s102
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/103-map.png
+t1352746949
+s3229
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/103-map@2x.png
+t1352746949
+s3527
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/113-navigation.png
+t1352746949
+s3098
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/113-navigation@2x.png
+t1352746949
+s3526
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/117-todo.png
+t1352746949
+s3004
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/117-todo@2x.png
+t1352746949
+s3419
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/179-notepad.png
+t1352746949
+s176
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/179-notepad@2x.png
+t1352746949
+s261
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default-568h@2x.png
+t1352746949
+s18594
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default.png
+t1352746949
+s6540
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default@2x.png
+t1352746949
+s16107
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining
+t1352747279
+s231488
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining.momd
+t1352746949
+s170
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DiningDBCreator.sqlite
+t1352746949
+s49152
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DropShadow.png
+t1352746949
+s2541
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DropShadow@2x.png
+t1352746949
+s2541
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Featheringill.jpeg
+t1352746949
+s130363
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Info.plist
+t1352746949
+s1060
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/MainStoryboard_iPad.storyboardc
+t1352746949
+s204
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/MainStoryboard_iPhone.storyboardc
+t1352747483
+s340
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/PkgInfo
+t1352746949
+s8
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/VMDMenuViewController.nib
+t1352746949
+s1402
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/VandyMobileBackgroundCanvas@2x.png
+t1352746949
+s608344
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/blackoverlay.png
+t1352746949
+s49257
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/en.lproj/InfoPlist.strings
+t1352746949
+s42
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/frontViewControllerDropShadow.png
+t1352746949
+s1612
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/frontViewControllerDropShadow@2x.png
+t1352746949
+s1612
+
+N/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/titleoverlay.png
+t1352746949
+s381
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/../VMDMenuTableViewController.m
+c0000000050A148CE0000000000000DBA
+t1352747214
+s3514
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/103-map.png
+c0000000050931E7E0000000000000C9D
+t1351818878
+s3229
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/103-map@2x.png
+c0000000050931E7E0000000000000DC7
+t1351818878
+s3527
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/113-navigation.png
+c0000000050931E7E0000000000000C1A
+t1351818878
+s3098
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/113-navigation@2x.png
+c0000000050931E7E0000000000000DC6
+t1351818878
+s3526
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/117-todo.png
+c0000000050931E7E0000000000000BBC
+t1351818878
+s3004
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/117-todo@2x.png
+c0000000050931E7E0000000000000D5B
+t1351818878
+s3419
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/179-notepad.png
+c0000000050931E7E00000000000000B0
+t1351818878
+s176
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/179-notepad@2x.png
+c0000000050931E7E0000000000000105
+t1351818878
+s261
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/DLocation.h
+c0000000050931E7E00000000000004DC
+t1351818878
+s1244
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/DLocation.m
+c0000000050931E7E0000000000000245
+t1351818878
+s581
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/Default-568h@2x.png
+c0000000050931E7E00000000000048A2
+t1351818878
+s18594
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/Default.png
+c0000000050931E7E000000000000198C
+t1351818878
+s6540
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/Default@2x.png
+c0000000050931E7E0000000000003EEB
+t1351818878
+s16107
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/Dining-Prefix.pch
+c00000000509322A2000000000000015D
+t1351819938
+s349
+i<Availability.h>
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+i<CoreData/CoreData.h>
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/Dining.xcdatamodeld
+c0000000050931E7E0000000000000088
+t1351818878
+s136
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/DiningDBCreator.sqlite
+c0000000050931E7E000000000000C000
+t1351818878
+s49152
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/DropShadow.png
+c0000000050A147C400000000000009ED
+t1352746948
+s2541
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/DropShadow@2x.png
+c0000000050A147C400000000000009ED
+t1352746948
+s2541
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/Featheringill.jpeg
+c0000000050931E7E000000000001FD3B
+t1351818878
+s130363
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/JSSlidingViewController.h
+c0000000050A147C40000000000000949
+t1352746948
+s2377
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/JSSlidingViewController.m
+c0000000050A147C40000000000006CA8
+t1352746948
+s27816
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/MainStoryboard_iPad.storyboard
+c0000000050931E7E0000000000002257
+t1351818878
+s8791
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/MainStoryboard_iPhone.storyboard
+c0000000050A14A36000000000000B26B
+t1352747574
+s45675
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/OBGradientView.h
+c0000000050931E7E0000000000000A9F
+t1351818878
+s2719
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/OBGradientView.m
+c0000000050931E7E0000000000000DCD
+t1351818878
+s3533
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/SAImageManipulator.h
+c0000000050931E7E00000000000003D2
+t1351818878
+s978
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/SAImageManipulator.m
+c0000000050931E7E0000000000001B4C
+t1351818878
+s6988
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/SASizer.h
+c0000000050931E7E00000000000001AC
+t1351818878
+s428
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/SASizer.m
+c0000000050931E7E0000000000000735
+t1351818878
+s1845
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIImage+Color.h
+c0000000050931E7E00000000000000FE
+t1351818878
+s254
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIImage+Color.m
+c0000000050931E7E00000000000005E8
+t1351818878
+s1512
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIView+Frame.h
+c0000000050931E7E00000000000006A2
+t1351818878
+s1698
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIView+Frame.m
+c0000000050931E7E0000000000000BD8
+t1351818878
+s3032
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIViewController+Overview.h
+c0000000050931E7E0000000000000493
+t1351818878
+s1171
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIViewController+Overview.m
+c0000000050931E7E000000000000133D
+t1351818878
+s4925
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDAppDelegate.h
+c0000000050A147C4000000000000038E
+t1352746948
+s910
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDAppDelegate.m
+c0000000050A147C40000000000002143
+t1352746948
+s8515
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDItem.h
+c0000000050A141550000000000000165
+t1352745301
+s357
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDItem.m
+c0000000050A147C400000000000000BA
+t1352746948
+s186
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDListViewController.h
+c0000000050931E7E000000000000025D
+t1351818878
+s605
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDListViewController.m
+c0000000050A147C40000000000001229
+t1352746948
+s4649
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDLocationDetailVC.h
+c0000000050931E7E0000000000000577
+t1351818878
+s1399
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDLocationDetailVC.m
+c0000000050A147C400000000000042E3
+t1352746948
+s17123
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMapViewController.h
+c0000000050931E7E000000000000014E
+t1351818878
+s334
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMapViewController.m
+c0000000050931E7E000000000000035F
+t1351818878
+s863
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenu.h
+c0000000050A147C400000000000001EB
+t1352746948
+s491
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenu.m
+c0000000050A147C400000000000001C5
+t1352746948
+s453
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuTableViewController.h
+c0000000050A148F800000000000000F7
+t1352747256
+s247
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuTableViewController.m
+c0000000050A148F80000000000000DBA
+t1352747256
+s3514
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.h
+c0000000050A1484900000000000000E6
+t1352747081
+s230
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m
+c0000000050A1481500000000000002D9
+t1352747029
+s729
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.xib
+c0000000050A147C400000000000588AF
+t1352746948
+s362671
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/VandyMobileBackgroundCanvas@2x.png
+c0000000050931E7E0000000000094858
+t1351818878
+s608344
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/blackoverlay.png
+c0000000050931E7E000000000000C069
+t1351818878
+s49257
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/en.lproj/InfoPlist.strings
+c0000000050837583000000000000002D
+t1350792579
+s45
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/frontViewControllerDropShadow.png
+c0000000050A147C4000000000000064C
+t1352746948
+s1612
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/frontViewControllerDropShadow@2x.png
+c0000000050A147C4000000000000064C
+t1352746948
+s1612
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/main.m
+c0000000050931E7E0000000000000156
+t1351818878
+s342
+
+N/Users/odormody/Documents/iOS Development/dining-ios/Dining/titleoverlay.png
+c0000000050931E7E000000000000017D
+t1351818878
+s381
+
+N/Users/odormody/Documents/iOS Development/dining-ios/VMDMenuTableViewController.m
+c0000000050A148CE0000000000000DBA
+t1352747214
+s3514
+
+NDining/Dining-Info.plist
+c0000000050931E7E000000000000062C
+t1351818878
+s1580
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/../VMDMenuTableViewController.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/DLocation.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/JSSlidingViewController.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/OBGradientView.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/SAImageManipulator.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/SASizer.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIImage+Color.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIView+Frame.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIViewController+Overview.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDAppDelegate.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDItem.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDListViewController.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDLocationDetailVC.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMapViewController.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenu.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuTableViewController.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/Dining/main.m"
+r0
+
+CBuild AST from "/Users/odormody/Documents/iOS Development/dining-ios/VMDMenuTableViewController.m"
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies32e9d7b68151b641^9a5bfdb68151b641^---0#1#0#--18"Check dependencies36"36356F2E-9D79-4D64-9AFD-22C68A0A151A-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/DLocation.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/DLocation.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439643.935038
+e374439644.028740
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/DLocation.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/DLocation.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/DLocation.m3754f0db7e51b641^c85e07dc7e51b641^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/DLocation.m0000000000000000^4094"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/DLocation.o Dining/DLocation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/DLocation.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/DLocation.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/DLocation.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/DLocation.o"36"00ABCE29-AAE8-40FC-809A-74A7ECE261AF-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/JSSlidingViewController.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/JSSlidingViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439644.728643
+e374439645.127770
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/JSSlidingViewController.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/JSSlidingViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/JSSlidingViewController.m56b7badc7e51b641^46b520dd7e51b641^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/JSSlidingViewController.m0000000000000000^4178"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/JSSlidingViewController.o Dining/JSSlidingViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/JSSlidingViewController.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/JSSlidingViewController.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/JSSlidingViewController.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/JSSlidingViewController.o"36"2971AC7A-00C6-46C7-A872-8D07C0E132D6-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/OBGradientView.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/OBGradientView.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439644.502938
+e374439644.695071
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/OBGradientView.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/OBGradientView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/OBGradientView.m6cea80dc7e51b641^3df3b2dc7e51b641^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/OBGradientView.m0000000000000000^4124"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/OBGradientView.o Dining/OBGradientView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/OBGradientView.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/OBGradientView.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/OBGradientView.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/OBGradientView.o"36"CC39643C-4BED-4DD3-BE33-BFA28A6888E7-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SAImageManipulator.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/SAImageManipulator.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439644.165579
+e374439644.350495
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SAImageManipulator.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/SAImageManipulator.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/SAImageManipulator.m338d2adc7e51b641^e7e15cdc7e51b641^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/SAImageManipulator.m0000000000000000^4148"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SAImageManipulator.o Dining/SAImageManipulator.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SAImageManipulator.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SAImageManipulator.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/SAImageManipulator.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SAImageManipulator.o"36"6DFDF82A-DD38-4757-84D8-DA19A35B0CE8-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SASizer.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/SASizer.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439644.709613
+e374439644.951667
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SASizer.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/SASizer.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/SASizer.m1bd4b6dc7e51b641^2e1ef6dc7e51b641^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/SASizer.m0000000000000000^4082"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SASizer.o Dining/SASizer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SASizer.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SASizer.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/SASizer.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/SASizer.o"36"B34B1B32-C63F-4C48-8258-82D511831FFD-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIImage+Color.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIImage+Color.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439644.376569
+e374439644.501495
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIImage+Color.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIImage+Color.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/UIImage+Color.m479260dc7e51b641^927580dc7e51b641^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/UIImage+Color.m0000000000000000^4118"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIImage+Color.o Dining/UIImage+Color.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIImage+Color.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIImage+Color.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIImage+Color.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIImage+Color.o"36"8C1F8B12-41EA-4079-85C2-C3E4F075C625-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIView+Frame.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIView+Frame.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439643.272579
+e374439643.537923
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIView+Frame.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIView+Frame.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/UIView+Frame.m1adc46db7e51b641^713b8cdb7e51b641^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/UIView+Frame.m0000000000000000^4112"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIView+Frame.o Dining/UIView+Frame.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIView+Frame.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIView+Frame.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIView+Frame.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIView+Frame.o"36"07C112D7-D7C7-4704-B2FF-CF60AF1C3FB0-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIViewController+Overview.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIViewController+Overview.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439644.421286
+e374439644.727322
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIViewController+Overview.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIViewController+Overview.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/UIViewController+Overview.m74076ddc7e51b641^d332badc7e51b641^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/UIViewController+Overview.m0000000000000000^4190"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIViewController+Overview.o Dining/UIViewController+Overview.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIViewController+Overview.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIViewController+Overview.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/UIViewController+Overview.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/UIViewController+Overview.o"36"190650CB-7241-41D6-9747-1C32A9D6F325-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDAppDelegate.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDAppDelegate.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439898.846675
+e374439899.055842
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDAppDelegate.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDAppDelegate.mb4e5d8da7f51b641^ac560edb7f51b641^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/VMDAppDelegate.m0000000000000000^4124"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDAppDelegate.o Dining/VMDAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDAppDelegate.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDAppDelegate.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDAppDelegate.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDAppDelegate.o"36"4F1E0F7A-2D33-4AF3-BAB7-045EF617195D-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDItem.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDItem.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439645.129502
+e374439645.244790
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDItem.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDItem.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDItem.m244821dd7e51b641^f8a93edd7e51b641^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/VMDItem.m0000000000000000^4082"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDItem.o Dining/VMDItem.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDItem.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDItem.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDItem.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDItem.o"36"53DBFA15-7681-4876-A713-54A91B7636C4-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDListViewController.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDListViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439643.558213
+e374439643.913091
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDListViewController.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDListViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDListViewController.m9ca28fdb7e51b641^8fc6e9db7e51b641^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/VMDListViewController.m0000000000000000^4166"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDListViewController.o Dining/VMDListViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDListViewController.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDListViewController.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDListViewController.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDListViewController.o"36"39E5256F-5993-4116-9C6E-C69F1DE17B3B-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDLocationDetailVC.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDLocationDetailVC.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439644.029937
+e374439644.397964
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDLocationDetailVC.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDLocationDetailVC.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDLocationDetailVC.me1d407dc7e51b641^57ed66dc7e51b641^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/VMDLocationDetailVC.m0000000000000000^4154"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDLocationDetailVC.o Dining/VMDLocationDetailVC.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDLocationDetailVC.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDLocationDetailVC.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDLocationDetailVC.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDLocationDetailVC.o"36"8923A681-054D-4F4E-896E-6F596DBFD872-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMapViewController.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMapViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439643.932765
+e374439644.164298
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMapViewController.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMapViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMapViewController.maef4eedb7e51b641^f2232adc7e51b641^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/VMDMapViewController.m0000000000000000^4160"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMapViewController.o Dining/VMDMapViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMapViewController.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMapViewController.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMapViewController.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMapViewController.o"36"60F40C98-2965-49A8-9D58-DCC03D2477ED-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenu.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenu.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439645.128868
+e374439645.223737
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenu.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenu.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenu.mab2521dd7e51b641^7f8839dd7e51b641^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/VMDMenu.m0000000000000000^4082"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenu.o Dining/VMDMenu.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenu.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenu.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenu.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenu.o"36"3635F4D1-8E4A-4630-B0B8-B99F8D219416-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuTableViewController.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/../VMDMenuTableViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuTableViewController.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuTableViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374440079.341125
+e374440079.445332
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuTableViewController.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuTableViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuTableViewController.m:47:2: warning: Potentially incomplete method implementation. [-W#warnings]
+o#warning Potentially incomplete method implementation.
+o ^
+o/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuTableViewController.m:54:2: warning: Incomplete method implementation. [-W#warnings]
+o#warning Incomplete method implementation.
+o ^
+o2 warnings generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuTableViewController.m618d578f8051b641^6805728f8051b641^-442"/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuTableViewController.m:47:2: warning: Potentially incomplete method implementation. [-W#warnings]#warning Potentially incomplete method implementation. ^/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuTableViewController.m:54:2: warning: Incomplete method implementation. [-W#warnings]#warning Incomplete method implementation. ^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@45"Potentially incomplete method implementation.-374440079#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@106"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/VMDMenuTableViewController.m0000000000000000^46#1#46#1#1047#0#18"#warning Directive--2@33"Incomplete method implementation.-374440079#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@106"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/VMDMenuTableViewController.m0000000000000000^53#1#53#1#1248#0#18"#warning Directive--0#0#0#-19%DVTDocumentLocation4@106"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/VMDMenuTableViewController.m0000000000000000^4196"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuTableViewController.o Dining/VMDMenuTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuTableViewController.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuTableViewController.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuTableViewController.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuTableViewController.o"36"8F3E8981-D25D-440E-8E9B-039BA71010B6-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuTableViewController.o "/Users/odormody/Documents/iOS Development/dining-ios/VMDMenuTableViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController-4A9A0FFFF468BD48.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439644.968321
+e374439645.127463
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController-4A9A0FFFF468BD48.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m:47:2: warning: Potentially incomplete method implementation. [-W#warnings]
+o#warning Potentially incomplete method implementation.
+o ^
+o/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m:54:2: warning: Incomplete method implementation. [-W#warnings]
+o#warning Incomplete method implementation.
+o ^
+o2 warnings generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m4df5f8dc7e51b641^a5a320dd7e51b641^-432"/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m:47:2: warning: Potentially incomplete method implementation. [-W#warnings]#warning Potentially incomplete method implementation. ^/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m:54:2: warning: Incomplete method implementation. [-W#warnings]#warning Incomplete method implementation. ^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@45"Potentially incomplete method implementation.-374439645#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@101"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/VMDMenuViewController.m0000000000000000^46#1#46#1#1027#0#18"#warning Directive--2@33"Incomplete method implementation.-374439645#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@101"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/VMDMenuViewController.m0000000000000000^53#1#53#1#1228#0#18"#warning Directive--0#0#0#-19%DVTDocumentLocation4@101"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/VMDMenuViewController.m0000000000000000^4234"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController-4A9A0FFFF468BD48.o Dining/VMDMenuViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController-4A9A0FFFF468BD48.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController-4A9A0FFFF468BD48.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController-4A9A0FFFF468BD48.o"36"1CE0F20B-2619-4375-8CA9-6916B710D76A-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439898.949288
+e374439899.049061
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m7330f3da7f51b641^c39c0cdb7f51b641^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/VMDMenuViewController.m0000000000000000^4166"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController.o Dining/VMDMenuViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/VMDMenuViewController.o"36"2D9D8746-13BF-451A-AACE-8E648DA00CCF-
+
+CCompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/main.o "/Users/odormody/Documents/iOS Development/dining-ios/Dining/main.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374439898.845407
+e374439898.929725
+r1
+xCompileC
+xDerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/main.o
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/odormody/Documents/iOS Development/dining-ios/Dining/main.mc1acd8da7f51b641^938aeeda7f51b641^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/main.m0000000000000000^4064"CompileC DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/main.o Dining/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -include "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/main.d" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/main.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/main.m" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/main.o"36"7E77224F-AF13-43E7-8B6C-D20CF94A4D55-
+
+CCompileStoryboard "/Users/odormody/Documents/iOS Development/dining-ios/Dining/MainStoryboard_iPad.storyboard"
+s374438538.007026
+e374438539.374181
+r1
+xCompileStoryboard
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/MainStoryboard_iPad.storyboard
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"CompileStoryboard Dining/MainStoryboard_iPad.storyboarde3e1018a7a51b641^35ec5f8b7a51b641^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/MainStoryboard_iPad.storyboard0000000000000000^1005"CompileStoryboard Dining/MainStoryboard_iPad.storyboard    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 5.1    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/MainStoryboard_iPad.storyboardc" "/Users/odormody/Documents/iOS Development/dining-ios/Dining/MainStoryboard_iPad.storyboard" --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk36"61FC69A6-35E7-4CE2-8BE1-085186130B51-
+
+CCompileStoryboard "/Users/odormody/Documents/iOS Development/dining-ios/Dining/MainStoryboard_iPhone.storyboard"
+s374440375.056400
+e374440375.994406
+r1
+xCompileStoryboard
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/MainStoryboard_iPhone.storyboard
+o/* com.apple.ibtool.document.warnings */
+o/Users/odormody/Documents/iOS Development/dining-ios/Dining/MainStoryboard_iPhone.storyboard:G4T-ha-FSQ: warning: Prototype table cells must have reuse identifiers [9]
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"CompileStoryboard Dining/MainStoryboard_iPhone.storyboard6f9e0eb78151b641^3291feb78151b641^-40"/* com.apple.ibtool.document.warnings */1(21%IDEActivityLogMessage2@49"Prototype table cells must have reuse identifiers-374440375#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@110"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/MainStoryboard_iPhone.storyboard0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#25"Unsupported Configuration--0#0#0#-19%DVTDocumentLocation4@110"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/MainStoryboard_iPhone.storyboard0000000000000000^1011"CompileStoryboard Dining/MainStoryboard_iPhone.storyboard    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 5.1    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/MainStoryboard_iPhone.storyboardc" "/Users/odormody/Documents/iOS Development/dining-ios/Dining/MainStoryboard_iPhone.storyboard" --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk36"306934DE-BDFA-481B-A638-37ADE1427E2D-
+
+CCompileXIB "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.xib"
+s374438539.598028
+e374438539.667424
+r1
+xCompileXIB
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.xib
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compiling /Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.xib8d43998b7a51b641^fbe6aa8b7a51b641^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/VMDMenuViewController.xib0000000000000000^981"CompileXIB Dining/VMDMenuViewController.xib    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.1    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/VMDMenuViewController.nib" "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VMDMenuViewController.xib" --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk36"F5402407-C6A5-4102-ACDD-9B46BFB73951-
+
+CCopyStringsFile "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/en.lproj/InfoPlist.strings" Dining/en.lproj/InfoPlist.strings
+s374438537.994764
+e374438538.000264
+r1
+xCopyStringsFile
+x/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/en.lproj/InfoPlist.strings
+xDining/en.lproj/InfoPlist.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Copy Dining/en.lproj/InfoPlist.strings54c7fe897a51b641^4d11008a7a51b641^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/en.lproj/InfoPlist.strings0000000000000000^659"CopyStringsFile DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/en.lproj/InfoPlist.strings Dining/en.lproj/InfoPlist.strings    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/en.lproj" -- Dining/en.lproj/InfoPlist.strings36"EB8ABA3C-E162-43A3-B5EC-3C85A8DAE520-
+
+CCpResource Dining/103-map.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/103-map.png
+s374438539.449647
+e374438539.452093
+r1
+xCpResource
+xDining/103-map.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/103-map.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/103-map.png3333738b7a51b641^09c4738b7a51b641^---0#0#0#-19%DVTDocumentLocation2@149"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/103-map.png000000000080d041^674"CpResource Dining/103-map.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/103-map.png    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/103-map.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"F74370ED-F608-42D6-B7B3-4AB0A5DB300B-
+
+CCpResource Dining/103-map@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/103-map@2x.png
+s374438539.452577
+e374438539.471363
+r1
+xCpResource
+xDining/103-map@2x.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/103-map@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/103-map@2x.png35f0738b7a51b641^3cf9788b7a51b641^---0#0#0#-19%DVTDocumentLocation2@152"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/103-map@2x.png000000000080d041^687"CpResource "Dining/103-map@2x.png" "DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/103-map@2x.png"    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/103-map@2x.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"FD063F17-DEF7-452C-AA17-9B192EFC0FDD-
+
+CCpResource Dining/113-navigation.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/113-navigation.png
+s374438539.442812
+e374438539.450765
+r1
+xCpResource
+xDining/113-navigation.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/113-navigation.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/113-navigation.pngd464728b7a51b641^b96d738b7a51b641^---0#0#0#-19%DVTDocumentLocation2@156"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/113-navigation.png000000000080d041^695"CpResource Dining/113-navigation.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/113-navigation.png    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/113-navigation.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"851385C0-C90E-49A2-9799-87DFED2C471F-
+
+CCpResource Dining/113-navigation@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/113-navigation@2x.png
+s374438539.443731
+e374438539.448354
+r1
+xCpResource
+xDining/113-navigation@2x.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/113-navigation@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/113-navigation@2x.png7235728b7a51b641^03d2728b7a51b641^---0#0#0#-19%DVTDocumentLocation2@159"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/113-navigation@2x.png000000000080d041^708"CpResource "Dining/113-navigation@2x.png" "DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/113-navigation@2x.png"    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/113-navigation@2x.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"1A5ABD98-5F0F-4BA5-9CC5-DE28676A3DC3-
+
+CCpResource Dining/117-todo.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/117-todo.png
+s374438539.486404
+e374438539.508366
+r1
+xCpResource
+xDining/117-todo.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/117-todo.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/117-todo.pngd49c7c8b7a51b641^705c828b7a51b641^---0#0#0#-19%DVTDocumentLocation2@150"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/117-todo.png000000000080d041^677"CpResource Dining/117-todo.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/117-todo.png    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/117-todo.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"9A4B6C65-0DE1-48F0-922D-AE7760186D28-
+
+CCpResource Dining/117-todo@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/117-todo@2x.png
+s374438539.538900
+e374438539.553697
+r1
+xCpResource
+xDining/117-todo@2x.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/117-todo@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/117-todo@2x.png410e8a8b7a51b641^5c398f8b7a51b641^---0#0#0#-19%DVTDocumentLocation2@153"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/117-todo@2x.png000000000080d041^690"CpResource "Dining/117-todo@2x.png" "DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/117-todo@2x.png"    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/117-todo@2x.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"2697E14F-F674-4FC7-872F-C9FA4D6EC435-
+
+CCpResource Dining/179-notepad.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/179-notepad.png
+s374438539.453872
+e374438539.472369
+r1
+xCpResource
+xDining/179-notepad.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/179-notepad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/179-notepad.png3e75748b7a51b641^8200798b7a51b641^---0#0#0#-19%DVTDocumentLocation2@153"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/179-notepad.png000000000080d041^686"CpResource Dining/179-notepad.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/179-notepad.png    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/179-notepad.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"35186EF4-B932-407A-A137-0AB65799A962-
+
+CCpResource Dining/179-notepad@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/179-notepad@2x.png
+s374438539.475951
+e374438539.523288
+r1
+xCpResource
+xDining/179-notepad@2x.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/179-notepad@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/179-notepad@2x.png91f0798b7a51b641^bde2858b7a51b641^---0#0#0#-19%DVTDocumentLocation2@156"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/179-notepad@2x.png000000000080d041^699"CpResource "Dining/179-notepad@2x.png" "DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/179-notepad@2x.png"    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/179-notepad@2x.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"2CDFB17B-C5D1-463A-A922-35C1C1AA9D8E-
+
+CCpResource Dining/Default-568h@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default-568h@2x.png
+s374438538.002185
+e374438538.006629
+r1
+xCpResource
+xDining/Default-568h@2x.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default-568h@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default-568h@2x.png1f9f008a7a51b641^18b3018a7a51b641^---0#0#0#-19%DVTDocumentLocation2@157"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default-568h@2x.png000000000080d041^702"CpResource "Dining/Default-568h@2x.png" "DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default-568h@2x.png"    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/Default-568h@2x.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"53BE83E1-56D0-4517-9DBC-F04E198F3E2C-
+
+CCpResource Dining/Default.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default.png
+s374438537.995448
+e374438538.000846
+r1
+xCpResource
+xDining/Default.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default.pngc8eefe897a51b641^1840008a7a51b641^---0#0#0#-19%DVTDocumentLocation2@149"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default.png000000000080d041^674"CpResource Dining/Default.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default.png    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/Default.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"64DBF004-A86B-436E-BF1D-4BE064DDB8E6-
+
+CCpResource Dining/Default@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default@2x.png
+s374438538.001674
+e374438538.005884
+r1
+xCpResource
+xDining/Default@2x.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default@2x.pngf182008a7a51b641^0e83018a7a51b641^---0#0#0#-19%DVTDocumentLocation2@152"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default@2x.png000000000080d041^687"CpResource "Dining/Default@2x.png" "DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Default@2x.png"    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/Default@2x.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"9B0B67C4-53B0-4A2C-8760-9A2F81C05FA9-
+
+CCpResource Dining/DiningDBCreator.sqlite DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DiningDBCreator.sqlite
+s374438539.375523
+e374438539.379789
+r1
+xCpResource
+xDining/DiningDBCreator.sqlite
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DiningDBCreator.sqlite
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DiningDBCreator.sqlitea437608b7a51b641^f646618b7a51b641^---0#0#0#-19%DVTDocumentLocation2@160"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DiningDBCreator.sqlite000000000080d041^707"CpResource Dining/DiningDBCreator.sqlite DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DiningDBCreator.sqlite    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/DiningDBCreator.sqlite" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"1DAEE2FC-6096-4F4C-8CF9-9551F8E37B54-
+
+CCpResource Dining/DropShadow.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DropShadow.png
+s374438539.549229
+e374438539.553334
+r1
+xCpResource
+xDining/DropShadow.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DropShadow.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DropShadow.png14b18c8b7a51b641^26368f8b7a51b641^---0#0#0#-19%DVTDocumentLocation2@152"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DropShadow.png000000000080d041^683"CpResource Dining/DropShadow.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DropShadow.png    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/DropShadow.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"9A4517C6-F371-4938-A6D8-DB475A5EC7C8-
+
+CCpResource Dining/DropShadow@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DropShadow@2x.png
+s374438539.555312
+e374438539.595933
+r1
+xCpResource
+xDining/DropShadow@2x.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DropShadow@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DropShadow@2x.pngb51a928b7a51b641^95f4988b7a51b641^---0#0#0#-19%DVTDocumentLocation2@155"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DropShadow@2x.png000000000080d041^696"CpResource "Dining/DropShadow@2x.png" "DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/DropShadow@2x.png"    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/DropShadow@2x.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"8EB5F5CF-68AA-42E0-A6DF-0A15385A46B6-
+
+CCpResource Dining/Featheringill.jpeg DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Featheringill.jpeg
+s374438539.381334
+e374438539.384975
+r1
+xCpResource
+xDining/Featheringill.jpeg
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Featheringill.jpeg
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Featheringill.jpegabb4618b7a51b641^7270658b7a51b641^---0#0#0#-19%DVTDocumentLocation2@156"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Featheringill.jpeg000000000080d041^695"CpResource Dining/Featheringill.jpeg DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Featheringill.jpeg    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/Featheringill.jpeg" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"B9C14A9C-A7F0-484E-9A4B-B5A403435B76-
+
+CCpResource Dining/VandyMobileBackgroundCanvas@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/VandyMobileBackgroundCanvas@2x.png
+s374438539.396779
+e374438539.431689
+r1
+xCpResource
+xDining/VandyMobileBackgroundCanvas@2x.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/VandyMobileBackgroundCanvas@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/VandyMobileBackgroundCanvas@2x.png2eaa658b7a51b641^2c836e8b7a51b641^---0#0#0#-19%DVTDocumentLocation2@172"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/VandyMobileBackgroundCanvas@2x.png000000000080d041^747"CpResource "Dining/VandyMobileBackgroundCanvas@2x.png" "DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/VandyMobileBackgroundCanvas@2x.png"    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/VandyMobileBackgroundCanvas@2x.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"77555E1B-85AB-4FA1-A49E-4F24A77CEC16-
+
+CCpResource Dining/blackoverlay.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/blackoverlay.png
+s374438539.378512
+e374438539.382659
+r1
+xCpResource
+xDining/blackoverlay.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/blackoverlay.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/blackoverlay.pngc9ff608b7a51b641^126b658b7a51b641^---0#0#0#-19%DVTDocumentLocation2@154"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/blackoverlay.png000000000080d041^689"CpResource Dining/blackoverlay.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/blackoverlay.png    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/blackoverlay.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"CC69465F-E4EB-4626-9A6B-15273CE9A775-
+
+CCpResource Dining/frontViewControllerDropShadow.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/frontViewControllerDropShadow.png
+s374438539.555761
+e374438539.593829
+r1
+xCpResource
+xDining/frontViewControllerDropShadow.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/frontViewControllerDropShadow.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/frontViewControllerDropShadow.pngd1418f8b7a51b641^1bf1988b7a51b641^---0#0#0#-19%DVTDocumentLocation2@171"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/frontViewControllerDropShadow.png000000000080d041^740"CpResource Dining/frontViewControllerDropShadow.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/frontViewControllerDropShadow.png    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/frontViewControllerDropShadow.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"41A917A2-C33F-4180-A7C1-0E057B334992-
+
+CCpResource Dining/frontViewControllerDropShadow@2x.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/frontViewControllerDropShadow@2x.png
+s374438539.596109
+e374438539.613092
+r1
+xCpResource
+xDining/frontViewControllerDropShadow@2x.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/frontViewControllerDropShadow@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/frontViewControllerDropShadow@2x.pngffb1988b7a51b641^c18c9d8b7a51b641^---0#0#0#-19%DVTDocumentLocation2@174"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/frontViewControllerDropShadow@2x.png000000000080d041^753"CpResource "Dining/frontViewControllerDropShadow@2x.png" "DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/frontViewControllerDropShadow@2x.png"    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/frontViewControllerDropShadow@2x.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"AAB3D3BC-94B4-4696-AF09-A696F18F1DEF-
+
+CCpResource Dining/titleoverlay.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/titleoverlay.png
+s374438539.385241
+e374438539.431337
+r1
+xCpResource
+xDining/titleoverlay.png
+xDerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/titleoverlay.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Copy DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/titleoverlay.pngce00638b7a51b641^e36c6e8b7a51b641^---0#0#0#-19%DVTDocumentLocation2@154"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/titleoverlay.png000000000080d041^689"CpResource Dining/titleoverlay.png DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/titleoverlay.png    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/odormody/Documents/iOS Development/dining-ios/Dining/titleoverlay.png" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"46F50E98-2E9E-4532-8AFD-F7E5E2E8F80E-
+
+CDataModelVersionCompile "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining.momd" "/Users/odormody/Documents/iOS Development/dining-ios/Dining/Dining.xcdatamodeld"
+s374438534.267655
+e374438535.230076
+r1
+xDataModelVersionCompile
+x/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining.momd
+x/Users/odormody/Documents/iOS Development/dining-ios/Dining/Dining.xcdatamodeld
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection129"DataModelVersionCompile DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining.momd Dining/Dining.xcdatamodeld16a544867a51b641^90f73a877a51b641^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/Dining.xcdatamodeld/0000000000000000^959"DataModelVersionCompile DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining.momd Dining/Dining.xcdatamodeld    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/momc -XD_MOMC_SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -XD_MOMC_IOS_TARGET_VERSION=5.1 -MOMC_PLATFORMS iphonesimulator -MOMC_PLATFORMS iphoneos -XD_MOMC_TARGET_VERSION=10.6 "/Users/odormody/Documents/iOS Development/dining-ios/Dining/Dining.xcdatamodeld" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining.momd"36"68D6D079-B048-4BA8-AE5E-164F0BD6EF6A-
+
+CGenerateDSYMFile "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app.dSYM" "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining"
+s374440079.529695
+e374440079.615831
+r1
+xGenerateDSYMFile
+x/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app.dSYM
+x/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection135"Generating /Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app.dSYM5fb4878f8051b641^09a79d8f8051b641^---0#0#0#-19%DVTDocumentLocation2@143"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app.dSYM/0000000000000000^779"GenerateDSYMFile DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app.dSYM DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app.dSYM"36"47C197F3-D469-41CA-B69C-5AC719D2A9BE-
+
+CLd "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining" normal i386
+s374440079.452012
+e374440079.517968
+r1
+xLd
+x/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection131"Link /Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Diningbad9738f8051b641^43aa848f8051b641^---0#0#0#--1425"Ld DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining normal i386    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv IPHONEOS_DEPLOYMENT_TARGET 5.1    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk "-L/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" -filelist "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Objects-normal/i386/Dining.LinkFileList" -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=5.1 -framework QuartzCore -framework MapKit -framework UIKit -framework Foundation -framework CoreGraphics -framework CoreData -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Dining"36"AE2890AC-92E8-4FDD-9AD7-793B2FE25B24-
+
+CProcessInfoPlistFile "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Info.plist" Dining/Dining-Info.plist
+s374438534.217498
+e374438534.232171
+r1
+xProcessInfoPlistFile
+x/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Info.plist
+xDining/Dining-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection32"Process Dining/Dining-Info.plist00c637867a51b641^36763d867a51b641^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/Dining-Info.plist0000000000000000^775"ProcessInfoPlistFile DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Info.plist Dining/Dining-Info.plist    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Dining/Dining-Info.plist -genpkginfo "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app/Info.plist"36"C0BDD407-4ACC-46DA-AC4A-398D4A7F81EC-
+
+CProcessPCH "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch.pth" Dining/Dining-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s374438534.275449
+e374438535.411147
+r1
+xProcessPCH
+x/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch.pth
+xDining/Dining-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Precompile Dining/Dining-Prefix.pch365a4a867a51b641^354069877a51b641^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/odormody/Documents/iOS%20Development/dining-ios/Dining/Dining-Prefix.pch0000000000000000^3944"ProcessPCH DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch.pth Dining/Dining-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=5.1 -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-generated-files.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-own-target-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-all-target-headers.hmap" -iquote "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/Dining-project-headers.hmap" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources/i386" "-I/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/Dining.build/Debug-iphonesimulator/Dining.build/DerivedSources" "-F/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator" --serialize-diagnostics "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch.dia" -c "/Users/odormody/Documents/iOS Development/dining-ios/Dining/Dining-Prefix.pch" -o "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch.pth" -MMD -MT dependencies -MF "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Intermediates/PrecompiledHeaders/Dining-Prefix-chcqmjryiqpehpenqflzyyctjnia/Dining-Prefix.pch.d"36"7C3903BA-1659-46B3-A8FB-BB385399C993-
+
+CProcessPCH "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Index/PrecompiledHeaders/Dining-Prefix-ewhutofkfbtmoserwbvhmmpzkztk_ast/Dining-Prefix.pch.pth" Dining/Dining-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CTouch "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"
+s374440376.002956
+e374440376.026769
+r1
+xTouch
+x/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Touch /Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app80d600b88151b641^eee906b88151b641^---0#0#0#--474"Touch DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app    cd "/Users/odormody/Documents/iOS Development/dining-ios"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/odormody/Documents/iOS Development/dining-ios/DerivedData/Dining/Build/Products/Debug-iphonesimulator/Dining.app"36"B7C41748-30E7-432A-972E-0D43EBE06EDC-
+
