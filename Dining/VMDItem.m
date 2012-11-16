@@ -10,15 +10,5 @@
 
 @implementation VMDItem
 
-- (id)initWithName:(NSString *)name category:(NSString *)category nutrition:(NSDictionary *)nutrition
-{
-    self = [super init];
-    if (self) {
-        self.name = name;
-        self.category = category;
-        self.nutrition = nutrition;
-    }
-    return self;
-}
 
 @end
