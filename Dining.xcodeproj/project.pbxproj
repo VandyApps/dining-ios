@@ -60,8 +60,6 @@
 /* Begin PBXFileReference section */
 		021E34BB16435ACB00463D96 /* VMDItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDItem.h; sourceTree = "<group>"; };
 		021E34BC16435ACB00463D96 /* VMDItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDItem.m; sourceTree = "<group>"; };
-		025536D416517F1E007F922A /* VMDMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMDMenuViewController.h; sourceTree = "<group>"; };
-		025536D516517F1E007F922A /* VMDMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMDMenuViewController.m; sourceTree = "<group>"; };
 		0262A9701651807900391641 /* VMDMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDMenuTableViewController.h; sourceTree = "<group>"; };
 		0262A9711651807900391641 /* VMDMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDMenuTableViewController.m; sourceTree = "<group>"; };
 		D2024C09160E99CA000BAE1A /* SASizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASizer.h; sourceTree = "<group>"; };
@@ -149,8 +147,6 @@
 		025536CA16517E5F007F922A /* Menu VC */ = {
 			isa = PBXGroup;
 			children = (
-				025536D416517F1E007F922A /* VMDMenuViewController.h */,
-				025536D516517F1E007F922A /* VMDMenuViewController.m */,
 			);
 			name = "Menu VC";
 			sourceTree = "<group>";
@@ -210,6 +206,7 @@
 			children = (
 				D20D442A160E8CAB00D954B3 /* Data Model */,
 				D20D441C160E8C5900D954B3 /* Utilities */,
+				D253CA071655CEBE0052D8CC /* Options VC */,
 				D20D4408160E80B100D954B3 /* Location Detail VC */,
 				D20D43C3160E2C1300D954B3 /* List VC */,
 				D20D43C2160E2C0C00D954B3 /* Map VC */,
@@ -307,9 +304,6 @@
 		D20D441C160E8C5900D954B3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				D2028BDE163348AA00D20CDB /* VMDOptionsViewController.h */,
-				D2028BDF163348AA00D20CDB /* VMDOptionsViewController.m */,
-				D2028BDC1633488A00D20CDB /* VMDOptionsViewController.xib */,
 				D2028BDB163347FB00D20CDB /* JSSlidingViewController */,
 				D20D4424160E8C8900D954B3 /* SAImageManipulator.h */,
 				D20D441D160E8C8900D954B3 /* SAImageManipulator.m */,
@@ -347,6 +341,16 @@
 				D26BCCA116434D32007030DD /* VMDMenu.m */,
 			);
 			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		D253CA071655CEBE0052D8CC /* Options VC */ = {
+			isa = PBXGroup;
+			children = (
+				D2028BDE163348AA00D20CDB /* VMDOptionsViewController.h */,
+				D2028BDF163348AA00D20CDB /* VMDOptionsViewController.m */,
+				D2028BDC1633488A00D20CDB /* VMDOptionsViewController.xib */,
+			);
+			name = "Options VC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
