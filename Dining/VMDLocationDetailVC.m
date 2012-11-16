@@ -380,6 +380,7 @@ typedef enum meals
                 break;
         }
         
+        // Conditions for Now and Tomorrow
         if (i == 0) {
             aMealLabel.text = [NSString stringWithFormat:@"%@ (Now)", aMealLabel.text];
         }
@@ -391,6 +392,7 @@ typedef enum meals
        
     }
     
+    // Set the currently selected meal period
     self.currentlySelectedMealPeriod = aMealPeriod;
     
 }

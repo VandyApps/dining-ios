@@ -22,8 +22,8 @@
 		D2028BD81633477D00D20CDB /* frontViewControllerDropShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D2028BD41633477D00D20CDB /* frontViewControllerDropShadow.png */; };
 		D2028BD91633477D00D20CDB /* frontViewControllerDropShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2028BD51633477D00D20CDB /* frontViewControllerDropShadow@2x.png */; };
 		D2028BDA1633477D00D20CDB /* JSSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2028BD71633477D00D20CDB /* JSSlidingViewController.m */; };
-		D2028BDD1633488A00D20CDB /* VMDMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2028BDC1633488A00D20CDB /* VMDMenuViewController.xib */; };
-		D2028BE0163348AA00D20CDB /* VMDMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2028BDF163348AA00D20CDB /* VMDMenuViewController.m */; };
+		D2028BDD1633488A00D20CDB /* VMDOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2028BDC1633488A00D20CDB /* VMDOptionsViewController.xib */; };
+		D2028BE0163348AA00D20CDB /* VMDOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2028BDF163348AA00D20CDB /* VMDOptionsViewController.m */; };
 		D20D4385160E239300D954B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D4384160E239300D954B3 /* UIKit.framework */; };
 		D20D4387160E239300D954B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D4386160E239300D954B3 /* Foundation.framework */; };
 		D20D4389160E239300D954B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D4388160E239300D954B3 /* CoreGraphics.framework */; };
@@ -75,9 +75,9 @@
 		D2028BD51633477D00D20CDB /* frontViewControllerDropShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frontViewControllerDropShadow@2x.png"; sourceTree = "<group>"; };
 		D2028BD61633477D00D20CDB /* JSSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSlidingViewController.h; sourceTree = "<group>"; };
 		D2028BD71633477D00D20CDB /* JSSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSlidingViewController.m; sourceTree = "<group>"; };
-		D2028BDC1633488A00D20CDB /* VMDMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMDMenuViewController.xib; sourceTree = "<group>"; };
-		D2028BDE163348AA00D20CDB /* VMDMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDMenuViewController.h; sourceTree = "<group>"; };
-		D2028BDF163348AA00D20CDB /* VMDMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDMenuViewController.m; sourceTree = "<group>"; };
+		D2028BDC1633488A00D20CDB /* VMDOptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMDOptionsViewController.xib; sourceTree = "<group>"; };
+		D2028BDE163348AA00D20CDB /* VMDOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDOptionsViewController.h; sourceTree = "<group>"; };
+		D2028BDF163348AA00D20CDB /* VMDOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDOptionsViewController.m; sourceTree = "<group>"; };
 		D20D4380160E239300D954B3 /* Dining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20D4384160E239300D954B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D20D4386160E239300D954B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -282,9 +282,9 @@
 		D20D441C160E8C5900D954B3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				D2028BDE163348AA00D20CDB /* VMDMenuViewController.h */,
-				D2028BDF163348AA00D20CDB /* VMDMenuViewController.m */,
-				D2028BDC1633488A00D20CDB /* VMDMenuViewController.xib */,
+				D2028BDE163348AA00D20CDB /* VMDOptionsViewController.h */,
+				D2028BDF163348AA00D20CDB /* VMDOptionsViewController.m */,
+				D2028BDC1633488A00D20CDB /* VMDOptionsViewController.xib */,
 				D2028BDB163347FB00D20CDB /* JSSlidingViewController */,
 				D20D4424160E8C8900D954B3 /* SAImageManipulator.h */,
 				D20D441D160E8C8900D954B3 /* SAImageManipulator.m */,
@@ -399,7 +399,7 @@
 				D2028BD3163343BF00D20CDB /* DropShadow@2x.png in Resources */,
 				D2028BD81633477D00D20CDB /* frontViewControllerDropShadow.png in Resources */,
 				D2028BD91633477D00D20CDB /* frontViewControllerDropShadow@2x.png in Resources */,
-				D2028BDD1633488A00D20CDB /* VMDMenuViewController.xib in Resources */,
+				D2028BDD1633488A00D20CDB /* VMDOptionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +424,7 @@
 				D20D442D160E8CE600D954B3 /* OBGradientView.m in Sources */,
 				D2024C0B160E99CA000BAE1A /* SASizer.m in Sources */,
 				D2028BDA1633477D00D20CDB /* JSSlidingViewController.m in Sources */,
-				D2028BE0163348AA00D20CDB /* VMDMenuViewController.m in Sources */,
+				D2028BE0163348AA00D20CDB /* VMDOptionsViewController.m in Sources */,
 				D26BCCA216434D32007030DD /* VMDMenu.m in Sources */,
 				021E34BD16435ACB00463D96 /* VMDItem.m in Sources */,
 			);

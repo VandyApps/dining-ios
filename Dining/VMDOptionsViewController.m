@@ -1,18 +1,18 @@
 //
-//  VMDMenuViewController.m
+//  VMDOptionsViewController.m
 //  Dining
 //
 //  Created by Scott Andrus on 10/20/12.
 //  Copyright (c) 2012 VandyMobile. All rights reserved.
 //
 
-#import "VMDMenuViewController.h"
+#import "VMDOptionsViewController.h"
 
-@interface VMDMenuViewController ()
+@interface VMDOptionsViewController ()
 
 @end
 
-@implementation VMDMenuViewController
+@implementation VMDOptionsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

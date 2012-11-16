@@ -30,7 +30,7 @@
     mapNC.title = mapNC.tabBarItem.title;
     
     self.frontVC = tabBarController;
-    self.backVC = [[VMDMenuViewController alloc] initWithNibName:@"VMDMenuViewController" bundle:nil];
+    self.backVC = [[VMDOptionsViewController alloc] initWithNibName:@"VMDOptionsViewController" bundle:nil];
     
     self.viewController = [[JSSlidingViewController alloc] initWithFrontViewController:self.frontVC backViewController:self.backVC];
     self.viewController.delegate = self;

@@ -1,5 +1,5 @@
 //
-//  VMDMenuViewController.h
+//  VMDOptionsViewController.h
 //  Dining
 //
 //  Created by Scott Andrus on 10/20/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VMDMenuViewController : UIViewController
+@interface VMDOptionsViewController : UIViewController
 
 @end

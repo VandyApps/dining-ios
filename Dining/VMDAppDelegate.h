@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "JSSlidingViewController.h"
-#import "VMDMenuViewController.h"
+#import "VMDOptionsViewController.h"
 
 @interface VMDAppDelegate : UIResponder <UIApplicationDelegate, JSSlidingViewControllerDelegate>
 
@@ -20,7 +20,7 @@
 
 @property (strong, nonatomic) JSSlidingViewController *viewController;
 
-@property (strong, nonatomic) VMDMenuViewController *backVC;
+@property (strong, nonatomic) VMDOptionsViewController *backVC;
 @property (strong, nonatomic) UITabBarController *frontVC;
 
 - (void)saveContext;
