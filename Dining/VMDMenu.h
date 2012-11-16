@@ -19,4 +19,6 @@
 // Breakfast - Lunch - Dinner - FourthMeal
 @property (strong, nonatomic) NSDictionary *mealPeriods;
 
+- (id)initWithLocation:(DLocation *)location date:(NSDate *)date content:(NSDictionary *)mealPeriods;
+
 @end

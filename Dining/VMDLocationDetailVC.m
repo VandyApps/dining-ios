@@ -8,6 +8,8 @@
 
 #import "VMDLocationDetailVC.h"
 #import "UIView+Frame.h"
+#import "VMDMenu.h"
+#import "VMDItem.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -60,6 +62,9 @@ typedef enum meals
     
     [self customizeUI];
     [self downloadPhoto];
+    
+    // DEBUG
+    [self loadMenus];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -388,6 +393,14 @@ typedef enum meals
     
     self.currentlySelectedMealPeriod = aMealPeriod;
     
+}
+
+- (void)loadMenus {
+    VMDItem *breakfastItem1 = [[VMDItem alloc] initWithName:@"Breakfast1" category:@"Category1" nutrition:nil];
+    NSArray *mainSection = [NSArray arrayWithObjects:breakfastItem1, nil];
+    NSArray *breakfastSections = [NSArray arrayWithObjects:mainSection, nil];
+    NSDictionary *mealPeriods = [NSDictionary dictionaryWithObjectsAndKeys:breakfastSections, @"Breakfast", nil];
+    VMDMenu *myMenu = [[VMDMenu alloc] initWithLocation:self.location date:[NSDate date] content:mealPeriods];
 }
 
 - (void)downloadPhoto {

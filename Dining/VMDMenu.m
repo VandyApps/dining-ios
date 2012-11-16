@@ -16,6 +16,12 @@
     if (self) {
         self.location = location;
         self.date = date;
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"MMMM d, yyyy"];
+        
+        self.dateString = [formatter stringFromDate:date];
+        
         self.mealPeriods = mealPeriods;
     }
     return self;
