@@ -10,6 +10,7 @@
 #import "UIView+Frame.h"
 #import "VMDMenu.h"
 #import "VMDItem.h"
+#import "VMDMenuTableViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -397,12 +398,13 @@ typedef enum meals
     
 }
 
-- (void)loadMenus {
+- (VMDMenu *)loadMenus {
     VMDItem *breakfastItem1 = [[VMDItem alloc] initWithName:@"Breakfast1" category:@"Category1" nutrition:nil];
     NSArray *mainSection = [NSArray arrayWithObjects:breakfastItem1, nil];
     NSArray *breakfastSections = [NSArray arrayWithObjects:mainSection, nil];
     NSDictionary *mealPeriods = [NSDictionary dictionaryWithObjectsAndKeys:breakfastSections, @"Breakfast", nil];
     VMDMenu *myMenu = [[VMDMenu alloc] initWithLocation:self.location date:[NSDate date] content:mealPeriods];
+    return myMenu;
 }
 
 - (void)downloadPhoto {
@@ -494,6 +496,11 @@ typedef enum meals
     [self.mealScrollView setContentOffset:CGPointMake(self.mealScrollView.width * MAX((page - 1), 0), 0) animated:YES];
 }
 
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"MenuSegue"]) {
+        VMDMenuTableViewController *vmdmtvc= (VMDMenuTableViewController *)segue.destinationViewController;
+        vmdmtvc.menu = [self loadMenus];
+    }
+}
 
 @end

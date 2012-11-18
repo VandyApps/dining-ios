@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VMDMenu.h"
 
 @interface VMDMenuTableViewController : UITableViewController
+
+@property (strong, nonatomic) VMDMenu *menu;
 
 @end

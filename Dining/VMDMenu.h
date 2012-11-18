@@ -16,7 +16,7 @@
 @property (strong, nonatomic) NSString *dateString;
 
 // Meal Periods:
-// Breakfast - Lunch - Dinner - FourthMeal
+// Breakfast - Lunch - Dinner - Fourthmeal
 @property (strong, nonatomic) NSDictionary *mealPeriods;
 
 - (id)initWithLocation:(DLocation *)location date:(NSDate *)date content:(NSDictionary *)mealPeriods;

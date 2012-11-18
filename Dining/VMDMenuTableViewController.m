@@ -7,6 +7,7 @@
 //
 
 #import "VMDMenuTableViewController.h"
+#import "VMDItem.h"
 
 @interface VMDMenuTableViewController ()
 
@@ -44,24 +45,49 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+
+    return self.menu.mealPeriods.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self mealItemsForTableViewSection:section].count;
+}
+
+- (NSArray *)mealItemsForTableViewSection:(NSInteger)section {
+    NSString *mealKey;
+    
+    if (section == 0) {
+        mealKey = @"Breakfast";
+    } else if (section == 1) {
+        mealKey = @"Lunch";
+    } else if (section == 2) {
+        mealKey = @"Dinner";
+    } else if (section == 3) {
+        mealKey = @"Fourthmeal";
+    }
+    
+    return [self.menu.mealPeriods objectForKey:mealKey];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"VMDMenuCell";
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"VMDMenuCell"];
+    }
+    //[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+    
+    NSArray *items = [self mealItemsForTableViewSection:indexPath.section];
+    NSArray *mainItems = [items lastObject];
+    VMDItem *anItem = [mainItems objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = anItem.name;
+    cell.detailTextLabel.text = anItem.category;
     
     return cell;
 }
