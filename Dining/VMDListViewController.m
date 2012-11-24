@@ -31,6 +31,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
+    // Grab the app delegate for use of the sliding view controller
+    self.appDelegate = (VMDAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
     // Fetch the data from the Core Data context
     [self fetchDataFromContext];
     
@@ -43,7 +46,7 @@
 {
     [self setTableView:nil];
     [self setFeaturedCellContainerView:nil];
-    [self setFeaturedCellView:nil];
+    [self setFeaturedCellButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -129,6 +132,13 @@
 //- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //    
 //}
+
+#pragma mark - IBActions
+
+- (IBAction)optionsPressed:(UIBarButtonItem *)sender {
+    [self.appDelegate.viewController openSlider:YES completion:nil];
+}
+
 
 #pragma mark - Storyboard segue
 
