@@ -9,7 +9,8 @@
 #import "VMDAppDelegate.h"
 #import "DLocation.h"
 #import "VMDListViewController.h"
-#import "SAImageManipulator.h"
+#import "SAViewManipulator.h"
+#import "VMDTabBarController.h"
 
 @implementation VMDAppDelegate
 
@@ -19,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    VMDTabBarController *tabBarController = (VMDTabBarController *)self.window.rootViewController;
     
     UINavigationController *listNC = (UINavigationController *)[tabBarController.viewControllers objectAtIndex:0];
     VMDListViewController *listVC = [listNC.viewControllers objectAtIndex:0];

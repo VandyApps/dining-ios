@@ -48,13 +48,17 @@
 		D20D4418160E879F00D954B3 /* Featheringill.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D20D4415160E879F00D954B3 /* Featheringill.jpeg */; };
 		D20D4419160E879F00D954B3 /* titleoverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D4416160E879F00D954B3 /* titleoverlay.png */; };
 		D20D441B160E87AD00D954B3 /* VandyMobileBackgroundCanvas@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D20D441A160E87AD00D954B3 /* VandyMobileBackgroundCanvas@2x.png */; };
-		D20D4425160E8C8900D954B3 /* SAImageManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D441D160E8C8900D954B3 /* SAImageManipulator.m */; };
+		D20D4425160E8C8900D954B3 /* SAViewManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D441D160E8C8900D954B3 /* SAViewManipulator.m */; };
 		D20D4426160E8C8900D954B3 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D441E160E8C8900D954B3 /* UIImage+Color.m */; };
 		D20D4427160E8C8900D954B3 /* UIViewController+Overview.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D4421160E8C8900D954B3 /* UIViewController+Overview.m */; };
 		D20D4428160E8C8900D954B3 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D4422160E8C8900D954B3 /* UIView+Frame.m */; };
 		D20D442D160E8CE600D954B3 /* OBGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D442C160E8CE600D954B3 /* OBGradientView.m */; };
 		D20D442F160E8D0400D954B3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D442E160E8D0400D954B3 /* QuartzCore.framework */; };
 		D26BCCA216434D32007030DD /* VMDMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D26BCCA116434D32007030DD /* VMDMenu.m */; };
+		D28A0B04168B958200E7815E /* VMDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B03168B958200E7815E /* VMDTabBarController.m */; };
+		D28A0B09168B978400E7815E /* VMDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B08168B978400E7815E /* VMDLoginViewController.m */; };
+		D28A0B0D168B9B7500E7815E /* UIColor+i7HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B0C168B9B7500E7815E /* UIColor+i7HexColor.m */; };
+		D28A0B15168BA6C400E7815E /* MenuIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D28A0B14168BA6C400E7815E /* MenuIcon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,19 +116,26 @@
 		D20D4415160E879F00D954B3 /* Featheringill.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Featheringill.jpeg; sourceTree = "<group>"; };
 		D20D4416160E879F00D954B3 /* titleoverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleoverlay.png; sourceTree = "<group>"; };
 		D20D441A160E87AD00D954B3 /* VandyMobileBackgroundCanvas@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VandyMobileBackgroundCanvas@2x.png"; sourceTree = "<group>"; };
-		D20D441D160E8C8900D954B3 /* SAImageManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAImageManipulator.m; sourceTree = "<group>"; };
+		D20D441D160E8C8900D954B3 /* SAViewManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAViewManipulator.m; sourceTree = "<group>"; };
 		D20D441E160E8C8900D954B3 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		D20D441F160E8C8900D954B3 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
 		D20D4420160E8C8900D954B3 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		D20D4421160E8C8900D954B3 /* UIViewController+Overview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Overview.m"; sourceTree = "<group>"; };
 		D20D4422160E8C8900D954B3 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		D20D4423160E8C8900D954B3 /* UIViewController+Overview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Overview.h"; sourceTree = "<group>"; };
-		D20D4424160E8C8900D954B3 /* SAImageManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAImageManipulator.h; sourceTree = "<group>"; };
+		D20D4424160E8C8900D954B3 /* SAViewManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAViewManipulator.h; sourceTree = "<group>"; };
 		D20D442B160E8CE600D954B3 /* OBGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBGradientView.h; sourceTree = "<group>"; };
 		D20D442C160E8CE600D954B3 /* OBGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBGradientView.m; sourceTree = "<group>"; };
 		D20D442E160E8D0400D954B3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D26BCCA016434D32007030DD /* VMDMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDMenu.h; sourceTree = "<group>"; };
 		D26BCCA116434D32007030DD /* VMDMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDMenu.m; sourceTree = "<group>"; };
+		D28A0B02168B958200E7815E /* VMDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDTabBarController.h; sourceTree = "<group>"; };
+		D28A0B03168B958200E7815E /* VMDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDTabBarController.m; sourceTree = "<group>"; };
+		D28A0B07168B978400E7815E /* VMDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDLoginViewController.h; sourceTree = "<group>"; };
+		D28A0B08168B978400E7815E /* VMDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDLoginViewController.m; sourceTree = "<group>"; };
+		D28A0B0B168B9B7500E7815E /* UIColor+i7HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+i7HexColor.h"; sourceTree = "<group>"; };
+		D28A0B0C168B9B7500E7815E /* UIColor+i7HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+i7HexColor.m"; sourceTree = "<group>"; };
+		D28A0B14168BA6C400E7815E /* MenuIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MenuIcon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +223,8 @@
 				D20D43C2160E2C0C00D954B3 /* Map VC */,
 				025536CA16517E5F007F922A /* Menu VC */,
 				0262A9731651807C00391641 /* Menu Table VC */,
+				D28A0B0A168B978B00E7815E /* Login VC */,
+				D28A0B06168B958800E7815E /* Tab Bar Controller */,
 				D20D43BB160E271800D954B3 /* App Delegate */,
 				D20D43C1160E2BFB00D954B3 /* Storyboards */,
 				D20D43BA160E26EF00D954B3 /* Images */,
@@ -235,6 +248,7 @@
 		D20D43BA160E26EF00D954B3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D28A0B14168BA6C400E7815E /* MenuIcon@2x.png */,
 				D2028BD0163343BF00D20CDB /* DropShadow.png */,
 				D2028BD1163343BF00D20CDB /* DropShadow@2x.png */,
 				D2024C22160EB77F000BAE1A /* 117-todo.png */,
@@ -305,8 +319,8 @@
 			isa = PBXGroup;
 			children = (
 				D2028BDB163347FB00D20CDB /* JSSlidingViewController */,
-				D20D4424160E8C8900D954B3 /* SAImageManipulator.h */,
-				D20D441D160E8C8900D954B3 /* SAImageManipulator.m */,
+				D20D4424160E8C8900D954B3 /* SAViewManipulator.h */,
+				D20D441D160E8C8900D954B3 /* SAViewManipulator.m */,
 				D20D442B160E8CE600D954B3 /* OBGradientView.h */,
 				D20D442C160E8CE600D954B3 /* OBGradientView.m */,
 				D2024C09160E99CA000BAE1A /* SASizer.h */,
@@ -319,6 +333,8 @@
 		D20D4429160E8C9300D954B3 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				D28A0B0B168B9B7500E7815E /* UIColor+i7HexColor.h */,
+				D28A0B0C168B9B7500E7815E /* UIColor+i7HexColor.m */,
 				D20D441F160E8C8900D954B3 /* UIImage+Color.h */,
 				D20D441E160E8C8900D954B3 /* UIImage+Color.m */,
 				D20D4420160E8C8900D954B3 /* UIView+Frame.h */,
@@ -351,6 +367,24 @@
 				D2028BDC1633488A00D20CDB /* VMDOptionsViewController.xib */,
 			);
 			name = "Options VC";
+			sourceTree = "<group>";
+		};
+		D28A0B06168B958800E7815E /* Tab Bar Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D28A0B02168B958200E7815E /* VMDTabBarController.h */,
+				D28A0B03168B958200E7815E /* VMDTabBarController.m */,
+			);
+			name = "Tab Bar Controller";
+			sourceTree = "<group>";
+		};
+		D28A0B0A168B978B00E7815E /* Login VC */ = {
+			isa = PBXGroup;
+			children = (
+				D28A0B07168B978400E7815E /* VMDLoginViewController.h */,
+				D28A0B08168B978400E7815E /* VMDLoginViewController.m */,
+			);
+			name = "Login VC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +463,7 @@
 				D2028BD81633477D00D20CDB /* frontViewControllerDropShadow.png in Resources */,
 				D2028BD91633477D00D20CDB /* frontViewControllerDropShadow@2x.png in Resources */,
 				D2028BDD1633488A00D20CDB /* VMDOptionsViewController.xib in Resources */,
+				D28A0B15168BA6C400E7815E /* MenuIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +481,7 @@
 				D20D43B3160E23DC00D954B3 /* VMDMapViewController.m in Sources */,
 				D20D43CE160E39D600D954B3 /* DLocation.m in Sources */,
 				D20D4407160E80AC00D954B3 /* VMDLocationDetailVC.m in Sources */,
-				D20D4425160E8C8900D954B3 /* SAImageManipulator.m in Sources */,
+				D20D4425160E8C8900D954B3 /* SAViewManipulator.m in Sources */,
 				D20D4426160E8C8900D954B3 /* UIImage+Color.m in Sources */,
 				D20D4427160E8C8900D954B3 /* UIViewController+Overview.m in Sources */,
 				D20D4428160E8C8900D954B3 /* UIView+Frame.m in Sources */,
@@ -457,6 +492,9 @@
 				D26BCCA216434D32007030DD /* VMDMenu.m in Sources */,
 				021E34BD16435ACB00463D96 /* VMDItem.m in Sources */,
 				0262A9721651807900391641 /* VMDMenuTableViewController.m in Sources */,
+				D28A0B04168B958200E7815E /* VMDTabBarController.m in Sources */,
+				D28A0B09168B978400E7815E /* VMDLoginViewController.m in Sources */,
+				D28A0B0D168B9B7500E7815E /* UIColor+i7HexColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

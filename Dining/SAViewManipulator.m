@@ -1,15 +1,15 @@
 //
-//  SAImageManipulator.m
+//  SAViewManipulator.m
 //
 //  Created by Scott Andrus on 8/9/12.
 //  Copyright (c) 2012 VandyMobile. All rights reserved.
 //
 
-#import "SAImageManipulator.h"
+#import "SAViewManipulator.h"
 #import "OBGradientView.h"
 #import <QuartzCore/QuartzCore.h>
 
-@implementation SAImageManipulator
+@implementation SAViewManipulator
 
 + (UIView *)getPrimaryBackgroundGradientViewForView:(UIView *)view withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot {
     
@@ -42,7 +42,7 @@
 }
 
 + (UIImage *)gradientBackgroundImageForView:(UIView *)view withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot {
-    return [SAImageManipulator screenShotOfView:[SAImageManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]];
+    return [SAViewManipulator screenShotOfView:[SAViewManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]];
 }
 
 + (CALayer *)getPrimaryBackgroundGradientViewForLayer:(CALayer *)layer withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot {
@@ -77,24 +77,24 @@
 }
 
 + (UIImage *)gradientBackgroundImageForLayer:(CALayer *)layer withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot {
-    return [SAImageManipulator screenShotOfLayer:[SAImageManipulator getPrimaryBackgroundGradientViewForLayer:layer withTopColor:gradientTop andBottomColor:gradientBot]];
+    return [SAViewManipulator screenShotOfLayer:[SAViewManipulator getPrimaryBackgroundGradientViewForLayer:layer withTopColor:gradientTop andBottomColor:gradientBot]];
 }
 
 + (void)setGradientBackgroundImageForView:(id)view withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot {
     if ([view respondsToSelector:@selector(setBackgroundImage:)]) {
-        [view setBackgroundImage:[SAImageManipulator screenShotOfView:[SAImageManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]]];
+        [view setBackgroundImage:[SAViewManipulator screenShotOfView:[SAViewManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]]];
     } else if ([view respondsToSelector:@selector(setBackgroundImage:forToolbarPosition:barMetrics:)]) {
-        [view setBackgroundImage:[SAImageManipulator screenShotOfView:[SAImageManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]] forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
+        [view setBackgroundImage:[SAViewManipulator screenShotOfView:[SAViewManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]] forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
     } else if ([view respondsToSelector:@selector(setBackgroundImage:forState:barMetrics:)]) {
-        [view setBackgroundImage:[SAImageManipulator screenShotOfView:[SAImageManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+        [view setBackgroundImage:[SAViewManipulator screenShotOfView:[SAViewManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     } else if ([view respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)]) {
-        [view setBackgroundImage:[SAImageManipulator screenShotOfView:[SAImageManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]] forBarMetrics:UIBarMetricsDefault];
+        [view setBackgroundImage:[SAViewManipulator screenShotOfView:[SAViewManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]] forBarMetrics:UIBarMetricsDefault];
     } else if ([view respondsToSelector:@selector(setBackgroundImage:forState:)]) {
-        [view setBackgroundImage:[SAImageManipulator screenShotOfView:[SAImageManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]] forState:UIControlStateNormal];
+        [view setBackgroundImage:[SAViewManipulator screenShotOfView:[SAViewManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]] forState:UIControlStateNormal];
     } else if ([view respondsToSelector:@selector(setImage:forState:)]) {
-        [view setImage:[SAImageManipulator screenShotOfView:[SAImageManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]] forState:UIControlStateNormal];
+        [view setImage:[SAViewManipulator screenShotOfView:[SAViewManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]] forState:UIControlStateNormal];
     } else {
-        [view insertSubview:[[UIImageView alloc] initWithImage:[SAImageManipulator gradientBackgroundImageForView:view withTopColor:gradientTop andBottomColor:gradientBot]] atIndex:0];
+        [view insertSubview:[[UIImageView alloc] initWithImage:[SAViewManipulator gradientBackgroundImageForView:view withTopColor:gradientTop andBottomColor:gradientBot]] atIndex:0];
     }
 }
 

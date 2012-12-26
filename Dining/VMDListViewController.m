@@ -9,7 +9,7 @@
 #import "VMDListViewController.h"
 #import "DLocation.h"
 #import "VMDLocationDetailVC.h"
-#import "SAImageManipulator.h"
+#import "SAViewManipulator.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -88,10 +88,12 @@
 //    self.featuredCellContainerView.layer.borderWidth = .5;
     
     // TODO: Make this less buggy
-//    [SAImageManipulator addShadowToView:self.featuredCellView withOpacity:.8 radius:2 andOffset:CGSizeMake(-1, -1)];
+//    [SAViewManipulator addShadowToView:self.featuredCellView withOpacity:.8 radius:2 andOffset:CGSizeMake(-1, -1)];
     
     // Set a tabbar gradient
-    [SAImageManipulator setGradientBackgroundImageForView:self.tabBarController.tabBar withTopColor:nil andBottomColor:nil];
+    [SAViewManipulator setGradientBackgroundImageForView:self.tabBarController.tabBar withTopColor:nil andBottomColor:nil];
+    
+    [self.navigationItem.leftBarButtonItem setImage:[UIImage imageNamed:@"MenuIcon"]];
 }
 
 #pragma mark - UITableView Data Source

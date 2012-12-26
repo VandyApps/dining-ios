@@ -1,5 +1,5 @@
 //
-//  SAImageManipulator.h
+//  SAViewManipulator.h
 //
 //  Created by Scott Andrus on 8/9/12.
 //  Copyright (c) 2012 VandyMobile. All rights reserved.
@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SAImageManipulator : NSObject
+@interface SAViewManipulator : NSObject
 
 + (UIView *)getPrimaryBackgroundGradientViewForView:(UIView *)view withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot;
 
