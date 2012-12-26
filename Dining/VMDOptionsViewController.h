@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VMDOptionsViewController : UIViewController
+@interface VMDOptionsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
