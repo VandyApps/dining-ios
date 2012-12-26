@@ -59,6 +59,7 @@
 		D28A0B09168B978400E7815E /* VMDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B08168B978400E7815E /* VMDLoginViewController.m */; };
 		D28A0B0D168B9B7500E7815E /* UIColor+i7HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B0C168B9B7500E7815E /* UIColor+i7HexColor.m */; };
 		D28A0B15168BA6C400E7815E /* MenuIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D28A0B14168BA6C400E7815E /* MenuIcon@2x.png */; };
+		D28A0B18168BB53300E7815E /* OptionPair.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B17168BB53300E7815E /* OptionPair.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +137,8 @@
 		D28A0B0B168B9B7500E7815E /* UIColor+i7HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+i7HexColor.h"; sourceTree = "<group>"; };
 		D28A0B0C168B9B7500E7815E /* UIColor+i7HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+i7HexColor.m"; sourceTree = "<group>"; };
 		D28A0B14168BA6C400E7815E /* MenuIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MenuIcon@2x.png"; sourceTree = "<group>"; };
+		D28A0B16168BB53300E7815E /* OptionPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionPair.h; sourceTree = "<group>"; };
+		D28A0B17168BB53300E7815E /* OptionPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionPair.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,6 +367,8 @@
 			children = (
 				D2028BDE163348AA00D20CDB /* VMDOptionsViewController.h */,
 				D2028BDF163348AA00D20CDB /* VMDOptionsViewController.m */,
+				D28A0B16168BB53300E7815E /* OptionPair.h */,
+				D28A0B17168BB53300E7815E /* OptionPair.m */,
 				D2028BDC1633488A00D20CDB /* VMDOptionsViewController.xib */,
 			);
 			name = "Options VC";
@@ -495,6 +500,7 @@
 				D28A0B04168B958200E7815E /* VMDTabBarController.m in Sources */,
 				D28A0B09168B978400E7815E /* VMDLoginViewController.m in Sources */,
 				D28A0B0D168B9B7500E7815E /* UIColor+i7HexColor.m in Sources */,
+				D28A0B18168BB53300E7815E /* OptionPair.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
