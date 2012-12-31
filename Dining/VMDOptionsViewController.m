@@ -13,7 +13,13 @@
 #import "OptionPair.h"
 #import "SectionHeaderView.h"
 
+#import "VMDListViewController.h"
+#import "VMDMapViewController.h"
+
 #import <QuartzCore/QuartzCore.h>
+
+#define kSortByHeader @"Sort By"
+#define kFilterHeader @"Filter"
 
 @interface VMDOptionsViewController ()
 
@@ -38,8 +44,18 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    [self populateOptions];
+    self.selectedOptions = [NSMutableArray array];
+    
     [self customizeInterface];
+    
+    // Grab the app delegate for use of the sliding view controller
+    self.appDelegate = (VMDAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [[self.appDelegate viewController] setDelegate:self];
+}
+
+- (void)slidingViewControllerWillOpen:(JSSlidingViewController *)viewController {
+    
+    [self populateOptions];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,23 +69,33 @@
 - (void)populateOptions {
     NSMutableArray *mutableOptions = [NSMutableArray arrayWithCapacity:5];
     
-    OptionPair *sortListPair = [[OptionPair alloc] init];
-    sortListPair.header = @"SORT LIST";
-    sortListPair.array = [NSArray arrayWithObjects:@"Near", @"A-Z", nil];
+    VMDAppDelegate *aD = self.appDelegate;
+    VMDTabBarController *vmdtbc = aD.frontVC;
+    UINavigationController *selectedNC = (UINavigationController *)vmdtbc.selectedViewController;
+    id selectedVC = selectedNC.topViewController;
     
-    OptionPair *filterListPair = [[OptionPair alloc] init];
-    filterListPair.header = @"FILTER LIST";
-    filterListPair.array = [NSArray arrayWithObjects:@"Dining Halls", @"Meal Plan", @"Munchie Marts", @"Open", nil];
-    
-    OptionPair *filterMapPair = [[OptionPair alloc] init];
-    filterMapPair.header = @"FILTER MAP";
-    filterMapPair.array = [NSArray arrayWithObjects:@"Dining Halls", @"Meal Plan", @"Munchie Marts", @"Open", nil];
-    
-    [mutableOptions addObject:sortListPair];
-    [mutableOptions addObject:filterListPair];
-    [mutableOptions addObject:filterMapPair];
+    if ([selectedVC isKindOfClass:[VMDListViewController class]]) {
+        OptionPair *sortListPair = [[OptionPair alloc] init];
+        sortListPair.header = kSortByHeader;
+        sortListPair.array = [NSArray arrayWithObjects:@"Near", @"A-Z", nil];
+        
+        OptionPair *filterListPair = [[OptionPair alloc] init];
+        filterListPair.header = kFilterHeader;
+        filterListPair.array = [NSArray arrayWithObjects:@"Dining Halls", @"Meal Plan", @"Munchie Marts", @"Open", nil];
+        
+        
+        [mutableOptions addObject:sortListPair];
+        [mutableOptions addObject:filterListPair];
+    } else if ([selectedVC isKindOfClass:[VMDMapViewController class]]) {
+        OptionPair *filterMapPair = [[OptionPair alloc] init];
+        filterMapPair.header = kFilterHeader;
+        filterMapPair.array = [NSArray arrayWithObjects:@"Dining Halls", @"Meal Plan", @"Munchie Marts", @"Open", nil];
+        
+        [mutableOptions addObject:filterMapPair];
+    }
     
     self.options = [mutableOptions copy];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Interface 
@@ -99,7 +125,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     
-    if ([[[self.options objectAtIndex:indexPath.section] header] isEqualToString:@"SORT LIST"]) {
+    if ([[[self.options objectAtIndex:indexPath.section] header] isEqualToString:kSortByHeader]) {
         cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     } else cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
@@ -115,10 +141,10 @@
 
 // Called before the user changes the selection. Return a new indexPath, or nil, to change the proposed selection.
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([[[self.options objectAtIndex:indexPath.section] header] isEqualToString:@"SORT LIST"]) {
+    if ([[[self.options objectAtIndex:indexPath.section] header] isEqualToString:kSortByHeader]) {
         
         for (int i = 0; i < self.options.count; ++i) {
-            if ([[[self.options objectAtIndex:i] header] isEqualToString:@"SORT LIST"]) {
+            if ([[[self.options objectAtIndex:i] header] isEqualToString:kSortByHeader]) {
                 for (int j = 0; j < [[[self.options objectAtIndex:i] array] count]; ++j) {
                     
                     NSIndexPath *oldIndexPath = [NSIndexPath indexPathForRow:j inSection:i];
@@ -141,15 +167,20 @@
 
 // Called after the user changes the selection.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (![[[self.options objectAtIndex:indexPath.section] header] isEqualToString:@"SORT LIST"]) {
+    if (![[[self.options objectAtIndex:indexPath.section] header] isEqualToString:kSortByHeader]) {
         UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        UIImageView *selind = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SelectionIndicator"]];
-        cell.accessoryView = selind;
+        if (cell) {
+            [self.selectedOptions addObject:cell.textLabel.text];
+            UIImageView *selind = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SelectionIndicator"]];
+            cell.accessoryView = selind;
+        }
     }
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(3_0) {
-    [tableView cellForRowAtIndexPath:indexPath].accessoryView = nil;
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [self.selectedOptions removeObject:cell.textLabel.text];
+    cell.accessoryView = nil;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

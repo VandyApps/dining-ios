@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#import "VMDTabBarController.h"
 #import "JSSlidingViewController.h"
 #import "VMDOptionsViewController.h"
 
@@ -21,7 +23,7 @@
 @property (strong, nonatomic) JSSlidingViewController *viewController;
 
 @property (strong, nonatomic) VMDOptionsViewController *backVC;
-@property (strong, nonatomic) UITabBarController *frontVC;
+@property (strong, nonatomic) VMDTabBarController *frontVC;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
