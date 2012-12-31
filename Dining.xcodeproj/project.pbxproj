@@ -64,6 +64,8 @@
 		D2B0688716920E3000C2726A /* VMDAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B0688616920E3000C2726A /* VMDAnnotation.m */; };
 		D2DFB7F216922EAC00D25AA6 /* SectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DFB7F116922EAC00D25AA6 /* SectionHeaderView.m */; };
 		D2DFB7F516922EC900D25AA6 /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB7F416922EC900D25AA6 /* SectionHeaderView.xib */; };
+		D2DFB7F716923FC800D25AA6 /* SelectionIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB7F616923FC800D25AA6 /* SelectionIndicator.png */; };
+		D2DFB7F91692402500D25AA6 /* SelectionIndicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB7F81692402500D25AA6 /* SelectionIndicator@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +151,8 @@
 		D2DFB7F016922EAC00D25AA6 /* SectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionHeaderView.h; sourceTree = "<group>"; };
 		D2DFB7F116922EAC00D25AA6 /* SectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionHeaderView.m; sourceTree = "<group>"; };
 		D2DFB7F416922EC900D25AA6 /* SectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
+		D2DFB7F616923FC800D25AA6 /* SelectionIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SelectionIndicator.png; sourceTree = "<group>"; };
+		D2DFB7F81692402500D25AA6 /* SelectionIndicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SelectionIndicator@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +267,8 @@
 		D20D43BA160E26EF00D954B3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D2DFB7F81692402500D25AA6 /* SelectionIndicator@2x.png */,
+				D2DFB7F616923FC800D25AA6 /* SelectionIndicator.png */,
 				D28A0B14168BA6C400E7815E /* MenuIcon@2x.png */,
 				D2028BD0163343BF00D20CDB /* DropShadow.png */,
 				D2028BD1163343BF00D20CDB /* DropShadow@2x.png */,
@@ -487,6 +493,8 @@
 				D2028BDD1633488A00D20CDB /* VMDOptionsViewController.xib in Resources */,
 				D28A0B15168BA6C400E7815E /* MenuIcon@2x.png in Resources */,
 				D2DFB7F516922EC900D25AA6 /* SectionHeaderView.xib in Resources */,
+				D2DFB7F716923FC800D25AA6 /* SelectionIndicator.png in Resources */,
+				D2DFB7F91692402500D25AA6 /* SelectionIndicator@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

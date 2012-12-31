@@ -99,6 +99,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     
+    if ([[[self.options objectAtIndex:indexPath.section] header] isEqualToString:@"SORT LIST"]) {
+        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+    } else cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     cell.textLabel.text = [[[self.options objectAtIndex:indexPath.section] array] objectAtIndex:indexPath.row];
     
     cell.textLabel.textColor = [UIColor whiteColor];
@@ -107,6 +111,45 @@
     cell.textLabel.shadowColor = [UIColor darkTextColor];
     
     return cell;
+}
+
+// Called before the user changes the selection. Return a new indexPath, or nil, to change the proposed selection.
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([[[self.options objectAtIndex:indexPath.section] header] isEqualToString:@"SORT LIST"]) {
+        
+        for (int i = 0; i < self.options.count; ++i) {
+            if ([[[self.options objectAtIndex:i] header] isEqualToString:@"SORT LIST"]) {
+                for (int j = 0; j < [[[self.options objectAtIndex:i] array] count]; ++j) {
+                    
+                    NSIndexPath *oldIndexPath = [NSIndexPath indexPathForRow:j inSection:i];
+                    UITableViewCell *cell = [tableView cellForRowAtIndexPath:oldIndexPath];
+                    
+                    // If another cell is selected, deselect it.
+                    if ([cell isSelected]) {
+                        [tableView deselectRowAtIndexPath:oldIndexPath animated:YES];
+                        [self tableView:tableView didDeselectRowAtIndexPath:oldIndexPath];
+                    }
+                    
+                }
+            }
+        }
+        
+    }
+    
+    return indexPath;
+}
+
+// Called after the user changes the selection.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (![[[self.options objectAtIndex:indexPath.section] header] isEqualToString:@"SORT LIST"]) {
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        UIImageView *selind = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SelectionIndicator"]];
+        cell.accessoryView = selind;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(3_0) {
+    [tableView cellForRowAtIndexPath:indexPath].accessoryView = nil;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
