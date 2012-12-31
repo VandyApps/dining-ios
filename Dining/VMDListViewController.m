@@ -10,6 +10,7 @@
 #import "DLocation.h"
 #import "VMDLocationDetailVC.h"
 #import "SAViewManipulator.h"
+#import "UIColor+i7HexColor.h"
 
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
@@ -149,9 +150,7 @@
 
 #pragma mark - UITableView Delegate
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//}
+
 
 #pragma mark - IBActions
 

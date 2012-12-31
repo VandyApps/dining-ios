@@ -62,6 +62,8 @@
 		D28A0B18168BB53300E7815E /* OptionPair.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B17168BB53300E7815E /* OptionPair.m */; };
 		D2B068701692010200C2726A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B0686F1692010200C2726A /* CoreLocation.framework */; };
 		D2B0688716920E3000C2726A /* VMDAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B0688616920E3000C2726A /* VMDAnnotation.m */; };
+		D2DFB7F216922EAC00D25AA6 /* SectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DFB7F116922EAC00D25AA6 /* SectionHeaderView.m */; };
+		D2DFB7F516922EC900D25AA6 /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2DFB7F416922EC900D25AA6 /* SectionHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +146,9 @@
 		D2B0686F1692010200C2726A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D2B0688516920E2F00C2726A /* VMDAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDAnnotation.h; sourceTree = "<group>"; };
 		D2B0688616920E3000C2726A /* VMDAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDAnnotation.m; sourceTree = "<group>"; };
+		D2DFB7F016922EAC00D25AA6 /* SectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionHeaderView.h; sourceTree = "<group>"; };
+		D2DFB7F116922EAC00D25AA6 /* SectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionHeaderView.m; sourceTree = "<group>"; };
+		D2DFB7F416922EC900D25AA6 /* SectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +335,9 @@
 		D20D441C160E8C5900D954B3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D2DFB7F016922EAC00D25AA6 /* SectionHeaderView.h */,
+				D2DFB7F116922EAC00D25AA6 /* SectionHeaderView.m */,
+				D2DFB7F416922EC900D25AA6 /* SectionHeaderView.xib */,
 				D2028BDB163347FB00D20CDB /* JSSlidingViewController */,
 				D20D4424160E8C8900D954B3 /* SAViewManipulator.h */,
 				D20D441D160E8C8900D954B3 /* SAViewManipulator.m */,
@@ -376,9 +384,9 @@
 			children = (
 				D2028BDE163348AA00D20CDB /* VMDOptionsViewController.h */,
 				D2028BDF163348AA00D20CDB /* VMDOptionsViewController.m */,
+				D2028BDC1633488A00D20CDB /* VMDOptionsViewController.xib */,
 				D28A0B16168BB53300E7815E /* OptionPair.h */,
 				D28A0B17168BB53300E7815E /* OptionPair.m */,
-				D2028BDC1633488A00D20CDB /* VMDOptionsViewController.xib */,
 			);
 			name = "Options VC";
 			sourceTree = "<group>";
@@ -478,6 +486,7 @@
 				D2028BD91633477D00D20CDB /* frontViewControllerDropShadow@2x.png in Resources */,
 				D2028BDD1633488A00D20CDB /* VMDOptionsViewController.xib in Resources */,
 				D28A0B15168BA6C400E7815E /* MenuIcon@2x.png in Resources */,
+				D2DFB7F516922EC900D25AA6 /* SectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +520,7 @@
 				D28A0B0D168B9B7500E7815E /* UIColor+i7HexColor.m in Sources */,
 				D28A0B18168BB53300E7815E /* OptionPair.m in Sources */,
 				D2B0688716920E3000C2726A /* VMDAnnotation.m in Sources */,
+				D2DFB7F216922EAC00D25AA6 /* SectionHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

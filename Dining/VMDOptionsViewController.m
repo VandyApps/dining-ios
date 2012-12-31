@@ -11,6 +11,9 @@
 #import "UIColor+i7HexColor.h"
 #import "UIView+Frame.h"
 #import "OptionPair.h"
+#import "SectionHeaderView.h"
+
+#import <QuartzCore/QuartzCore.h>
 
 @interface VMDOptionsViewController ()
 
@@ -99,6 +102,7 @@
     cell.textLabel.text = [[[self.options objectAtIndex:indexPath.section] array] objectAtIndex:indexPath.row];
     
     cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont fontWithName:cell.textLabel.font.fontName size:17.0f];
     cell.textLabel.shadowOffset = CGSizeMake(0, 1);
     cell.textLabel.shadowColor = [UIColor darkTextColor];
     
@@ -111,6 +115,30 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return [[self.options objectAtIndex:section] header];
+}
+
+- (UIView *)tableView:(UITableView*)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    SectionHeaderView *container = [SectionHeaderView new];
+    
+    // Load the top-level objects from the custom cell XIB.
+    NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SectionHeaderView" owner:self options:nil];
+    
+    // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
+    container = [topLevelObjects objectAtIndex:0];
+    
+    container.layer.borderColor = [UIColor darkTextColor].CGColor;
+    container.layer.borderWidth = 0.5f;
+    
+    NSString *title = [self tableView:self.tableView titleForHeaderInSection:section];
+    container.label.text = title;
+    
+    [SAViewManipulator setGradientBackgroundImageForView:container withTopColor:[UIColor colorWithHexString:@"757575"] andBottomColor:[UIColor colorWithHexString:@"4F4F4F"]];
+    return container;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+	return 25;
 }
 
 - (void)viewDidUnload {

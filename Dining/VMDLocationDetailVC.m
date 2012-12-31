@@ -109,7 +109,7 @@ typedef enum meals
     self.nameLabel.size = [self.nameLabel.text sizeWithFont:self.nameLabel.font constrainedToSize:CGSizeMake(200, self.nameLabel.height)];
     self.typeLabel.text = self.location.type;
     self.typeLabel.size = [self.typeLabel.text sizeWithFont:self.typeLabel.font constrainedToSize:CGSizeMake(200, self.typeLabel.height)];
-    self.typeLabel.top += 5;
+    self.typeLabel.top += 4;
     
     // Width calculations based on Interface Builder dimensions
 //    if (self.nameLabel.width > 111) self.titleOverlayView.width = self.nameLabel.width + 15;
