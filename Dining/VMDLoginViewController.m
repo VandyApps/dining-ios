@@ -54,7 +54,8 @@
 }
 
 - (IBAction)continuePressed:(id)sender {
-    [self.delegate setLoggedIn:YES];
+//    [self.delegate setLoggedIn:YES];
+//    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 

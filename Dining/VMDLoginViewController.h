@@ -10,6 +10,6 @@
 
 @interface VMDLoginViewController : UIViewController
 
-@property (strong, nonatomic) id delegate;
+@property (weak, nonatomic) id delegate;
 
 @end

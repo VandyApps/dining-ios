@@ -7,6 +7,7 @@
 //
 
 #import "VMDTabBarController.h"
+#import "VMDListViewController.h"
 
 #define LoginIdentifier @"LoginSegue"
 
@@ -31,18 +32,21 @@
 	// Do any additional setup after loading the view.
     
     self.loggedIn = NO;
+    for (id viewController in self.viewControllers) {
+        [(id)[viewController visibleViewController] setVmdTBC:self];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
     
-    // If the user is not yet logged in...
-    if (!self.loggedIn) {
-        
-        // Present the login VC via a segue
-        [self performSegueWithIdentifier:LoginIdentifier sender:self];
-    }
+//    // If the user is not yet logged in...
+//    if (!self.loggedIn) {
+//        
+//        // Present the login VC via a segue
+//        [self performSegueWithIdentifier:LoginIdentifier sender:self];
+//    }
 }
 
 - (void)didReceiveMemoryWarning

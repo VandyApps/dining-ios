@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "VMDAppDelegate.h"
+#import "VMDTabBarController.h"
 
 @interface VMDListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
@@ -18,5 +19,6 @@
 @property (strong, nonatomic) NSArray *dataSource;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) VMDAppDelegate *appDelegate;
+@property (strong, nonatomic) VMDTabBarController *vmdTBC;
 
 @end

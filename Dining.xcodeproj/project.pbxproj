@@ -60,6 +60,8 @@
 		D28A0B0D168B9B7500E7815E /* UIColor+i7HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B0C168B9B7500E7815E /* UIColor+i7HexColor.m */; };
 		D28A0B15168BA6C400E7815E /* MenuIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D28A0B14168BA6C400E7815E /* MenuIcon@2x.png */; };
 		D28A0B18168BB53300E7815E /* OptionPair.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B17168BB53300E7815E /* OptionPair.m */; };
+		D2B068701692010200C2726A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B0686F1692010200C2726A /* CoreLocation.framework */; };
+		D2B0688716920E3000C2726A /* VMDAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B0688616920E3000C2726A /* VMDAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +141,9 @@
 		D28A0B14168BA6C400E7815E /* MenuIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MenuIcon@2x.png"; sourceTree = "<group>"; };
 		D28A0B16168BB53300E7815E /* OptionPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionPair.h; sourceTree = "<group>"; };
 		D28A0B17168BB53300E7815E /* OptionPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionPair.m; sourceTree = "<group>"; };
+		D2B0686F1692010200C2726A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D2B0688516920E2F00C2726A /* VMDAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDAnnotation.h; sourceTree = "<group>"; };
+		D2B0688616920E3000C2726A /* VMDAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B068701692010200C2726A /* CoreLocation.framework in Frameworks */,
 				D20D442F160E8D0400D954B3 /* QuartzCore.framework in Frameworks */,
 				D20D43B9160E26D200D954B3 /* MapKit.framework in Frameworks */,
 				D20D4385160E239300D954B3 /* UIKit.framework in Frameworks */,
@@ -205,6 +211,7 @@
 		D20D4383160E239300D954B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2B0686F1692010200C2726A /* CoreLocation.framework */,
 				D20D442E160E8D0400D954B3 /* QuartzCore.framework */,
 				D20D43B8160E26D200D954B3 /* MapKit.framework */,
 				D20D4384160E239300D954B3 /* UIKit.framework */,
@@ -296,6 +303,8 @@
 			children = (
 				D20D43AC160E23DB00D954B3 /* VMDMapViewController.h */,
 				D20D43AD160E23DC00D954B3 /* VMDMapViewController.m */,
+				D2B0688516920E2F00C2726A /* VMDAnnotation.h */,
+				D2B0688616920E3000C2726A /* VMDAnnotation.m */,
 			);
 			name = "Map VC";
 			sourceTree = "<group>";
@@ -501,6 +510,7 @@
 				D28A0B09168B978400E7815E /* VMDLoginViewController.m in Sources */,
 				D28A0B0D168B9B7500E7815E /* UIColor+i7HexColor.m in Sources */,
 				D28A0B18168BB53300E7815E /* OptionPair.m in Sources */,
+				D2B0688716920E3000C2726A /* VMDAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

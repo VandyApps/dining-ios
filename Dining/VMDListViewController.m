@@ -11,6 +11,8 @@
 #import "VMDLocationDetailVC.h"
 #import "SAViewManipulator.h"
 
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 #import <QuartzCore/QuartzCore.h>
 
 @interface VMDListViewController ()
@@ -39,7 +41,12 @@
     
     // Customize the UI
     [self customizeUI];
+
     
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [[self.appDelegate viewController] setLocked:NO];
 }
 
 - (void)viewDidUnload
@@ -77,6 +84,17 @@
     // Fetch the data from the context, set it to the dataSource array
     NSError *error;
     self.dataSource = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    NSMutableArray *mapItems = [NSMutableArray arrayWithCapacity:self.dataSource.count];
+    for (DLocation *location in self.dataSource) {
+        if ([location isKindOfClass:[DLocation class]]) {
+//            MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake([location.latitude doubleValue], [location.longitude doubleValue]) addressDictionary:nil]];
+//            mapItem.name = location.name;
+//            [mapItems addObject:mapItem];
+            [mapItems addObject:location];
+        }
+    }
+    self.vmdTBC.mapItems = [mapItems copy];
 }
 
 #pragma mark - User interface
@@ -145,6 +163,8 @@
 #pragma mark - Storyboard segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [[self.appDelegate viewController] setLocked:YES];
+    
     // Get the destination view controller from the segue
     VMDLocationDetailVC *destination = [segue destinationViewController];
     

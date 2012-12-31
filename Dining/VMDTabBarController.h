@@ -10,6 +10,8 @@
 
 @interface VMDTabBarController : UITabBarController
 
-@property (assign, nonatomic) BOOL loggedIn;
+@property (strong, nonatomic) NSArray *mapItems;
+
+@property BOOL loggedIn;
 
 @end
