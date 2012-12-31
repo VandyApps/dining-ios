@@ -26,6 +26,9 @@
     self.mapView.mapType = MKMapTypeHybrid;
     self.mapView.delegate = self;
     
+    // Configure mapView to track user location
+    [self.mapView setShowsUserLocation:YES];
+    
     // Grab the app delegate for use of the sliding view controller
     self.appDelegate = (VMDAppDelegate *)[[UIApplication sharedApplication] delegate];
 
@@ -39,12 +42,10 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-//    CLLocationManager *locManager = [CLLocationManager new];
-//    locManager.delegate = self;
-//    [locManager startUpdatingLocation];
-
-    // Configure mapView to track user location
-    [self.mapView setShowsUserLocation:YES];
+    
+    [self.appDelegate.viewController setLocked:NO];
+    
+    self.mapView.userTrackingMode = MKUserTrackingModeNone;
     
     // Coordinates of Vanderbilt University Campus
     CLLocationCoordinate2D zoomLocation;
@@ -60,15 +61,29 @@
     // 4
     [self.mapView setRegion:adjustedRegion animated:YES];
     
+    DLocation *lastLocation = [self.vmdTBC.mapItems lastObject];
+    
+    self.maxLat = [lastLocation.latitude doubleValue], self.minLat = self.maxLat, self.maxLong = [lastLocation.longitude doubleValue], self.minLong = self.maxLong;
+    
     if ([self.mapView.annotations count] == 0) {
         int i = 0;
         for (DLocation *location in self.vmdTBC.mapItems) {
             VMDAnnotation *annotation = [[VMDAnnotation alloc] initWithTitle:location.name subtitle:location.type andCoordinate:CLLocationCoordinate2DMake([location.latitude doubleValue], [location.longitude doubleValue])];
+            if ([location.latitude doubleValue] > self.maxLat) self.maxLat = [location.latitude doubleValue];
+            if ([location.latitude doubleValue] < self.minLat) self.minLat = [location.latitude doubleValue];
+            if ([location.longitude doubleValue] > self.maxLong) self.maxLong = [location.longitude doubleValue];
+            if ([location.longitude doubleValue] < self.minLong) self.minLong = [location.longitude doubleValue];
+            
             annotation.idNum = [NSNumber numberWithInt:i];
             i++;
             [self.mapView addAnnotation:annotation];
         }
+        self.center = CLLocationCoordinate2DMake((self.minLat + self.maxLat) / 2.0, (self.minLong + self.maxLong) / 2.0);
+        self.span = MKCoordinateSpanMake(self.maxLat - self.minLat, self.maxLong - self.minLong);
     }
+    
+    
+    [self.mapView setRegion:MKCoordinateRegionMake(self.center, self.span) animated:YES];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -92,6 +107,11 @@
     }
     else if (self.mapView.userTrackingMode == MKUserTrackingModeFollowWithHeading) [self.mapView setUserTrackingMode:MKUserTrackingModeNone animated:YES];
 }
+
+- (IBAction)optionsPressed:(UIBarButtonItem *)sender {
+    [self.appDelegate.viewController openSlider:YES completion:nil];
+}
+
 
 #pragma mark - MKMapViewDelegate methods 
 
@@ -125,21 +145,21 @@
     [self performSegueWithIdentifier:@"Detail" sender:[(VMDAnnotation *)view.annotation idNum]];
 }
 
-#pragma mark - CLLocationManagerDelegate methods
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    if (manager.location) {
-        [self.mapView setRegion:MKCoordinateRegionMake(manager.location.coordinate, MKCoordinateSpanMake(1, 1)) animated:YES];
-    }
-}
-
-- (void)locationManager:(CLLocationManager *)manager
-	didUpdateToLocation:(CLLocation *)newLocation
-		   fromLocation:(CLLocation *)oldLocation {
-    if (manager.location) {
-        [self.mapView setRegion:MKCoordinateRegionMake(manager.location.coordinate, MKCoordinateSpanMake(1, 1)) animated:YES];
-    }
-}
+//#pragma mark - CLLocationManagerDelegate methods
+//
+//- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+//    if (manager.location) {
+//        [self.mapView setRegion:MKCoordinateRegionMake(manager.location.coordinate, MKCoordinateSpanMake(1, 1)) animated:YES];
+//    }
+//}
+//
+//- (void)locationManager:(CLLocationManager *)manager
+//	didUpdateToLocation:(CLLocation *)newLocation
+//		   fromLocation:(CLLocation *)oldLocation {
+//    if (manager.location) {
+//        [self.mapView setRegion:MKCoordinateRegionMake(manager.location.coordinate, MKCoordinateSpanMake(1, 1)) animated:YES];
+//    }
+//}
 
 #pragma mark - Storyboard methods
 
@@ -152,7 +172,7 @@
     DLocation *loc = [self.vmdTBC.mapItems objectAtIndex:[sender integerValue]];
     
     // Set the title
-    destination.title = [loc name];
+    destination.title = loc.type;
     
     // Set the destination's location property
     destination.location = loc;

@@ -121,7 +121,7 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Locations" id="jbS-b2-qb0">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="tWY-Ja-p8m">
+                        <barButtonItem key="leftBarButtonItem" title="Options" id="tWY-Ja-p8m">
                             <connections>
                                 <action selector="optionsPressed:" destination="2" id="Yyc-tM-0wb"/>
                             </connections>
@@ -169,7 +169,7 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Vanderbilt University" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pff-Sp-jNP">
                                         <rect key="frame" x="8" y="18" width="111" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -397,7 +397,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="3J9-DD-LHb">
-                        <barButtonItem key="leftBarButtonItem" title="Options" id="8qk-8h-0Mp"/>
+                        <barButtonItem key="leftBarButtonItem" title="Options" id="8qk-8h-0Mp">
+                            <connections>
+                                <action selector="optionsPressed:" destination="3" id="tud-z8-G8s"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="1Kb-Ib-eA9">
                             <connections>
                                 <action selector="trackPressed:" destination="3" id="MzQ-M0-WYM"/>
@@ -531,7 +535,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DyB-DZ-oeH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.85407366070000001" green="0.70622658930000004" blue="0.2484520422" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.91669323979999995" green="0.73648992609999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -568,50 +572,6 @@
         <image name="Featheringill.jpeg" width="640" height="330"/>
         <image name="VandyMobileBackgroundCanvas@2x.png" width="640" height="734"/>
     </resources>
-    <classes>
-        <class className="VMDListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="featuredCellButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="featuredCellContainerView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="VMDLocationDetailVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDLocationDetailVC.h"/>
-            <relationships>
-                <relationship kind="outlet" name="coverImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateLeftButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="dateRightButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="dateScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="dayLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="hoursLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mealLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mealLeftBurron" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mealRightButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mealScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleOverlayView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="typeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="VMDLoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDLoginViewController.h"/>
-        </class>
-        <class className="VMDMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="VMDMenuTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDMenuTableViewController.h"/>
-        </class>
-        <class className="VMDTabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDTabBarController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

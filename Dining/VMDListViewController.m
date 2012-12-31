@@ -111,7 +111,7 @@
     // Set a tabbar gradient
     [SAViewManipulator setGradientBackgroundImageForView:self.tabBarController.tabBar withTopColor:nil andBottomColor:nil];
     
-    [self.navigationItem.leftBarButtonItem setImage:[UIImage imageNamed:@"MenuIcon"]];
+//    [self.navigationItem.leftBarButtonItem setImage:[UIImage imageNamed:@"MenuIcon"]];
 }
 
 #pragma mark - UITableView Data Source
@@ -168,17 +168,18 @@
     // Get the destination view controller from the segue
     VMDLocationDetailVC *destination = [segue destinationViewController];
     
-    // Set the title
-    destination.title = [[self.dataSource objectAtIndex:[self.tableView indexPathForCell:sender].row] name];
-    
     // Grab the index of the object selected
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     
     // Deselect the row
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    
     // Set the destination's location property
     DLocation *loc = [self.dataSource objectAtIndex:indexPath.row];
+    
+    // Set the title
+    destination.title = loc.type;
+
     destination.location = loc;
 }
 

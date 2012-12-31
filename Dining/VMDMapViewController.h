@@ -19,4 +19,11 @@
 @property (strong, nonatomic) VMDTabBarController *vmdTBC;
 @property (strong, nonatomic) VMDAppDelegate *appDelegate;
 
+@property double maxLat;
+@property double minLat;
+@property double maxLong;
+@property double minLong;
+@property CLLocationCoordinate2D center;
+@property MKCoordinateSpan span;
+
 @end

@@ -50,16 +50,21 @@
 - (void)populateOptions {
     NSMutableArray *mutableOptions = [NSMutableArray arrayWithCapacity:5];
     
-    OptionPair *optionsPair = [[OptionPair alloc] init];
-    optionsPair.header = @"Options";
-    optionsPair.array = [NSArray arrayWithObjects:@"Item 1", @"Item 2", nil];
+    OptionPair *sortListPair = [[OptionPair alloc] init];
+    sortListPair.header = @"SORT LIST";
+    sortListPair.array = [NSArray arrayWithObjects:@"Near", @"A-Z", nil];
     
-    OptionPair *accountPair = [[OptionPair alloc] init];
-    accountPair.header = @"Account";
-    accountPair.array = [NSArray arrayWithObjects:@"Item 1", @"Item 2", @"Item 3", nil];
+    OptionPair *filterListPair = [[OptionPair alloc] init];
+    filterListPair.header = @"FILTER LIST";
+    filterListPair.array = [NSArray arrayWithObjects:@"Dining Halls", @"Meal Plan", @"Munchie Marts", @"Open", nil];
     
-    [mutableOptions addObject:optionsPair];
-    [mutableOptions addObject:accountPair];
+    OptionPair *filterMapPair = [[OptionPair alloc] init];
+    filterMapPair.header = @"FILTER MAP";
+    filterMapPair.array = [NSArray arrayWithObjects:@"Dining Halls", @"Meal Plan", @"Munchie Marts", @"Open", nil];
+    
+    [mutableOptions addObject:sortListPair];
+    [mutableOptions addObject:filterListPair];
+    [mutableOptions addObject:filterMapPair];
     
     self.options = [mutableOptions copy];
 }
