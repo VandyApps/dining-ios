@@ -148,6 +148,24 @@
     return cell;
 }
 
+- (void)sortData:(NSString *)sortType
+{
+	NSSortDescriptor *locationSortDescriptor;
+
+	if ([sortType isEqualToString:@"Near"]) {
+		locationSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"distance" ascending:YES];
+	} else if ([sortType isEqualToString:@"A-Z"]) {
+		locationSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+	
+	}
+	
+	NSArray * descriptors = @[locationSortDescriptor];
+	NSArray * sortedArray = [self.dataSource sortedArrayUsingDescriptors:descriptors];
+
+	
+	
+}
+
 #pragma mark - UITableView Delegate
 
 

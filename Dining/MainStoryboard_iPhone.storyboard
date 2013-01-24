@@ -574,54 +574,6 @@
         <image name="Featheringill.jpeg" width="640" height="330"/>
         <image name="VandyMobileBackgroundCanvas@2x.png" width="640" height="734"/>
     </resources>
-    <classes>
-        <class className="VMDListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDListViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="optionsPressed:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="featuredCellButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="featuredCellContainerView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="VMDLocationDetailVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDLocationDetailVC.h"/>
-            <relationships>
-                <relationship kind="outlet" name="coverImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateLeftButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="dateRightButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="dateScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="dayLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="hoursLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mealLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mealLeftBurron" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mealRightButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mealScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleOverlayView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="typeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="VMDLoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDLoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="continuePressed:"/>
-            </relationships>
-        </class>
-        <class className="VMDMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="VMDMenuTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDMenuTableViewController.h"/>
-        </class>
-        <class className="VMDTabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDTabBarController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
