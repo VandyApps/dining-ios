@@ -16,6 +16,9 @@
 #import <MapKit/MapKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+#define kSortIdentifierAlphabetical @"SORT_ID_ALPHABETICAL"
+#define kSortIdentifierNear @"SORT_ID_NEAR"
+
 @interface VMDListViewController ()
 
 @end
@@ -39,6 +42,9 @@
     
     // Fetch the data from the Core Data context
     [self fetchDataFromContext];
+    
+    // Configure the data
+    [self configureDataWithSortIdentifier:kSortIdentifierAlphabetical];
     
     // Customize the UI
     [self customizeUI];
@@ -84,18 +90,78 @@
     
     // Fetch the data from the context, set it to the dataSource array
     NSError *error;
-    self.dataSource = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    self.oldDataSource = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
     NSMutableArray *mapItems = [NSMutableArray arrayWithCapacity:self.dataSource.count];
-    for (DLocation *location in self.dataSource) {
+    for (DLocation *location in self.oldDataSource) {
         if ([location isKindOfClass:[DLocation class]]) {
-//            MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake([location.latitude doubleValue], [location.longitude doubleValue]) addressDictionary:nil]];
-//            mapItem.name = location.name;
-//            [mapItems addObject:mapItem];
             [mapItems addObject:location];
         }
     }
     self.vmdTBC.mapItems = [mapItems copy];
+}
+
+// Configures the data in the tableView based on the sortIdentifier
+- (void)configureDataWithSortIdentifier:(NSString *)sortIdentifier {
+    
+    NSArray *sortedData;
+    
+    if ([sortIdentifier isEqualToString:kSortIdentifierAlphabetical]) {
+        sortedData = [self sortDataAlphabetical:[self.oldDataSource mutableCopy]];
+    }
+    
+    else if ([sortIdentifier isEqualToString:kSortIdentifierNear @"SORT_ID_NEAR"]) {
+        // Sort data by nearness, use CoreLocation
+    }
+    
+    NSMutableArray *sectionedDataSource = [NSMutableArray array];
+    
+    NSMutableSet *hash = [NSMutableSet set];
+    
+    for (DLocation *location in sortedData) {
+        if (![hash containsObject:location.name]) {
+            [hash addObject:location.name];
+            
+            if ([sortIdentifier isEqualToString:kSortIdentifierAlphabetical]) {
+                bool found = false;
+                for (int i = 0; i < sectionedDataSource.count; i++) {
+                    NSArray *letterArray = [sectionedDataSource objectAtIndex:i];
+                    if ([[[letterArray lastObject] name] characterAtIndex:0] ==
+                        [location.name characterAtIndex:0]) {
+                        
+                        NSMutableArray *mutLetArr = [letterArray mutableCopy];
+                        [mutLetArr addObject:location];
+                        NSArray *newLetterArray = [mutLetArr copy];
+                        [sectionedDataSource setObject:newLetterArray atIndexedSubscript:i];
+                        found = true;
+                        
+                    }
+                }
+                if (!found) {
+                    [sectionedDataSource addObject:[NSArray arrayWithObject:location]];
+                }
+            }
+            
+        }
+
+    }
+    
+    for (NSArray *array in sectionedDataSource) {
+        for (DLocation *location in array) {
+            NSLog(@"%c: %@", [[[array lastObject] name] characterAtIndex:0],
+                  location.name);
+        }
+    }
+    
+    self.dataSource = [sectionedDataSource copy];
+    self.sortIdentifier = sortIdentifier;
+}
+
+- (NSArray *)sortDataAlphabetical:(NSMutableArray *)array {
+    [array sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        return [[obj1 name] characterAtIndex:0] > [[obj2 name] characterAtIndex:0];
+    }];
+    return [array copy];
 }
 
 #pragma mark - User interface
@@ -120,13 +186,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return [self.dataSource count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.dataSource count];
+    return [[self.dataSource objectAtIndex:section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -141,7 +207,7 @@
     }
     
     // Configure the cell...
-    DLocation *location = [self.dataSource objectAtIndex:indexPath.row];
+    DLocation *location = [[self.dataSource objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     cell.textLabel.text = location.name;
     cell.detailTextLabel.text = location.type;
     
@@ -163,8 +229,8 @@
 	NSArray * sortedArray = [self.dataSource sortedArrayUsingDescriptors:descriptors];
 }
 
-	
-	
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [NSString stringWithFormat:@"%c", [[[[self.dataSource objectAtIndex:section] lastObject] name] characterAtIndex:0]];
 }
 
 #pragma mark - UITableView Delegate
@@ -181,7 +247,7 @@
 #pragma mark - Storyboard segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    [[self.appDelegate viewController] setLocked:YES];
+    [self.appDelegate.viewController setLocked:YES];
     
     // Get the destination view controller from the segue
     VMDLocationDetailVC *destination = [segue destinationViewController];
@@ -193,7 +259,7 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     // Set the destination's location property
-    DLocation *loc = [self.dataSource objectAtIndex:indexPath.row];
+    DLocation *loc = [[self.dataSource objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     
     // Set the title
     destination.title = loc.type;
