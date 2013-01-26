@@ -12,10 +12,10 @@
 #import "SAViewManipulator.h"
 #import "UIColor+i7HexColor.h"
 
-#import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+#define METERS_PER_MILE 1609.344
 #define kSortIdentifierAlphabetical @"SORT_ID_ALPHABETICAL"
 #define kSortIdentifierNear @"SORT_ID_NEAR"
 
@@ -49,7 +49,9 @@
     // Customize the UI
     [self customizeUI];
 
-    
+    self.locManager = [CLLocationManager new];
+    self.locManager.delegate = self;
+    [self.locManager startUpdatingHeading];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -61,6 +63,7 @@
     [self setTableView:nil];
     [self setFeaturedCellContainerView:nil];
     [self setFeaturedCellButton:nil];
+    [self setNearestDistance:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -105,23 +108,31 @@
 - (void)configureDataWithSortIdentifier:(NSString *)sortIdentifier {
     
     NSArray *sortedData;
+    NSMutableArray *sectionedDataSource = [NSMutableArray array];
+    NSMutableSet *hash = [NSMutableSet set];
     
+    // Alphabetical
     if ([sortIdentifier isEqualToString:kSortIdentifierAlphabetical]) {
         sortedData = [self sortDataAlphabetical:[self.oldDataSource mutableCopy]];
     }
     
-    else if ([sortIdentifier isEqualToString:kSortIdentifierNear @"SORT_ID_NEAR"]) {
+    // Near
+    else if ([sortIdentifier isEqualToString:kSortIdentifierNear]) {
+        
         // Sort data by nearness, use CoreLocation
+        sortedData = [self sortDataNear:[self.oldDataSource mutableCopy]];
+        
+        for (int i = 0; i < 7; ++i) {
+            [sectionedDataSource addObject:[NSArray array]];
+        }
     }
     
-    NSMutableArray *sectionedDataSource = [NSMutableArray array];
-    
-    NSMutableSet *hash = [NSMutableSet set];
     
     for (DLocation *location in sortedData) {
         if (![hash containsObject:location.name]) {
             [hash addObject:location.name];
             
+            // If alphabetical sort
             if ([sortIdentifier isEqualToString:kSortIdentifierAlphabetical]) {
                 bool found = false;
                 for (int i = 0; i < sectionedDataSource.count; i++) {
@@ -142,6 +153,28 @@
                 }
             }
             
+            // If nearness sort
+            else if ([sortIdentifier isEqualToString:kSortIdentifierNear]) {
+                int index;
+                int miles = [location.distance doubleValue] / METERS_PER_MILE;
+                if (miles <= .25) index = 0;
+                else if (miles <= .5) index = 1;
+                else if (miles <= 1) index = 2;
+                else if (miles <= 5) index = 3;
+                else if (miles <= 10) index = 4;
+                else if (miles <= 20) index = 5;
+                else index = 6;
+                
+                
+                NSMutableArray *mutDistArr =
+                [[sectionedDataSource objectAtIndex:index] mutableCopy];
+                [mutDistArr addObject:location];
+                NSArray *newDistArray = [mutDistArr copy];
+                [sectionedDataSource setObject:newDistArray
+                            atIndexedSubscript:index];
+                
+            }
+            
         }
 
     }
@@ -160,6 +193,26 @@
 - (NSArray *)sortDataAlphabetical:(NSMutableArray *)array {
     [array sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         return [[obj1 name] characterAtIndex:0] > [[obj2 name] characterAtIndex:0];
+    }];
+    return [array copy];
+}
+
+- (NSArray *)sortDataNear:(NSMutableArray *)array {
+    CLLocation *userLoc = [self.locManager location];
+    CLLocation *otherLoc;
+    
+    for (DLocation *location in array) {
+        if (!location.distance) {
+            otherLoc = [[CLLocation alloc] initWithLatitude:
+                        [location.latitude doubleValue]
+                                                  longitude:
+                        [location.longitude doubleValue]];
+            location.distance =
+            [NSNumber numberWithDouble:[userLoc distanceFromLocation:otherLoc]];
+        }
+    }
+    [array sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        return [[obj1 distance] doubleValue] > [[obj2 distance] doubleValue];
     }];
     return [array copy];
 }
@@ -229,13 +282,29 @@
 	NSArray * sortedArray = [self.dataSource sortedArrayUsingDescriptors:descriptors];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [NSString stringWithFormat:@"%c", [[[[self.dataSource objectAtIndex:section] lastObject] name] characterAtIndex:0]];
-}
 
 #pragma mark - UITableView Delegate
 
-
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (self.sortIdentifier == kSortIdentifierAlphabetical) {
+        return [NSString stringWithFormat:@"%c", [[[[self.dataSource objectAtIndex:section] lastObject] name] characterAtIndex:0]];
+    } else if (self.sortIdentifier == kSortIdentifierNear) {
+        float y;
+        NSArray *distances = [NSArray arrayWithObjects:[NSNumber numberWithFloat:.25], [NSNumber numberWithFloat:.5], [NSNumber numberWithInt:1], [NSNumber numberWithInt:5], [NSNumber numberWithInt:10], [NSNumber numberWithInt:20], [NSNumber numberWithInt:21], nil];
+        NSNumber *num = [distances objectAtIndex:section];
+        NSNumberFormatter *numFormatter = [[NSNumberFormatter alloc] init];
+        [numFormatter setMaximumFractionDigits:2];
+        
+        y = [[distances objectAtIndex:section] floatValue];
+        
+        if (y > 20) {
+            return [NSString stringWithFormat:@">%d miles", 20];
+        }
+        
+        return [NSString stringWithFormat:@"%@ miles", [numFormatter stringFromNumber:num]];
+    }
+    return @" ";
+}
 
 #pragma mark - IBActions
 
@@ -243,6 +312,10 @@
     [self.appDelegate.viewController openSlider:YES completion:nil];
 }
 
+- (IBAction)refreshData:(UIBarButtonItem *)sender {
+    [self configureDataWithSortIdentifier:self.sortIdentifier];
+    [self.tableView reloadData];
+}
 
 #pragma mark - Storyboard segue
 
@@ -265,6 +338,13 @@
     destination.title = loc.type;
 
     destination.location = loc;
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager
+didUpdateHeading:(CLHeading *)newHeading __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0) {
+    NSLog(@"%f", newHeading.magneticHeading);
 }
 
 @end

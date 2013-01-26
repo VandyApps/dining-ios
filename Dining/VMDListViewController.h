@@ -7,14 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+
 #import "VMDAppDelegate.h"
 #import "VMDTabBarController.h"
 
-@interface VMDListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface VMDListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate,CLLocationManagerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIView *featuredCellContainerView;
 @property (strong, nonatomic) IBOutlet UIButton *featuredCellButton;
+@property (strong, nonatomic) IBOutlet UILabel *nearestDistance;
 
 @property (strong, nonatomic) NSArray *dataSource;
 @property (strong, nonatomic) NSArray *oldDataSource;
@@ -22,6 +25,7 @@
 @property (strong, nonatomic) VMDAppDelegate *appDelegate;
 @property (strong, nonatomic) VMDTabBarController *vmdTBC;
 @property (strong, nonatomic) NSString *sortIdentifier;
+@property (strong, nonatomic) CLLocationManager *locManager;
 
 - (void)configureDataWithSortIdentifier:(NSString *)sortIdentifier;
 

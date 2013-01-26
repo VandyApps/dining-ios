@@ -31,4 +31,6 @@
 @dynamic isOnCampus;
 @dynamic locID;
 
+@synthesize distance;
+
 @end

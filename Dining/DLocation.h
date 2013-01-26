@@ -32,4 +32,7 @@
 @property (nonatomic, retain) NSNumber * isOnCampus;
 @property (nonatomic, retain) NSNumber * locID;
 
+// Non core data properties
+@property (nonatomic, strong) NSNumber * distance;
+
 @end
