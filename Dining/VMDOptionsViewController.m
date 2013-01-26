@@ -18,6 +18,8 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+#define kSortIdentifierAlphabetical @"SORT_ID_ALPHABETICAL"
+#define kSortIdentifierNear @"SORT_ID_NEAR"
 #define kSortByHeader @"Sort By"
 #define kFilterHeader @"Filter"
 
@@ -45,6 +47,7 @@
     self.tableView.dataSource = self;
     
     self.selectedOptions = [NSMutableArray array];
+    self.sortSelected = kSortIdentifierAlphabetical;
     
     [self customizeInterface];
     
@@ -53,10 +56,6 @@
     [[self.appDelegate viewController] setDelegate:self];
 }
 
-- (void)slidingViewControllerWillOpen:(JSSlidingViewController *)viewController {
-    
-    [self populateOptions];
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -74,6 +73,8 @@
     UINavigationController *selectedNC = (UINavigationController *)vmdtbc.selectedViewController;
     id selectedVC = selectedNC.topViewController;
     
+    NSArray *filters = [NSArray arrayWithObjects:@"Dining Halls", @"Meal Plan", @"Munchie Marts", @"Open", nil];
+    
     if ([selectedVC isKindOfClass:[VMDListViewController class]]) {
         OptionPair *sortListPair = [[OptionPair alloc] init];
         sortListPair.header = kSortByHeader;
@@ -81,15 +82,14 @@
         
         OptionPair *filterListPair = [[OptionPair alloc] init];
         filterListPair.header = kFilterHeader;
-        filterListPair.array = [NSArray arrayWithObjects:@"Dining Halls", @"Meal Plan", @"Munchie Marts", @"Open", nil];
-        
+        filterListPair.array = filters;
         
         [mutableOptions addObject:sortListPair];
         [mutableOptions addObject:filterListPair];
     } else if ([selectedVC isKindOfClass:[VMDMapViewController class]]) {
         OptionPair *filterMapPair = [[OptionPair alloc] init];
         filterMapPair.header = kFilterHeader;
-        filterMapPair.array = [NSArray arrayWithObjects:@"Dining Halls", @"Meal Plan", @"Munchie Marts", @"Open", nil];
+        filterMapPair.array = filters;
         
         [mutableOptions addObject:filterMapPair];
     }
@@ -155,11 +155,9 @@
                         [tableView deselectRowAtIndexPath:oldIndexPath animated:YES];
                         [self tableView:tableView didDeselectRowAtIndexPath:oldIndexPath];
                     }
-                    
                 }
             }
         }
-        
     }
     
     return indexPath;
@@ -167,13 +165,24 @@
 
 // Called after the user changes the selection.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (![[[self.options objectAtIndex:indexPath.section] header] isEqualToString:kSortByHeader]) {
+    if (![[[self.options objectAtIndex:indexPath.section] header]
+          isEqualToString:kSortByHeader]) {
         UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         if (cell) {
             [self.selectedOptions addObject:cell.textLabel.text];
-            UIImageView *selind = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SelectionIndicator"]];
+            UIImageView *selind = [[UIImageView alloc] initWithImage:
+                                   [UIImage imageNamed:@"SelectionIndicator"]];
             cell.accessoryView = selind;
         }
+    } else {
+        if ([[[[self.options objectAtIndex:indexPath.section] array]
+              objectAtIndex:indexPath.row] isEqualToString:@"A-Z"]) {
+            self.sortSelected = kSortIdentifierAlphabetical;
+        } else {
+            self.sortSelected = kSortIdentifierNear;
+        }
+        
+        [[self.appDelegate viewController] closeSlider:YES completion:nil];
     }
 }
 
@@ -221,5 +230,30 @@
     [self setProfilePicture:nil];
     [self setInfoView:nil];
     [super viewDidUnload];
+}
+
+
+#pragma mark - JSSlidingViewControllerDelegate
+
+- (void)slidingViewControllerDidOpen:(JSSlidingViewController *)viewController {
+    if ([self.sortSelected isEqualToString:@"Near"]) {
+        [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:0];
+    } else {
+        [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] animated:YES scrollPosition:0];
+    }
+    
+    [self populateOptions];
+}
+
+- (void)slidingViewControllerDidClose:(JSSlidingViewController *)viewController {
+    id tbcsvc = [(UINavigationController *)[[self.appDelegate frontVC] selectedViewController] visibleViewController];
+    if ([tbcsvc isKindOfClass:[VMDListViewController class]]) {
+        VMDListViewController *lvc = tbcsvc;
+        if (![self.sortSelected isEqualToString:lvc.sortIdentifier]) {
+            [lvc configureDataWithSortIdentifier:self.sortSelected];
+            [lvc.tableView reloadData];
+        }
+    }
+    
 }
 @end

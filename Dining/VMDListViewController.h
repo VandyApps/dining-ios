@@ -17,8 +17,12 @@
 @property (strong, nonatomic) IBOutlet UIButton *featuredCellButton;
 
 @property (strong, nonatomic) NSArray *dataSource;
+@property (strong, nonatomic) NSArray *oldDataSource;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) VMDAppDelegate *appDelegate;
 @property (strong, nonatomic) VMDTabBarController *vmdTBC;
+@property (strong, nonatomic) NSString *sortIdentifier;
+
+- (void)configureDataWithSortIdentifier:(NSString *)sortIdentifier;
 
 @end

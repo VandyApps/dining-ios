@@ -161,6 +161,7 @@
 	
 	NSArray * descriptors = @[locationSortDescriptor];
 	NSArray * sortedArray = [self.dataSource sortedArrayUsingDescriptors:descriptors];
+}
 
 	
 	

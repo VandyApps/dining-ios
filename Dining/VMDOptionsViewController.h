@@ -19,6 +19,7 @@
 
 @property (strong, nonatomic) NSArray *options;
 @property (strong, nonatomic) NSMutableArray *selectedOptions;
+@property (strong, nonatomic) NSString *sortSelected;
 @property (strong, nonatomic) id appDelegate;
 
 @end
