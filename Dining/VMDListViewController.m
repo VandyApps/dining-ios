@@ -7,7 +7,6 @@
 //
 
 #import "VMDListViewController.h"
-#import "DLocation.h"
 #import "VMDLocationDetailVC.h"
 #import "SAViewManipulator.h"
 #import "UIColor+i7HexColor.h"
@@ -36,6 +35,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.prevRotation = 0;
 
     // Grab the app delegate for use of the sliding view controller
     self.appDelegate = (VMDAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -44,14 +45,17 @@
     [self fetchDataFromContext];
     
     // Configure the data
-    [self configureDataWithSortIdentifier:kSortIdentifierAlphabetical];
+    [self configureDataWithSortIdentifier:kSortIdentifierNear];
     
     // Customize the UI
     [self customizeUI];
 
     self.locManager = [CLLocationManager new];
     self.locManager.delegate = self;
+    [self.locManager startUpdatingLocation];
     [self.locManager startUpdatingHeading];
+    
+//    self.directingLocation = [[self.dataSource objectAtIndex:1] objectAtIndex:1];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -64,6 +68,9 @@
     [self setFeaturedCellContainerView:nil];
     [self setFeaturedCellButton:nil];
     [self setNearestDistance:nil];
+    [self setDirectionImageView:nil];
+    [self setNearestNameLabel:nil];
+    [self setNearestCategoryLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -179,13 +186,6 @@
 
     }
     
-    for (NSArray *array in sectionedDataSource) {
-        for (DLocation *location in array) {
-            NSLog(@"%c: %@", [[[array lastObject] name] characterAtIndex:0],
-                  location.name);
-        }
-    }
-    
     self.dataSource = [sectionedDataSource copy];
     self.sortIdentifier = sortIdentifier;
 }
@@ -202,14 +202,14 @@
     CLLocation *otherLoc;
     
     for (DLocation *location in array) {
-        if (!location.distance) {
+//        if (!location.distance) {
             otherLoc = [[CLLocation alloc] initWithLatitude:
                         [location.latitude doubleValue]
                                                   longitude:
                         [location.longitude doubleValue]];
             location.distance =
             [NSNumber numberWithDouble:[userLoc distanceFromLocation:otherLoc]];
-        }
+//        }
     }
     [array sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         return [[obj1 distance] doubleValue] > [[obj2 distance] doubleValue];
@@ -342,9 +342,83 @@
 
 #pragma mark - CLLocationManagerDelegate
 
+- (float)distanceWithXOne:(float)x1 yOne:(float)y1 xTwo:(float)x2 yTwo:(float)y2 {
+    return sqrtf(powf((x2-x1), 2.0) + powf((y2-y1), 2.0));
+}
+
 - (void)locationManager:(CLLocationManager *)manager
 didUpdateHeading:(CLHeading *)newHeading __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0) {
-    NSLog(@"%f", newHeading.magneticHeading);
+    
+    // Magnetic heading
+//    NSLog(@"%f", newHeading.magneticHeading);
+    
+    // Directed location
+    DLocation *location = self.directingLocation;
+    NSLog(@"Pointing to %@", location.name);
+    
+    // Me
+    float x1 = self.locManager.location.coordinate.latitude;
+    float y1 = self.locManager.location.coordinate.longitude;
+    
+    // Location
+    float x2 = [location.latitude doubleValue];
+    float y2 = [location.longitude doubleValue];
+    
+    // Third triangle point
+    float x3 = x1;
+    float y3 = y2;
+    
+    float meToLocation = [self distanceWithXOne:x1 yOne:y1 xTwo:x2 yTwo:y2];
+    float meToVertPoint = [self distanceWithXOne:x1 yOne:y1 xTwo:x3 yTwo:y3];
+    
+    // Angle between me and north
+    double angle = acosf(meToVertPoint/meToLocation);
+    if (y3 < 0) angle += (M_PI/2);
+    
+    // Angles
+//    NSLog(@"Angle from north (rad): %f", newHeading.magneticHeading * (M_PI/180.0));
+//    NSLog(@"Angle (degree): %f", newHeading.magneticHeading);
+    
+    // Rotate the arrow
+    CGAffineTransform rotationTransform = CGAffineTransformIdentity;
+    rotationTransform = CGAffineTransformRotate(rotationTransform, -newHeading.magneticHeading * (M_PI/180.0) + angle + (M_PI));
+    self.prevRotation = newHeading.magneticHeading * (M_PI/180.0);
+    self.directionImageView.transform = rotationTransform;
+    
+    [self locationManager:self.locManager didUpdateToLocation:nil fromLocation:nil];
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+didUpdateToLocation:(CLLocation *)newLocation
+fromLocation:(CLLocation *)oldLocation __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_6, __MAC_NA, __IPHONE_2_0, __IPHONE_6_0) {
+    
+    NSArray *dataSourceCopy = [self.dataSource copy];
+    [self configureDataWithSortIdentifier:self.sortIdentifier];
+    if (![dataSourceCopy isEqualToArray:self.dataSource]) {
+        [self.tableView reloadData];
+    }
+    
+    if (self.sortIdentifier == kSortIdentifierNear && self.directingLocation != [[self.dataSource objectAtIndex:0] objectAtIndex:0]) {
+        self.directingLocation = [[self.dataSource objectAtIndex:0] objectAtIndex:0];
+        self.nearestNameLabel.text = self.directingLocation.name;
+        self.nearestCategoryLabel.text = self.directingLocation.type;
+    }
+    
+    if (self.directingLocation) {
+        
+        CLLocation *otherLoc = [[CLLocation alloc] initWithLatitude:
+                                [self.directingLocation.latitude doubleValue]
+                                                          longitude:
+                                [self.directingLocation.longitude doubleValue]];
+        NSNumber *num = [NSNumber numberWithFloat:[self.locManager.location distanceFromLocation:otherLoc] / METERS_PER_MILE];
+        NSNumberFormatter *numFormatter = [[NSNumberFormatter alloc] init];
+        [numFormatter setMaximumFractionDigits:2];
+        
+        self.nearestDistance.text =
+        [NSString stringWithFormat:@"%@", [numFormatter stringFromNumber:num]];
+    }
+    
+    
 }
 
 @end

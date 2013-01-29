@@ -60,6 +60,7 @@
 		D28A0B0D168B9B7500E7815E /* UIColor+i7HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B0C168B9B7500E7815E /* UIColor+i7HexColor.m */; };
 		D28A0B15168BA6C400E7815E /* MenuIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D28A0B14168BA6C400E7815E /* MenuIcon@2x.png */; };
 		D28A0B18168BB53300E7815E /* OptionPair.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B17168BB53300E7815E /* OptionPair.m */; };
+		D2AEA62016B48239006B4F05 /* MNarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D2AEA61F16B48239006B4F05 /* MNarrow.png */; };
 		D2B068701692010200C2726A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B0686F1692010200C2726A /* CoreLocation.framework */; };
 		D2B0688716920E3000C2726A /* VMDAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B0688616920E3000C2726A /* VMDAnnotation.m */; };
 		D2DFB7F216922EAC00D25AA6 /* SectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DFB7F116922EAC00D25AA6 /* SectionHeaderView.m */; };
@@ -145,6 +146,7 @@
 		D28A0B14168BA6C400E7815E /* MenuIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MenuIcon@2x.png"; sourceTree = "<group>"; };
 		D28A0B16168BB53300E7815E /* OptionPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionPair.h; sourceTree = "<group>"; };
 		D28A0B17168BB53300E7815E /* OptionPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionPair.m; sourceTree = "<group>"; };
+		D2AEA61F16B48239006B4F05 /* MNarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MNarrow.png; sourceTree = "<group>"; };
 		D2B0686F1692010200C2726A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D2B0688516920E2F00C2726A /* VMDAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDAnnotation.h; sourceTree = "<group>"; };
 		D2B0688616920E3000C2726A /* VMDAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDAnnotation.m; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 		D20D43BA160E26EF00D954B3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D2AEA61F16B48239006B4F05 /* MNarrow.png */,
 				D2DFB7F81692402500D25AA6 /* SelectionIndicator@2x.png */,
 				D2DFB7F616923FC800D25AA6 /* SelectionIndicator.png */,
 				D28A0B14168BA6C400E7815E /* MenuIcon@2x.png */,
@@ -495,6 +498,7 @@
 				D2DFB7F516922EC900D25AA6 /* SectionHeaderView.xib in Resources */,
 				D2DFB7F716923FC800D25AA6 /* SelectionIndicator.png in Resources */,
 				D2DFB7F91692402500D25AA6 /* SelectionIndicator@2x.png in Resources */,
+				D2AEA62016B48239006B4F05 /* MNarrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
