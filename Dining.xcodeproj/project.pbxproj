@@ -54,6 +54,10 @@
 		D20D4428160E8C8900D954B3 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D4422160E8C8900D954B3 /* UIView+Frame.m */; };
 		D20D442D160E8CE600D954B3 /* OBGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D442C160E8CE600D954B3 /* OBGradientView.m */; };
 		D20D442F160E8D0400D954B3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D442E160E8D0400D954B3 /* QuartzCore.framework */; };
+		D2210E1D16B7675800657CBD /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2210E1916B7675800657CBD /* libTestFlight.a */; };
+		D2210E1E16B7675800657CBD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D2210E1A16B7675800657CBD /* README.md */; };
+		D2210E1F16B7675800657CBD /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = D2210E1B16B7675800657CBD /* release_notes.md */; };
+		D2210E2116B7677400657CBD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2210E2016B7677400657CBD /* libz.dylib */; };
 		D26BCCA216434D32007030DD /* VMDMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D26BCCA116434D32007030DD /* VMDMenu.m */; };
 		D28A0B04168B958200E7815E /* VMDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B03168B958200E7815E /* VMDTabBarController.m */; };
 		D28A0B09168B978400E7815E /* VMDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B08168B978400E7815E /* VMDLoginViewController.m */; };
@@ -135,6 +139,11 @@
 		D20D442B160E8CE600D954B3 /* OBGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBGradientView.h; sourceTree = "<group>"; };
 		D20D442C160E8CE600D954B3 /* OBGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBGradientView.m; sourceTree = "<group>"; };
 		D20D442E160E8D0400D954B3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D2210E1916B7675800657CBD /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		D2210E1A16B7675800657CBD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D2210E1B16B7675800657CBD /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		D2210E1C16B7675800657CBD /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		D2210E2016B7677400657CBD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		D26BCCA016434D32007030DD /* VMDMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDMenu.h; sourceTree = "<group>"; };
 		D26BCCA116434D32007030DD /* VMDMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDMenu.m; sourceTree = "<group>"; };
 		D28A0B02168B958200E7815E /* VMDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDTabBarController.h; sourceTree = "<group>"; };
@@ -162,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2210E2116B7677400657CBD /* libz.dylib in Frameworks */,
 				D2B068701692010200C2726A /* CoreLocation.framework in Frameworks */,
 				D20D442F160E8D0400D954B3 /* QuartzCore.framework in Frameworks */,
 				D20D43B9160E26D200D954B3 /* MapKit.framework in Frameworks */,
@@ -169,6 +179,7 @@
 				D20D4387160E239300D954B3 /* Foundation.framework in Frameworks */,
 				D20D4389160E239300D954B3 /* CoreGraphics.framework in Frameworks */,
 				D20D438B160E239300D954B3 /* CoreData.framework in Frameworks */,
+				D2210E1D16B7675800657CBD /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +233,8 @@
 		D20D4383160E239300D954B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2210E2016B7677400657CBD /* libz.dylib */,
+				D2210E1816B7675800657CBD /* TestFlightSDK1.1 */,
 				D2B0686F1692010200C2726A /* CoreLocation.framework */,
 				D20D442E160E8D0400D954B3 /* QuartzCore.framework */,
 				D20D43B8160E26D200D954B3 /* MapKit.framework */,
@@ -388,6 +401,18 @@
 			name = "Data Model";
 			sourceTree = "<group>";
 		};
+		D2210E1816B7675800657CBD /* TestFlightSDK1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				D2210E1916B7675800657CBD /* libTestFlight.a */,
+				D2210E1A16B7675800657CBD /* README.md */,
+				D2210E1B16B7675800657CBD /* release_notes.md */,
+				D2210E1C16B7675800657CBD /* TestFlight.h */,
+			);
+			name = TestFlightSDK1.1;
+			path = Dining/TestFlightSDK1.1;
+			sourceTree = "<group>";
+		};
 		D253CA071655CEBE0052D8CC /* Options VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +524,8 @@
 				D2DFB7F716923FC800D25AA6 /* SelectionIndicator.png in Resources */,
 				D2DFB7F91692402500D25AA6 /* SelectionIndicator@2x.png in Resources */,
 				D2AEA62016B48239006B4F05 /* MNarrow.png in Resources */,
+				D2210E1E16B7675800657CBD /* README.md in Resources */,
+				D2210E1F16B7675800657CBD /* release_notes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,11 +631,19 @@
 		D20D43A4160E239300D954B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tapatory, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tapatory, LLC";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dining/Dining-Prefix.pch";
 				INFOPLIST_FILE = "Dining/Dining-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dining/TestFlightSDK1.1\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "249C66A0-3D56-430E-9FED-D057672E30A0";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "249C66A0-3D56-430E-9FED-D057672E30A0";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
@@ -617,11 +652,19 @@
 		D20D43A5160E239300D954B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tapatory, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tapatory, LLC";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dining/Dining-Prefix.pch";
 				INFOPLIST_FILE = "Dining/Dining-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dining/TestFlightSDK1.1\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "249C66A0-3D56-430E-9FED-D057672E30A0";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "249C66A0-3D56-430E-9FED-D057672E30A0";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};

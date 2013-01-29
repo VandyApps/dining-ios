@@ -12,6 +12,7 @@
 #import "SAViewManipulator.h"
 #import "VMDTabBarController.h"
 
+
 @implementation VMDAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -20,6 +21,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [TestFlight takeOff:@"94720c04471dc3d9f59d1ef2640f82ea_MTgwNDk4MjAxMy0wMS0yOCAxOTo0MTo0Mi4yMTUxNjY"];
+    
     VMDTabBarController *tabBarController = (VMDTabBarController *)self.window.rootViewController;
     
     UINavigationController *listNC = (UINavigationController *)[tabBarController.viewControllers objectAtIndex:0];

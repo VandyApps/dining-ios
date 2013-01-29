@@ -47,7 +47,7 @@
     self.tableView.dataSource = self;
     
     self.selectedOptions = [NSMutableArray array];
-    self.sortSelected = kSortIdentifierAlphabetical;
+    self.sortSelected = kSortIdentifierNear;
     
     [self customizeInterface];
     
@@ -238,7 +238,7 @@
 - (void)slidingViewControllerDidOpen:(JSSlidingViewController *)viewController {
     if ([self.sortSelected isEqualToString:@"Near"]) {
         [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:0];
-    } else {
+    } else if ([self.sortSelected isEqualToString:@"A-Z"]) {
         [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] animated:YES scrollPosition:0];
     }
     

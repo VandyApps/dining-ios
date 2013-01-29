@@ -33,8 +33,6 @@
 
 @property (strong, nonatomic) DLocation *directingLocation;
 
-@property float prevRotation;
-
 - (void)configureDataWithSortIdentifier:(NSString *)sortIdentifier;
 
 @end

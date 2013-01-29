@@ -35,9 +35,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    self.prevRotation = 0;
 
+    self.sortIdentifier = kSortIdentifierNear;
+    
     // Grab the app delegate for use of the sliding view controller
     self.appDelegate = (VMDAppDelegate *)[[UIApplication sharedApplication] delegate];
     
@@ -141,6 +141,7 @@
             
             // If alphabetical sort
             if ([sortIdentifier isEqualToString:kSortIdentifierAlphabetical]) {
+                
                 bool found = false;
                 for (int i = 0; i < sectionedDataSource.count; i++) {
                     NSArray *letterArray = [sectionedDataSource objectAtIndex:i];
@@ -152,7 +153,6 @@
                         NSArray *newLetterArray = [mutLetArr copy];
                         [sectionedDataSource setObject:newLetterArray atIndexedSubscript:i];
                         found = true;
-                        
                     }
                 }
                 if (!found) {
@@ -172,24 +172,20 @@
                 else if (miles <= 20) index = 5;
                 else index = 6;
                 
-                
                 NSMutableArray *mutDistArr =
                 [[sectionedDataSource objectAtIndex:index] mutableCopy];
                 [mutDistArr addObject:location];
                 NSArray *newDistArray = [mutDistArr copy];
                 [sectionedDataSource setObject:newDistArray
                             atIndexedSubscript:index];
-                
             }
-            
         }
-
     }
-    
     self.dataSource = [sectionedDataSource copy];
     self.sortIdentifier = sortIdentifier;
 }
 
+// Sort data in alphabetical order. Takes old dataSource.
 - (NSArray *)sortDataAlphabetical:(NSMutableArray *)array {
     [array sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         return [[obj1 name] characterAtIndex:0] > [[obj2 name] characterAtIndex:0];
@@ -197,19 +193,18 @@
     return [array copy];
 }
 
+// Sort data based on nearby. Takes old dataSource.
 - (NSArray *)sortDataNear:(NSMutableArray *)array {
     CLLocation *userLoc = [self.locManager location];
     CLLocation *otherLoc;
     
     for (DLocation *location in array) {
-//        if (!location.distance) {
-            otherLoc = [[CLLocation alloc] initWithLatitude:
-                        [location.latitude doubleValue]
-                                                  longitude:
-                        [location.longitude doubleValue]];
-            location.distance =
-            [NSNumber numberWithDouble:[userLoc distanceFromLocation:otherLoc]];
-//        }
+        otherLoc = [[CLLocation alloc] initWithLatitude:
+                    [location.latitude doubleValue]
+                                              longitude:
+                    [location.longitude doubleValue]];
+        location.distance =
+        [NSNumber numberWithDouble:[userLoc distanceFromLocation:otherLoc]];
     }
     [array sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         return [[obj1 distance] doubleValue] > [[obj2 distance] doubleValue];
@@ -267,6 +262,7 @@
     return cell;
 }
 
+/* Commented out for now, may find use for later.
 - (void)sortData:(NSString *)sortType
 {
 	NSSortDescriptor *locationSortDescriptor;
@@ -278,13 +274,15 @@
 	
 	}
 	
-	NSArray * descriptors = @[locationSortDescriptor];
-	NSArray * sortedArray = [self.dataSource sortedArrayUsingDescriptors:descriptors];
+//	NSArray * descriptors = @[locationSortDescriptor];
+//	NSArray * sortedArray = [self.dataSource sortedArrayUsingDescriptors:descriptors];
 }
+*/
 
 
 #pragma mark - UITableView Delegate
 
+// Titles for section headers
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (self.sortIdentifier == kSortIdentifierAlphabetical) {
         return [NSString stringWithFormat:@"%c", [[[[self.dataSource objectAtIndex:section] lastObject] name] characterAtIndex:0]];
@@ -342,15 +340,13 @@
 
 #pragma mark - CLLocationManagerDelegate
 
+// Cartesian distance
 - (float)distanceWithXOne:(float)x1 yOne:(float)y1 xTwo:(float)x2 yTwo:(float)y2 {
     return sqrtf(powf((x2-x1), 2.0) + powf((y2-y1), 2.0));
 }
 
 - (void)locationManager:(CLLocationManager *)manager
 didUpdateHeading:(CLHeading *)newHeading __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0) {
-    
-    // Magnetic heading
-//    NSLog(@"%f", newHeading.magneticHeading);
     
     // Directed location
     DLocation *location = self.directingLocation;
@@ -368,6 +364,7 @@ didUpdateHeading:(CLHeading *)newHeading __OSX_AVAILABLE_STARTING(__MAC_NA,__IPH
     float x3 = x1;
     float y3 = y2;
     
+    // Sides of the triangle
     float meToLocation = [self distanceWithXOne:x1 yOne:y1 xTwo:x2 yTwo:y2];
     float meToVertPoint = [self distanceWithXOne:x1 yOne:y1 xTwo:x3 yTwo:y3];
     
@@ -375,45 +372,57 @@ didUpdateHeading:(CLHeading *)newHeading __OSX_AVAILABLE_STARTING(__MAC_NA,__IPH
     double angle = acosf(meToVertPoint/meToLocation);
     if (y3 < 0) angle += (M_PI/2);
     
-    // Angles
-//    NSLog(@"Angle from north (rad): %f", newHeading.magneticHeading * (M_PI/180.0));
-//    NSLog(@"Angle (degree): %f", newHeading.magneticHeading);
-    
-    // Rotate the arrow
+    // Rotate directional image view to location.
     CGAffineTransform rotationTransform = CGAffineTransformIdentity;
-    rotationTransform = CGAffineTransformRotate(rotationTransform, -newHeading.magneticHeading * (M_PI/180.0) + angle + (M_PI));
-    self.prevRotation = newHeading.magneticHeading * (M_PI/180.0);
+    rotationTransform = CGAffineTransformRotate(rotationTransform, -newHeading.trueHeading * (M_PI/180.0) + angle + (M_PI));
     self.directionImageView.transform = rotationTransform;
-    
-    [self locationManager:self.locManager didUpdateToLocation:nil fromLocation:nil];
 }
 
+// Location update
 - (void)locationManager:(CLLocationManager *)manager
 didUpdateToLocation:(CLLocation *)newLocation
 fromLocation:(CLLocation *)oldLocation __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_6, __MAC_NA, __IPHONE_2_0, __IPHONE_6_0) {
     
+    // Copy the datasource for comparison
     NSArray *dataSourceCopy = [self.dataSource copy];
+    
+    // Sort data again
     [self configureDataWithSortIdentifier:self.sortIdentifier];
+    
+    // If the newly sorted data is different, reload the tableView with it
     if (![dataSourceCopy isEqualToArray:self.dataSource]) {
         [self.tableView reloadData];
     }
     
-    if (self.sortIdentifier == kSortIdentifierNear && self.directingLocation != [[self.dataSource objectAtIndex:0] objectAtIndex:0]) {
-        self.directingLocation = [[self.dataSource objectAtIndex:0] objectAtIndex:0];
-        self.nearestNameLabel.text = self.directingLocation.name;
-        self.nearestCategoryLabel.text = self.directingLocation.type;
+    // If we're in near mode and the first one is different, change it
+    if (self.sortIdentifier == kSortIdentifierNear &&
+        self.directingLocation != [[self.dataSource objectAtIndex:0]
+                                   objectAtIndex:0]){
+        self.directingLocation = [[self.dataSource objectAtIndex:0]
+                                  objectAtIndex:0];
+        
     }
     
+    // If the we have a location to direct to,
     if (self.directingLocation) {
+        // Update information on the view at the top of the tableView
+        self.nearestNameLabel.text = self.directingLocation.name;
+        self.nearestCategoryLabel.text = self.directingLocation.type;
         
+        // Get the other location
         CLLocation *otherLoc = [[CLLocation alloc] initWithLatitude:
                                 [self.directingLocation.latitude doubleValue]
                                                           longitude:
                                 [self.directingLocation.longitude doubleValue]];
-        NSNumber *num = [NSNumber numberWithFloat:[self.locManager.location distanceFromLocation:otherLoc] / METERS_PER_MILE];
+        
+        // Format the number
+        NSNumber *num = [NSNumber numberWithFloat:
+                         [self.locManager.location
+                          distanceFromLocation:otherLoc] / METERS_PER_MILE];
         NSNumberFormatter *numFormatter = [[NSNumberFormatter alloc] init];
         [numFormatter setMaximumFractionDigits:2];
         
+        // idsplay it
         self.nearestDistance.text =
         [NSString stringWithFormat:@"%@", [numFormatter stringFromNumber:num]];
     }
