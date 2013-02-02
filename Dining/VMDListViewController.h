@@ -12,8 +12,9 @@
 #import "VMDAppDelegate.h"
 #import "VMDTabBarController.h"
 #import "DLocation.h"
+#import "PullToRefreshView.h"
 
-@interface VMDListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate,CLLocationManagerDelegate>
+@interface VMDListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate,CLLocationManagerDelegate, PullToRefreshViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIView *featuredCellContainerView;

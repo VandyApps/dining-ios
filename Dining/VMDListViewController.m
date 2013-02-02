@@ -20,9 +20,13 @@
 
 @interface VMDListViewController ()
 
+
 @end
 
 @implementation VMDListViewController
+{
+	PullToRefreshView *pull;
+}
 
 @synthesize tableView;
 
@@ -54,12 +58,27 @@
     self.locManager.delegate = self;
     [self.locManager startUpdatingLocation];
     [self.locManager startUpdatingHeading];
+	
+	pull = [[PullToRefreshView alloc] initWithScrollView:(UIScrollView *) self.tableView];
+	[pull setDelegate:self];
+	[self.tableView addSubview:pull];
     
 //    self.directingLocation = [[self.dataSource objectAtIndex:1] objectAtIndex:1];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [[self.appDelegate viewController] setLocked:NO];
+}
+
+- (void)pullToRefreshViewShouldRefresh:(PullToRefreshView *)view;
+{
+	[self reloadTableData];
+}
+
+-(void) reloadTableData
+{
+    [self.tableView reloadData];
+    [pull finishedLoading];
 }
 
 - (void)viewDidUnload
