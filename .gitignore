@@ -18,3 +18,17 @@ xcuserdata
 profile
 *.moved-aside
 .DS_Store
+
+*.hmap
+
+*.dep
+
+*.o
+
+*.LinkFileList
+
+*.d
+
+*.d
+
+*.dia
