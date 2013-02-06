@@ -64,6 +64,10 @@
 		D2210E1E16B7675800657CBD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D2210E1A16B7675800657CBD /* README.md */; };
 		D2210E1F16B7675800657CBD /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = D2210E1B16B7675800657CBD /* release_notes.md */; };
 		D2210E2116B7677400657CBD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2210E2016B7677400657CBD /* libz.dylib */; };
+		D234EB1116C22715009EDCA0 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D234EB1016C22715009EDCA0 /* libxml2.2.dylib */; };
+		D234EB3716C22BF0009EDCA0 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = D234EB3216C22BF0009EDCA0 /* TFHpple.m */; };
+		D234EB3816C22BF0009EDCA0 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = D234EB3416C22BF0009EDCA0 /* TFHppleElement.m */; };
+		D234EB3916C22BF0009EDCA0 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = D234EB3616C22BF0009EDCA0 /* XPathQuery.m */; };
 		D26BCCA216434D32007030DD /* VMDMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D26BCCA116434D32007030DD /* VMDMenu.m */; };
 		D28A0B04168B958200E7815E /* VMDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B03168B958200E7815E /* VMDTabBarController.m */; };
 		D28A0B09168B978400E7815E /* VMDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A0B08168B978400E7815E /* VMDLoginViewController.m */; };
@@ -157,6 +161,13 @@
 		D2210E1B16B7675800657CBD /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
 		D2210E1C16B7675800657CBD /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		D2210E2016B7677400657CBD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D234EB1016C22715009EDCA0 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		D234EB3116C22BF0009EDCA0 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		D234EB3216C22BF0009EDCA0 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		D234EB3316C22BF0009EDCA0 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		D234EB3416C22BF0009EDCA0 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		D234EB3516C22BF0009EDCA0 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		D234EB3616C22BF0009EDCA0 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		D26BCCA016434D32007030DD /* VMDMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDMenu.h; sourceTree = "<group>"; };
 		D26BCCA116434D32007030DD /* VMDMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDMenu.m; sourceTree = "<group>"; };
 		D28A0B02168B958200E7815E /* VMDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDTabBarController.h; sourceTree = "<group>"; };
@@ -184,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D234EB1116C22715009EDCA0 /* libxml2.2.dylib in Frameworks */,
 				02FC753B16BDBEE0004BEE72 /* AudioToolbox.framework in Frameworks */,
 				D2210E2116B7677400657CBD /* libz.dylib in Frameworks */,
 				D2B068701692010200C2726A /* CoreLocation.framework in Frameworks */,
@@ -243,7 +255,6 @@
 		D20D4375160E239300D954B3 = {
 			isa = PBXGroup;
 			children = (
-				02FC753A16BDBEE0004BEE72 /* AudioToolbox.framework */,
 				D20D438C160E239300D954B3 /* Dining */,
 				D20D4383160E239300D954B3 /* Frameworks */,
 				D20D4381160E239300D954B3 /* Products */,
@@ -261,8 +272,10 @@
 		D20D4383160E239300D954B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D234EB1016C22715009EDCA0 /* libxml2.2.dylib */,
 				D2210E2016B7677400657CBD /* libz.dylib */,
 				D2210E1816B7675800657CBD /* TestFlightSDK1.1 */,
+				02FC753A16BDBEE0004BEE72 /* AudioToolbox.framework */,
 				D2B0686F1692010200C2726A /* CoreLocation.framework */,
 				D20D442E160E8D0400D954B3 /* QuartzCore.framework */,
 				D20D43B8160E26D200D954B3 /* MapKit.framework */,
@@ -277,6 +290,12 @@
 		D20D438C160E239300D954B3 /* Dining */ = {
 			isa = PBXGroup;
 			children = (
+				D234EB3116C22BF0009EDCA0 /* TFHpple.h */,
+				D234EB3216C22BF0009EDCA0 /* TFHpple.m */,
+				D234EB3316C22BF0009EDCA0 /* TFHppleElement.h */,
+				D234EB3416C22BF0009EDCA0 /* TFHppleElement.m */,
+				D234EB3516C22BF0009EDCA0 /* XPathQuery.h */,
+				D234EB3616C22BF0009EDCA0 /* XPathQuery.m */,
 				D20D442A160E8CAB00D954B3 /* Data Model */,
 				D20D441C160E8C5900D954B3 /* Utilities */,
 				D253CA071655CEBE0052D8CC /* Options VC */,
@@ -594,6 +613,9 @@
 				D2B0688716920E3000C2726A /* VMDAnnotation.m in Sources */,
 				D2DFB7F216922EAC00D25AA6 /* SectionHeaderView.m in Sources */,
 				02FC753416BDB729004BEE72 /* PullToRefreshView.m in Sources */,
+				D234EB3716C22BF0009EDCA0 /* TFHpple.m in Sources */,
+				D234EB3816C22BF0009EDCA0 /* TFHppleElement.m in Sources */,
+				D234EB3916C22BF0009EDCA0 /* XPathQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +691,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dining/Dining-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
 				INFOPLIST_FILE = "Dining/Dining-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
@@ -690,6 +713,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dining/Dining-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
 				INFOPLIST_FILE = "Dining/Dining-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (

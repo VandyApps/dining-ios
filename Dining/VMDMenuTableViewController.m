@@ -9,6 +9,8 @@
 #import "VMDMenuTableViewController.h"
 #import "VMDItem.h"
 
+#import "TFHpple.h"
+
 @interface VMDMenuTableViewController ()
 
 @end
@@ -33,6 +35,76 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self downloadAndParseMenuForDate:[NSDate date]];
+}
+
+- (void)downloadAndParseMenuForDate:(NSDate *)date {
+    [self parseHppleMenu:
+     [self downloadMenuForDateComponents:
+      [self componentsFromCurrentDate:date]]];
+}
+
+- (NSDateComponents *)componentsFromCurrentDate:(NSDate *)today {
+    NSCalendar *gregorian = [[NSCalendar alloc]
+                             initWithCalendarIdentifier:NSGregorianCalendar];
+    return [gregorian components:(NSDayCalendarUnit
+                           | NSMonthCalendarUnit
+                           | NSYearCalendarUnit) fromDate:today];
+}
+
+- (TFHpple *)downloadMenuForDateComponents:(NSDateComponents *)components {
+    NSInteger day = [components day];
+    NSInteger month = [components month];
+    NSInteger year = [components year];
+    return [self downloadMenuForMonth:month Day:day Year:year];
+}
+
+- (TFHpple *)downloadMenuForMonth:(NSInteger)month Day:(NSInteger)day Year:(NSInteger)year {
+    // Grab the data from the web for today's menu
+    NSData  * data      = [NSData dataWithContentsOfURL:
+                           [NSURL URLWithString:
+                            [NSString stringWithFormat:
+                             @"http://vanderbilt.mymenumanager.net/menu.php?date=%d,%d,%d&location=-1",
+                             month, day, year]]];
+    
+    // Transform data into HTML parseable document
+    return [[TFHpple alloc] initWithHTMLData:data];
+}
+
+- (void)parseHppleMenu:(TFHpple *)doc {
+    // Perform various searches on tags
+    NSArray * locations  = [doc searchWithXPathQuery:@"//td [@class='location_title']"];
+    NSArray * subheaders = [doc searchWithXPathQuery:@"//td [@class='displaytext'] [@valign='bottom']"];
+    NSArray * mealPeriods = [doc searchWithXPathQuery:@"//td [@class='displaytext'] [@valign='top']"];
+    NSArray * menus = [doc searchWithXPathQuery:@"//table [@width='100%'] [@border='0'] [@cellpadding='0'] [@cellspacing='0'] [@class='text']"];
+    
+    // For each location element
+    for (TFHppleElement *location in locations) {
+        // Get the index of that element
+        int index = [locations indexOfObject:location];
+        
+        // Grab the subheader and meal period
+        TFHppleElement *subHeader = [subheaders objectAtIndex:index];
+        TFHppleElement *meal = [mealPeriods objectAtIndex:index];
+        
+        // Display that in the log
+        NSLog(@"%@ - %@ (%@)", [location text], [subHeader text], [meal text]);
+        
+        // Grab the menu list
+        TFHppleElement *menu = [[[menus objectAtIndex:index]
+                                 firstChild]
+                                firstChild];
+        menu = [menu.children objectAtIndex:1];
+        
+        // Grab each item in that menu, place them in an array
+        NSArray *menuItems = [menu childrenWithTagName:@"li"];
+        
+        // For each of those items, display it neatly
+        for (TFHppleElement *menuItem in menuItems) {
+            NSLog(@"   * %@", menuItem.text);
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
