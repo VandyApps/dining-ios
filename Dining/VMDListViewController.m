@@ -303,9 +303,9 @@
 
 // Titles for section headers
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (self.sortIdentifier == kSortIdentifierAlphabetical) {
+    if ([self.sortIdentifier isEqualToString:kSortIdentifierAlphabetical]) {
         return [NSString stringWithFormat:@"%c", [[[[self.dataSource objectAtIndex:section] lastObject] name] characterAtIndex:0]];
-    } else if (self.sortIdentifier == kSortIdentifierNear) {
+    } else if ([self.sortIdentifier isEqualToString:kSortIdentifierNear]) {
         float y;
         NSArray *distances = [NSArray arrayWithObjects:[NSNumber numberWithFloat:.25], [NSNumber numberWithFloat:.5], [NSNumber numberWithInt:1], [NSNumber numberWithInt:5], [NSNumber numberWithInt:10], [NSNumber numberWithInt:20], [NSNumber numberWithInt:21], nil];
         NSNumber *num = [distances objectAtIndex:section];
@@ -367,34 +367,41 @@
 - (void)locationManager:(CLLocationManager *)manager
 didUpdateHeading:(CLHeading *)newHeading __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0) {
     
-    // Directed location
-    DLocation *location = self.directingLocation;
-    NSLog(@"Pointing to %@", location.name);
+    if (newHeading.headingAccuracy < 30) {
     
-    // Me
-    float x1 = self.locManager.location.coordinate.latitude;
-    float y1 = self.locManager.location.coordinate.longitude;
-    
-    // Location
-    float x2 = [location.latitude doubleValue];
-    float y2 = [location.longitude doubleValue];
-    
-    // Third triangle point
-    float x3 = x1;
-    float y3 = y2;
-    
-    // Sides of the triangle
-    float meToLocation = [self distanceWithXOne:x1 yOne:y1 xTwo:x2 yTwo:y2];
-    float meToVertPoint = [self distanceWithXOne:x1 yOne:y1 xTwo:x3 yTwo:y3];
-    
-    // Angle between me and north
-    double angle = acosf(meToVertPoint/meToLocation);
-    if (y3 < 0) angle += (M_PI/2);
-    
-    // Rotate directional image view to location.
-    CGAffineTransform rotationTransform = CGAffineTransformIdentity;
-    rotationTransform = CGAffineTransformRotate(rotationTransform, -newHeading.trueHeading * (M_PI/180.0) + angle + (M_PI));
-    self.directionImageView.transform = rotationTransform;
+        // Directed location
+        DLocation *location = self.directingLocation;
+        NSLog(@"Pointing to %@", location.name);
+        
+        // Me
+        float x1 = self.locManager.location.coordinate.latitude;
+        float y1 = self.locManager.location.coordinate.longitude;
+        
+        // Location
+        float x2 = [location.latitude floatValue];
+        float y2 = [location.longitude floatValue];
+        
+        // Third triangle point
+        float x3 = x1;
+        float y3 = y2;
+        
+        // Sides of the triangle
+        float meToLocation = [self distanceWithXOne:x1 yOne:y1 xTwo:x2 yTwo:y2];
+        float meToVertPoint = [self distanceWithXOne:x1 yOne:y1 xTwo:x3 yTwo:y3];
+        
+        NSLog(@"Magnetic heading: %f", newHeading.magneticHeading);
+        NSLog(@"Heading accuracy: %f", newHeading.headingAccuracy);
+        
+        // Angle between me and north
+        double angle = acosf(meToVertPoint/meToLocation);
+        if (y3 < 0) angle += (M_PI/2);
+        
+        // Rotate directional image view to location.
+        CGAffineTransform rotationTransform = CGAffineTransformIdentity;
+        rotationTransform = CGAffineTransformRotate(rotationTransform, -newHeading.magneticHeading * (M_PI/180.0) + angle);
+        self.directionImageView.transform = rotationTransform;
+    }
+    else NSLog(@"Deviation too high!");
 }
 
 // Location update
@@ -414,7 +421,7 @@ fromLocation:(CLLocation *)oldLocation __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_6
     }
     
     // If we're in near mode and the first one is different, change it
-    if (self.sortIdentifier == kSortIdentifierNear &&
+    if ([self.sortIdentifier isEqualToString:kSortIdentifierNear] &&
         self.directingLocation != [[self.dataSource objectAtIndex:0]
                                    objectAtIndex:0]){
         self.directingLocation = [[self.dataSource objectAtIndex:0]
