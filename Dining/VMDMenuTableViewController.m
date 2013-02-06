@@ -62,11 +62,11 @@
 
 - (TFHpple *)downloadMenuForMonth:(NSInteger)month Day:(NSInteger)day Year:(NSInteger)year {
     // Grab the data from the web for today's menu
-    NSData  * data      = [NSData dataWithContentsOfURL:
-                           [NSURL URLWithString:
-                            [NSString stringWithFormat:
-                             @"http://vanderbilt.mymenumanager.net/menu.php?date=%d,%d,%d&location=-1",
-                             month, day, year]]];
+    NSData * data = [NSData dataWithContentsOfURL:
+                     [NSURL URLWithString:
+                      [NSString stringWithFormat:
+                       @"http://vanderbilt.mymenumanager.net/menu.php?date=%d,%d,%d&location=-1",
+                       month, day, year]]];
     
     // Transform data into HTML parseable document
     return [[TFHpple alloc] initWithHTMLData:data];
