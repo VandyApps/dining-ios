@@ -20,6 +20,7 @@
 
 #define kSortIdentifierAlphabetical @"SORT_ID_ALPHABETICAL"
 #define kSortIdentifierNear @"SORT_ID_NEAR"
+#define kSortIdentifierCategory @"SORT_ID_CATEGORY"
 #define kSortByHeader @"Sort By"
 #define kFilterHeader @"Filter"
 
@@ -78,7 +79,8 @@
     if ([selectedVC isKindOfClass:[VMDListViewController class]]) {
         OptionPair *sortListPair = [[OptionPair alloc] init];
         sortListPair.header = kSortByHeader;
-        sortListPair.array = [NSArray arrayWithObjects:@"Near", @"A-Z", nil];
+        sortListPair.array =
+        [NSArray arrayWithObjects:@"Near", @"A-Z", @"Category", nil];
         
         OptionPair *filterListPair = [[OptionPair alloc] init];
         filterListPair.header = kFilterHeader;
@@ -175,11 +177,14 @@
             cell.accessoryView = selind;
         }
     } else {
-        if ([[[[self.options objectAtIndex:indexPath.section] array]
-              objectAtIndex:indexPath.row] isEqualToString:@"A-Z"]) {
+        NSString *sortIdentifier = [[[self.options objectAtIndex:indexPath.section] array]
+                                    objectAtIndex:indexPath.row];
+        if ([sortIdentifier isEqualToString:@"A-Z"]) {
             self.sortSelected = kSortIdentifierAlphabetical;
-        } else {
+        } else if ([sortIdentifier isEqualToString:@"Near"]) {
             self.sortSelected = kSortIdentifierNear;
+        } else if ([sortIdentifier isEqualToString:@"Category"]) {
+            self.sortSelected = kSortIdentifierCategory;
         }
         
         [[self.appDelegate viewController] closeSlider:YES completion:nil];
@@ -240,6 +245,8 @@
         [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:0];
     } else if ([self.sortSelected isEqualToString:@"A-Z"]) {
         [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] animated:YES scrollPosition:0];
+    } else if ([self.sortSelected isEqualToString:@"Category"]) {
+        [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0] animated:YES scrollPosition:0];
     }
     
     [self populateOptions];

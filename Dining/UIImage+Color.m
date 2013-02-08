@@ -13,7 +13,8 @@
     UIImage *img = [UIImage imageNamed:name];
     
     // begin a new image context, to draw our colored image onto
-    UIGraphicsBeginImageContext(img.size);
+//    UIGraphicsBeginImageContext(img.size);
+    UIGraphicsBeginImageContextWithOptions(img.size, NO, [UIScreen mainScreen].scale);
     
     // get a reference to that context we created
     CGContextRef context = UIGraphicsGetCurrentContext();

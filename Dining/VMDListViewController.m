@@ -6,17 +6,23 @@
 //  Copyright (c) 2012 VandyMobile. All rights reserved.
 //
 
+#import <MapKit/MapKit.h>
+#import <QuartzCore/QuartzCore.h>
+
 #import "VMDListViewController.h"
 #import "VMDLocationDetailVC.h"
 #import "SAViewManipulator.h"
-#import "UIColor+i7HexColor.h"
 
-#import <MapKit/MapKit.h>
-#import <QuartzCore/QuartzCore.h>
+#import "UIColor+i7HexColor.h"
+#import "UIView+Frame.h"
+#import "UIBarButtonItem+Custom.h"
+#import "UIImage+Color.h"
+#import "CLLocation+AFExtensions.h"
 
 #define METERS_PER_MILE 1609.344
 #define kSortIdentifierAlphabetical @"SORT_ID_ALPHABETICAL"
 #define kSortIdentifierNear @"SORT_ID_NEAR"
+#define kSortIdentifierCategory @"SORT_ID_CATEGORY"
 
 @interface VMDListViewController ()
 
@@ -56,29 +62,42 @@
 
     self.locManager = [CLLocationManager new];
     self.locManager.delegate = self;
+    self.locManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
     [self.locManager startUpdatingLocation];
     [self.locManager startUpdatingHeading];
-	
+    
+    self.motionManager = [CMMotionManager new];
+//    [self.motionManager startAccelerometerUpdates];
+//    [self.motionManager startGyroUpdates];
+	[self.motionManager startDeviceMotionUpdates];
+    
 	pull = [[PullToRefreshView alloc] initWithScrollView:(UIScrollView *) self.tableView];
 	[pull setDelegate:self];
 	[self.tableView addSubview:pull];
+    [self.tableView registerClass:[VMDListCell class] forCellReuseIdentifier:@"VMDiningCell"];
     
 //    self.directingLocation = [[self.dataSource objectAtIndex:1] objectAtIndex:1];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [[self.appDelegate viewController] setLocked:NO];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"VMDining_NavBar"]]];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[[self.navigationController.navigationBar subviews] lastObject] removeFromSuperview];
 }
 
 - (void)pullToRefreshViewShouldRefresh:(PullToRefreshView *)view;
 {
-	[self reloadTableData];
-}
-
--(void) reloadTableData
-{
-    [self.tableView reloadData];
-    [pull finishedLoading];
+    [self refreshData:nil];
+    [pull performSelector:@selector(finishedLoading) withObject:nil afterDelay:1.5];
 }
 
 - (void)viewDidUnload
@@ -137,8 +156,8 @@
     NSMutableArray *sectionedDataSource = [NSMutableArray array];
     NSMutableSet *hash = [NSMutableSet set];
     
-    // Alphabetical
-    if ([sortIdentifier isEqualToString:kSortIdentifierAlphabetical]) {
+    // Alphabetical (and Category)
+    if ([sortIdentifier isEqualToString:kSortIdentifierAlphabetical] ||[sortIdentifier isEqualToString:kSortIdentifierCategory]) {
         sortedData = [self sortDataAlphabetical:[self.oldDataSource mutableCopy]];
     }
     
@@ -153,6 +172,7 @@
         }
     }
     
+    NSMutableDictionary *categories = [NSMutableDictionary dictionary];
     
     for (DLocation *location in sortedData) {
         if (![hash containsObject:location.name]) {
@@ -182,13 +202,13 @@
             // If nearness sort
             else if ([sortIdentifier isEqualToString:kSortIdentifierNear]) {
                 int index;
-                int miles = [location.distance doubleValue] / METERS_PER_MILE;
-                if (miles <= .25) index = 0;
-                else if (miles <= .5) index = 1;
-                else if (miles <= 1) index = 2;
-                else if (miles <= 5) index = 3;
-                else if (miles <= 10) index = 4;
-                else if (miles <= 20) index = 5;
+                double miles = [location.distance doubleValue] / METERS_PER_MILE;
+                if (miles <= .05) index = 0;
+                else if (miles <= .1) index = 1;
+                else if (miles <= .25) index = 2;
+                else if (miles <= .5) index = 3;
+                else if (miles <= 1) index = 4;
+                else if (miles <= 2) index = 5;
                 else index = 6;
                 
                 NSMutableArray *mutDistArr =
@@ -198,6 +218,30 @@
                 [sectionedDataSource setObject:newDistArray
                             atIndexedSubscript:index];
             }
+            else if ([sortIdentifier isEqualToString:kSortIdentifierCategory]) {
+                
+                NSMutableArray *arr = [categories objectForKey:location.type];
+                if (!arr) {
+                    [categories setObject:
+                     [NSMutableArray  arrayWithObject:location]
+                                   forKey:location.type];
+                } else [arr addObject:location];
+                
+            }
+        }
+    }
+    
+    if ([sortIdentifier isEqualToString:kSortIdentifierCategory]) {
+        for (id category in categories) {
+            [sectionedDataSource addObject:
+             [[categories objectForKey:category] copy]];
+        }
+    }
+    
+    self.dataSource = [sectionedDataSource copy];
+    for (NSArray *section in self.dataSource) {
+        if ([section count] == 0) {
+            [sectionedDataSource removeObject:section];
         }
     }
     self.dataSource = [sectionedDataSource copy];
@@ -235,17 +279,19 @@
 
 // Private method to customize the UI. Typically called in viewDidLoad
 - (void)customizeUI {
-    // Set borders and corner radius for cell container view and cell view
-//    self.featuredCellContainerView.layer.borderColor = [[UIColor darkTextColor] CGColor];
-//    self.featuredCellContainerView.layer.borderWidth = .5;
-    
-    // TODO: Make this less buggy
-//    [SAViewManipulator addShadowToView:self.featuredCellView withOpacity:.8 radius:2 andOffset:CGSizeMake(-1, -1)];
-    
-    // Set a tabbar gradient
+
+    // Set a gradient on the Tab Bar
     [SAViewManipulator setGradientBackgroundImageForView:self.tabBarController.tabBar withTopColor:nil andBottomColor:nil];
     
-//    [self.navigationItem.leftBarButtonItem setImage:[UIImage imageNamed:@"MenuIcon"]];
+    // Set a gradient on tab bar selection indicator
+    [SAViewManipulator setGradientBackgroundImageForView:self.tabBarController.tabBar.selectionIndicatorImage withTopColor:[UIColor whiteColor] andBottomColor:[UIColor whiteColor]];
+    
+    // Custom left bar-button item
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"20-gear2" withColor:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(optionsPressed:)];
+    UIView *bBIView = self.navigationItem.leftBarButtonItem.customView;
+    
+    // Add a shadow to that bar-button item
+    [SAViewManipulator addShadowToView:bBIView withOpacity:.5 radius:1 andOffset:CGSizeMake(1, 1)];
 }
 
 #pragma mark - UITableView Data Source
@@ -264,19 +310,26 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Try to dequeue a reusable cell
     static NSString *CellIdentifier = @"VMDiningCell";
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    // If we can't, then allocate and initialize a new one
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-    
+ 
+    // Try to dequeue a reusable cell
+    VMDListCell *cell = (VMDListCell *)[self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
     // Configure the cell...
     DLocation *location = [[self.dataSource objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-    cell.textLabel.text = location.name;
-    cell.detailTextLabel.text = location.type;
+    cell.nameLabel.text = location.name;
+    cell.categoryLabel.text = location.type;
+    if (indexPath.row % 2) {
+        cell.cellBg.backgroundColor = [UIColor whiteColor];
+    } else cell.cellBg.backgroundColor = [UIColor lightGrayColor];
+    
+    if ([location distance]) {
+        cell.distanceLabel.text = [self formatDistanceToMiles:location.distance];
+    }
+    cell.delegate = self;
+    
+//    cell.selectedBackgroundView = cell.cellBg;
+//    cell.selectedBackgroundView.backgroundColor = [UIColor colorWithHexString:@"FFDB4D"];
     
     return cell;
 }
@@ -303,30 +356,48 @@
 
 // Titles for section headers
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    // Alphabetical sort
     if ([self.sortIdentifier isEqualToString:kSortIdentifierAlphabetical]) {
         return [NSString stringWithFormat:@"%c", [[[[self.dataSource objectAtIndex:section] lastObject] name] characterAtIndex:0]];
-    } else if ([self.sortIdentifier isEqualToString:kSortIdentifierNear]) {
+    }
+    // Nearness sort
+    else if ([self.sortIdentifier isEqualToString:kSortIdentifierNear]) {
         float y;
-        NSArray *distances = [NSArray arrayWithObjects:[NSNumber numberWithFloat:.25], [NSNumber numberWithFloat:.5], [NSNumber numberWithInt:1], [NSNumber numberWithInt:5], [NSNumber numberWithInt:10], [NSNumber numberWithInt:20], [NSNumber numberWithInt:21], nil];
+        NSArray *distances = [NSArray arrayWithObjects:[NSNumber numberWithFloat:.05], [NSNumber numberWithFloat:.1], [NSNumber numberWithFloat:.25], [NSNumber numberWithFloat:.5], [NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3], nil];
         NSNumber *num = [distances objectAtIndex:section];
         NSNumberFormatter *numFormatter = [[NSNumberFormatter alloc] init];
         [numFormatter setMaximumFractionDigits:2];
         
         y = [[distances objectAtIndex:section] floatValue];
         
-        if (y > 20) {
-            return [NSString stringWithFormat:@">%d miles", 20];
+        if (y > 2) {
+            return [NSString stringWithFormat:@">%d miles", 2];
         }
         
         return [NSString stringWithFormat:@"%@ miles", [numFormatter stringFromNumber:num]];
     }
+    // Categorical sort
+    else if ([self.sortIdentifier isEqualToString:kSortIdentifierCategory]) {
+        DLocation *loc = [[self.dataSource objectAtIndex:section] lastObject];
+        return loc.type;
+    }
     return @" ";
+}
+
+// Called after the user changes the selection.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"VMDListToDetail" sender:[self.tableView cellForRowAtIndexPath:indexPath]];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - IBActions
 
 - (IBAction)optionsPressed:(UIBarButtonItem *)sender {
-    [self.appDelegate.viewController openSlider:YES completion:nil];
+    if (self.appDelegate.viewController.isOpen) {
+        [self.appDelegate.viewController closeSlider:YES completion:nil];
+    } else {
+        [self.appDelegate.viewController openSlider:YES completion:nil];
+    }
 }
 
 - (IBAction)refreshData:(UIBarButtonItem *)sender {
@@ -360,48 +431,78 @@
 #pragma mark - CLLocationManagerDelegate
 
 // Cartesian distance
-- (float)distanceWithXOne:(float)x1 yOne:(float)y1 xTwo:(float)x2 yTwo:(float)y2 {
-    return sqrtf(powf((x2-x1), 2.0) + powf((y2-y1), 2.0));
+- (double)distanceWithXOne:(double)x1 yOne:(double)y1 xTwo:(double)x2 yTwo:(double)y2 {
+    return sqrt(pow((x2-x1), 2.0) + pow((y2-y1), 2.0));
 }
 
 - (void)locationManager:(CLLocationManager *)manager
 didUpdateHeading:(CLHeading *)newHeading __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0) {
     
-    if (newHeading.headingAccuracy < 30) {
+
+//        // Directed location
+//        DLocation *location = self.directingLocation;
+//        NSLog(@"Pointing to %@", location.name);
+//        
+//        // Me
+//        double x1 = self.locManager.location.coordinate.latitude;
+//        double y1 = self.locManager.location.coordinate.longitude;
+//        
+//        // Location
+//        double x2 = [location.latitude floatValue];
+//        double y2 = [location.longitude floatValue];
+//        
+//        // Third triangle point
+//        double x3 = x1;
+//        double y3 = y2;
+//        
+//        // Sides of the triangle
+//        double meToLocation = [self distanceWithXOne:x1 yOne:y1 xTwo:x2 yTwo:y2];
+//        double meToVertPoint = [self distanceWithXOne:x1 yOne:y1 xTwo:x3 yTwo:y3];
+//        
+//        NSLog(@"Magnetic heading: %f", newHeading.magneticHeading);
+//        NSLog(@"Heading accuracy: %f", newHeading.headingAccuracy);
+//        
+//        // Angle between place and north
+//        double angle = acosf(meToVertPoint/meToLocation);
+//        
+//        if (y2 < y1) {
+//            angle = -angle;
+//        }
+//        if (x2 < x1) {
+//            if (angle >= 0)
+//                angle = M_PI - angle;
+//            else
+//                angle = -M_PI - angle;
+//        }
+
+    CLLocation *destination = [CLLocation locationWithCoordinate:
+                               CLLocationCoordinate2DMake(self.directingLocation.latitude.doubleValue,
+                                                          self.directingLocation.longitude.doubleValue)];
     
-        // Directed location
-        DLocation *location = self.directingLocation;
-        NSLog(@"Pointing to %@", location.name);
-        
-        // Me
-        float x1 = self.locManager.location.coordinate.latitude;
-        float y1 = self.locManager.location.coordinate.longitude;
-        
-        // Location
-        float x2 = [location.latitude floatValue];
-        float y2 = [location.longitude floatValue];
-        
-        // Third triangle point
-        float x3 = x1;
-        float y3 = y2;
-        
-        // Sides of the triangle
-        float meToLocation = [self distanceWithXOne:x1 yOne:y1 xTwo:x2 yTwo:y2];
-        float meToVertPoint = [self distanceWithXOne:x1 yOne:y1 xTwo:x3 yTwo:y3];
-        
-        NSLog(@"Magnetic heading: %f", newHeading.magneticHeading);
-        NSLog(@"Heading accuracy: %f", newHeading.headingAccuracy);
-        
-        // Angle between me and north
-        double angle = acosf(meToVertPoint/meToLocation);
-        if (y3 < 0) angle += (M_PI/2);
-        
-        // Rotate directional image view to location.
-        CGAffineTransform rotationTransform = CGAffineTransformIdentity;
-        rotationTransform = CGAffineTransformRotate(rotationTransform, -newHeading.magneticHeading * (M_PI/180.0) + angle);
-        self.directionImageView.transform = rotationTransform;
-    }
-    else NSLog(@"Deviation too high!");
+    double rotationAngle =
+    [self.locManager.location bearingInRadiansTowardsLocation:destination] -
+    newHeading.magneticHeading * ((double)M_PI/(double)180.0);
+    
+    // Create rotation transform based on heading
+//    CGAffineTransform rotationTransform = CGAffineTransformIdentity;
+//    rotationTransform = CGAffineTransformRotate(rotationTransform, rotationAngle);
+    
+    // Create 3D Affine Transform based on pitch of device
+    CMAttitude *attitude = self.motionManager.deviceMotion.attitude;
+//    CATransform3D transform3D =
+//    CATransform3DMakeRotation(attitude.pitch, 0, 1, 0);
+    CATransform3D transform;
+    transform = CATransform3DMakeRotation(attitude.pitch, 1, 0, 0);
+    transform = CATransform3DRotate(transform, attitude.roll, 0, 1, 0);
+    transform = CATransform3DRotate(transform, rotationAngle, 0, 0, 1);
+    
+    // Combine the two affine transforms
+//    CGAffineTransform combineTransforms =
+//    CGAffineTransformConcat(CATransform3DGetAffineTransform(transform), rotationTransform);
+    
+    // Transform the imageView
+    self.directionImageView.transform = CATransform3DGetAffineTransform(transform);
+    
 }
 
 // Location update
@@ -418,42 +519,50 @@ fromLocation:(CLLocation *)oldLocation __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_6
     // If the newly sorted data is different, reload the tableView with it
     if (![dataSourceCopy isEqualToArray:self.dataSource]) {
         [self.tableView reloadData];
+        
+        // If the we have a location to direct to,
+        if (!self.directingLocation) {
+            if ([self.sortIdentifier isEqualToString:kSortIdentifierNear] &&
+                self.directingLocation != [[self.dataSource objectAtIndex:0]
+                                           objectAtIndex:0]) {
+                    self.directingLocation = [[self.dataSource objectAtIndex:0]
+                                              objectAtIndex:0];
+                    
+                }
+        }
     }
     
-    // If we're in near mode and the first one is different, change it
-    if ([self.sortIdentifier isEqualToString:kSortIdentifierNear] &&
-        self.directingLocation != [[self.dataSource objectAtIndex:0]
-                                   objectAtIndex:0]){
-        self.directingLocation = [[self.dataSource objectAtIndex:0]
-                                  objectAtIndex:0];
-        
+    if (![self.nearestDistance.text isEqualToString:[self formatDistanceToMiles:self.directingLocation.distance]]) {
+        [self updateDistance];
     }
+}
+
+- (void)updateDistance {
+    self.nearestDistance.text =
+    [self formatDistanceToMiles:self.directingLocation.distance];
+}
+
+- (void)setWayPointToLocation:(DLocation *)location {
+    self.directingLocation = location;
     
-    // If the we have a location to direct to,
-    if (self.directingLocation) {
-        // Update information on the view at the top of the tableView
-        self.nearestNameLabel.text = self.directingLocation.name;
-        self.nearestCategoryLabel.text = self.directingLocation.type;
-        
-        // Get the other location
-        CLLocation *otherLoc = [[CLLocation alloc] initWithLatitude:
-                                [self.directingLocation.latitude doubleValue]
-                                                          longitude:
-                                [self.directingLocation.longitude doubleValue]];
-        
-        // Format the number
-        NSNumber *num = [NSNumber numberWithFloat:
-                         [self.locManager.location
-                          distanceFromLocation:otherLoc] / METERS_PER_MILE];
-        NSNumberFormatter *numFormatter = [[NSNumberFormatter alloc] init];
-        [numFormatter setMaximumFractionDigits:2];
-        
-        // idsplay it
-        self.nearestDistance.text =
-        [NSString stringWithFormat:@"%@", [numFormatter stringFromNumber:num]];
-    }
+    // Update information on the view at the top of the tableView
+    self.nearestNameLabel.text = self.directingLocation.name;
+    self.nearestCategoryLabel.text = self.directingLocation.type;
     
+    // display it
+    self.nearestDistance.text = [self formatDistanceToMiles:location.distance];
     
+    [self locationManager:self.locManager didUpdateHeading:self.locManager.heading];
+}
+
+- (NSString *)formatDistanceToMiles:(NSNumber *)distance {
+    NSNumber *num = [NSNumber numberWithFloat:(distance.floatValue / METERS_PER_MILE)];
+    NSNumberFormatter *numFormatter = [[NSNumberFormatter alloc] init];
+    [numFormatter setMaximumIntegerDigits:1];
+    [numFormatter setMaximumFractionDigits:2];
+    
+    // display it
+    return [NSString stringWithFormat:@"%@", [numFormatter stringFromNumber:num]];
 }
 
 @end

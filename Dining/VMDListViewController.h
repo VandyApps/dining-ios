@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <CoreMotion/CoreMotion.h>
 
 #import "VMDAppDelegate.h"
 #import "VMDTabBarController.h"
 #import "DLocation.h"
 #import "PullToRefreshView.h"
+#import "VMDListCell.h"
 
-@interface VMDListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate,CLLocationManagerDelegate, PullToRefreshViewDelegate>
+@interface VMDListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate,CLLocationManagerDelegate, PullToRefreshViewDelegate, VMDListCellDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIView *featuredCellContainerView;
@@ -31,6 +33,7 @@
 @property (strong, nonatomic) VMDTabBarController *vmdTBC;
 @property (strong, nonatomic) NSString *sortIdentifier;
 @property (strong, nonatomic) CLLocationManager *locManager;
+@property (strong, nonatomic) CMMotionManager *motionManager;
 
 @property (strong, nonatomic) DLocation *directingLocation;
 
