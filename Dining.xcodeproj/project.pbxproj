@@ -85,6 +85,11 @@
 		D28CE73E16C5629E007586B7 /* CLLocationManager+AFExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D28CE73A16C5629D007586B7 /* CLLocationManager+AFExtensions.m */; };
 		D28CE73F16C5629E007586B7 /* CLLocation+AFExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D28CE73C16C5629E007586B7 /* CLLocation+AFExtensions.m */; };
 		D28CE74116C5648A007586B7 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28CE74016C5648A007586B7 /* CoreMotion.framework */; };
+		D28CE74416C59D90007586B7 /* 71-compass.png in Resources */ = {isa = PBXBuildFile; fileRef = D28CE74216C59D90007586B7 /* 71-compass.png */; };
+		D28CE74516C59D90007586B7 /* 71-compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D28CE74316C59D90007586B7 /* 71-compass@2x.png */; };
+		D28CE74716C5C8B0007586B7 /* VMDSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28CE74616C5C8B0007586B7 /* VMDSectionHeaderView.xib */; };
+		D28CE74916C5C9B2007586B7 /* Suplexmentary Comic NC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D28CE74816C5C9B2007586B7 /* Suplexmentary Comic NC.ttf */; };
+		D28CE74C16C5CA97007586B7 /* VMDSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D28CE74B16C5CA97007586B7 /* VMDSectionHeaderView.m */; };
 		D2AEA62016B48239006B4F05 /* MNarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D2AEA61F16B48239006B4F05 /* MNarrow.png */; };
 		D2B068701692010200C2726A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B0686F1692010200C2726A /* CoreLocation.framework */; };
 		D2B0688716920E3000C2726A /* VMDAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B0688616920E3000C2726A /* VMDAnnotation.m */; };
@@ -205,6 +210,12 @@
 		D28CE73C16C5629E007586B7 /* CLLocation+AFExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+AFExtensions.m"; sourceTree = "<group>"; };
 		D28CE73D16C5629E007586B7 /* CLLocation+AFExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+AFExtensions.h"; sourceTree = "<group>"; };
 		D28CE74016C5648A007586B7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		D28CE74216C59D90007586B7 /* 71-compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "71-compass.png"; sourceTree = "<group>"; };
+		D28CE74316C59D90007586B7 /* 71-compass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "71-compass@2x.png"; sourceTree = "<group>"; };
+		D28CE74616C5C8B0007586B7 /* VMDSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMDSectionHeaderView.xib; sourceTree = "<group>"; };
+		D28CE74816C5C9B2007586B7 /* Suplexmentary Comic NC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Suplexmentary Comic NC.ttf"; sourceTree = "<group>"; };
+		D28CE74A16C5CA97007586B7 /* VMDSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDSectionHeaderView.h; sourceTree = "<group>"; };
+		D28CE74B16C5CA97007586B7 /* VMDSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDSectionHeaderView.m; sourceTree = "<group>"; };
 		D2AEA61F16B48239006B4F05 /* MNarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MNarrow.png; sourceTree = "<group>"; };
 		D2B0686F1692010200C2726A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D2B0688516920E2F00C2726A /* VMDAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDAnnotation.h; sourceTree = "<group>"; };
@@ -351,6 +362,7 @@
 				D20D438F160E239300D954B3 /* InfoPlist.strings */,
 				D20D4392160E239300D954B3 /* main.m */,
 				D20D4394160E239300D954B3 /* Dining-Prefix.pch */,
+				D28CE74816C5C9B2007586B7 /* Suplexmentary Comic NC.ttf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -358,6 +370,8 @@
 		D20D43BA160E26EF00D954B3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D28CE74216C59D90007586B7 /* 71-compass.png */,
+				D28CE74316C59D90007586B7 /* 71-compass@2x.png */,
 				D28CE73616C4A34F007586B7 /* 20-gear2.png */,
 				D28CE73716C4A34F007586B7 /* 20-gear2@2x.png */,
 				D234EBAB16C49096009EDCA0 /* VMDining_NavBar@2x.png */,
@@ -425,6 +439,9 @@
 				D234EBA416C34D8E009EDCA0 /* DiningCellView.xib */,
 				D20D43AA160E23DB00D954B3 /* VMDListViewController.h */,
 				D20D43AB160E23DB00D954B3 /* VMDListViewController.m */,
+				D28CE74616C5C8B0007586B7 /* VMDSectionHeaderView.xib */,
+				D28CE74A16C5CA97007586B7 /* VMDSectionHeaderView.h */,
+				D28CE74B16C5CA97007586B7 /* VMDSectionHeaderView.m */,
 			);
 			name = "List VC";
 			sourceTree = "<group>";
@@ -626,6 +643,10 @@
 				D234EBAE16C49096009EDCA0 /* VMDining_NavBar.png in Resources */,
 				D28CE73816C4A34F007586B7 /* 20-gear2.png in Resources */,
 				D28CE73916C4A34F007586B7 /* 20-gear2@2x.png in Resources */,
+				D28CE74416C59D90007586B7 /* 71-compass.png in Resources */,
+				D28CE74516C59D90007586B7 /* 71-compass@2x.png in Resources */,
+				D28CE74716C5C8B0007586B7 /* VMDSectionHeaderView.xib in Resources */,
+				D28CE74916C5C9B2007586B7 /* Suplexmentary Comic NC.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +689,7 @@
 				D28CE73516C4A0DD007586B7 /* UIBarButtonItem+Custom.m in Sources */,
 				D28CE73E16C5629E007586B7 /* CLLocationManager+AFExtensions.m in Sources */,
 				D28CE73F16C5629E007586B7 /* CLLocation+AFExtensions.m in Sources */,
+				D28CE74C16C5CA97007586B7 /* VMDSectionHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,8 +783,8 @@
 		D20D43A5160E239300D954B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dining/Dining-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";

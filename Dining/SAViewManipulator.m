@@ -105,8 +105,10 @@
         else if (opacity < 0) opacity = 0;
         view.layer.shadowOpacity = opacity;
     }
-    if (radius) view.layer.shadowRadius = 2.0;
-    if (offset.height && offset.width) view.layer.shadowOffset = CGSizeMake(-1, 1);
+    if (!radius) view.layer.shadowRadius = 2.0;
+    else view.layer.shadowRadius = radius;
+    if (!offset.height && !offset.width) view.layer.shadowOffset = CGSizeMake(-1, 1);
+    else view.layer.shadowOffset = offset;
 }
 
 + (void)addBorderToView:(UIView *)view withWidth:(CGFloat)borderWidth color:(UIColor *)borderColor andRadius:(CGFloat)cornerRadius {
