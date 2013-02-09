@@ -431,7 +431,7 @@ typedef enum meals
                 self.navigationItem.rightBarButtonItem = temp;
             });
         });
-        dispatch_release(downloadQueue);
+        //dispatch_release(downloadQueue);
     }
     else {
         [self.coverImageView setImage:[UIImage imageNamed:@"Featheringill.jpeg"]];
