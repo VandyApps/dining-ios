@@ -76,7 +76,11 @@
 	pull = [[PullToRefreshView alloc] initWithScrollView:(UIScrollView *) self.tableView];
 	[pull setDelegate:self];
 	[self.tableView addSubview:pull];
-    [self.tableView registerClass:[VMDListCell class] forCellReuseIdentifier:@"VMDiningCell"];
+    if ([self.tableView respondsToSelector:@selector(registerClass:forCellReuseIdentifier:)]) {
+        [self.tableView registerClass:[VMDListCell class] forCellReuseIdentifier:@"VMDiningCell"];
+    }
+    
+    
     
 //    self.directingLocation = [[self.dataSource objectAtIndex:1] objectAtIndex:1];
 }
