@@ -26,8 +26,13 @@
 @property (strong, nonatomic) IBOutlet UILabel *nearestNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *nearestCategoryLabel;
 
+
+// Two-dimensional array of NSArrays of DLocations
 @property (strong, nonatomic) NSArray *dataSource;
+
+// One-dimensional array of Dlocations
 @property (strong, nonatomic) NSArray *oldDataSource;
+
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) VMDAppDelegate *appDelegate;
 @property (strong, nonatomic) VMDTabBarController *vmdTBC;

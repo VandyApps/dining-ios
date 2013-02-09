@@ -256,13 +256,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		025536CA16517E5F007F922A /* Menu VC */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Menu VC";
-			sourceTree = "<group>";
-		};
 		0262A9731651807C00391641 /* Menu Table VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,7 +341,6 @@
 				02FC753516BDB72D004BEE72 /* PullToRefreshView */,
 				D20D43C3160E2C1300D954B3 /* List VC */,
 				D20D43C2160E2C0C00D954B3 /* Map VC */,
-				025536CA16517E5F007F922A /* Menu VC */,
 				0262A9731651807C00391641 /* Menu Table VC */,
 				D28A0B0A168B978B00E7815E /* Login VC */,
 				D28A0B06168B958800E7815E /* Tab Bar Controller */,
