@@ -9,6 +9,8 @@
 #import "VMDTabBarController.h"
 #import "VMDListViewController.h"
 
+#import "SAViewManipulator.h"
+
 #define LoginIdentifier @"LoginSegue"
 
 @interface VMDTabBarController ()
@@ -35,6 +37,9 @@
     for (id viewController in self.viewControllers) {
         [(id)[viewController visibleViewController] setVmdTBC:self];
     }
+    
+    self.tabBar.backgroundImage = [[UIImage imageNamed:@"VMDining_tab_bar"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 40, 0, 40) resizingMode:UIImageResizingModeStretch];
+    self.tabBar.selectionIndicatorImage = [[UIImage imageNamed:@"VMDining_tab_bar_selected"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 40, 0, 40) resizingMode:UIImageResizingModeStretch];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

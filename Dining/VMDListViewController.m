@@ -313,10 +313,10 @@
 - (void)customizeUI {
 
     // Set a gradient on the Tab Bar
-    [SAViewManipulator setGradientBackgroundImageForView:self.tabBarController.tabBar withTopColor:nil andBottomColor:nil];
+//    [SAViewManipulator setGradientBackgroundImageForView:self.tabBarController.tabBar withTopColor:[UIColor colorWithHexString:@"666666"] andBottomColor:[UIColor colorWithHexString:@"333333"]];
     
     // Set a gradient on tab bar selection indicator
-    [SAViewManipulator setGradientBackgroundImageForView:self.tabBarController.tabBar.selectionIndicatorImage withTopColor:[UIColor whiteColor] andBottomColor:[UIColor whiteColor]];
+//    [SAViewManipulator setGradientBackgroundImageForView:self.tabBarController.tabBar.selectionIndicatorImage withTopColor:[UIColor whiteColor] andBottomColor:[UIColor whiteColor]];
     
     // Custom left bar-button item
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"20-gear2" withColor:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(optionsPressed:)];
