@@ -12,6 +12,7 @@
 #import "VMDListViewController.h"
 #import "VMDLocationDetailVC.h"
 #import "SAViewManipulator.h"
+#import "VMDSectionHeaderView.h"
 
 #import "UIColor+i7HexColor.h"
 #import "UIView+Frame.h"
@@ -24,6 +25,7 @@
 #define kSortIdentifierNear @"SORT_ID_NEAR"
 #define kSortIdentifierCategory @"SORT_ID_CATEGORY"
 
+
 @interface VMDListViewController ()
 
 
@@ -34,7 +36,7 @@
 	PullToRefreshView *pull;
 }
 
-@synthesize tableView;
+@synthesize tableView = _tableView;
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize dataSource = _dataSource;
@@ -82,6 +84,29 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [[self.appDelegate viewController] setLocked:NO];
+    
+    VMDListCell *cell = [[VMDListCell alloc] init];
+    UIGraphicsBeginImageContextWithOptions(cell.accessoryView.size, YES, [UIScreen mainScreen].scale);
+    [cell.accessoryView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    NSString *pngPath = [NSString stringWithFormat:@"%@/%@", documentsDirectory ,@"Test.png"];
+    // Write image to PNG
+    [UIImagePNGRepresentation(image) writeToFile:pngPath atomically:YES];
+    
+    // Create file manager
+    NSError *error;
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    
+    // Point to Document directory
+    NSString *docsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    
+    // Write out the contents of home directory to console
+    NSLog(@"Documents directory: %@", [fileMgr contentsOfDirectoryAtPath:docsDirectory error:&error]);
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -288,10 +313,17 @@
     
     // Custom left bar-button item
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"20-gear2" withColor:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(optionsPressed:)];
-    UIView *bBIView = self.navigationItem.leftBarButtonItem.customView;
+    UIView *lBBIView = self.navigationItem.leftBarButtonItem.customView;
     
     // Add a shadow to that bar-button item
-    [SAViewManipulator addShadowToView:bBIView withOpacity:.5 radius:1 andOffset:CGSizeMake(1, 1)];
+    [SAViewManipulator addShadowToView:lBBIView withOpacity:.8 radius:1 andOffset:CGSizeMake(1, 1)];
+    
+    // Custom right bar-button item
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"71-compass" withColor:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(setWayPointToNearestLocation)];
+    UIView *rBBIView = self.navigationItem.rightBarButtonItem.customView;
+    
+    // Add a shadow to that bar-button item
+    [SAViewManipulator addShadowToView:rBBIView withOpacity:.8 radius:1 andOffset:CGSizeMake(-1, 1)];
 }
 
 #pragma mark - UITableView Data Source
@@ -353,6 +385,14 @@
 
 
 #pragma mark - UITableView Delegate
+
+// custom view for header. will be adjusted to default or specified header height 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    VMDSectionHeaderView *sHV = [[VMDSectionHeaderView alloc] init];
+    sHV.headerLabel.text = [self tableView:tableView titleForHeaderInSection:section];
+    [SAViewManipulator addBorderToView:sHV withWidth:1 color:[UIColor lightGrayColor] andRadius:0];
+    return sHV;
+}
 
 // Titles for section headers
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -540,6 +580,13 @@ fromLocation:(CLLocation *)oldLocation __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_6
 - (void)updateDistance {
     self.nearestDistance.text =
     [self formatDistanceToMiles:self.directingLocation.distance];
+}
+
+- (void)setWayPointToNearestLocation {
+    
+    [self setWayPointToLocation:
+     [[self sortDataNear:[self.oldDataSource mutableCopy]]
+       objectAtIndex:0]];
 }
 
 - (void)setWayPointToLocation:(DLocation *)location {
