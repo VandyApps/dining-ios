@@ -11,6 +11,7 @@
 #import "VMDMenu.h"
 #import "VMDItem.h"
 #import "VMDMenuTableViewController.h"
+#import "SAViewManipulator.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -96,6 +97,7 @@ typedef enum meals
     [self setMealRightButton:nil];
     [self setMealLeftBurron:nil];
 
+    [self setImageViewScrollView:nil];
     [super viewDidUnload];
 }
 
@@ -115,18 +117,19 @@ typedef enum meals
 //    if (self.nameLabel.width > 111) self.titleOverlayView.width = self.nameLabel.width + 15;
 //    else self.titleOverlayView.width = 125;
     self.titleOverlayView.width = MAX(self.nameLabel.width, self.typeLabel.width) + 15;
+    [SAViewManipulator addBorderToView:self.titleOverlayView withWidth:1 color:[UIColor blackColor] andRadius:7];
     
     // Add some borders and round some corners (QuartzCore)
-    self.titleOverlayView.layer.cornerRadius = 10;
+    self.titleOverlayView.layer.cornerRadius = 7;
     self.dateScrollView.layer.borderColor = [[UIColor blackColor] CGColor];
     self.dateScrollView.layer.borderWidth = .5;
     self.mealScrollView.layer.borderColor = [[UIColor blackColor] CGColor];
     self.mealScrollView.layer.borderWidth = .5;
     
     // Format photo imageview
-    self.coverImageView.clipsToBounds = YES;
-    self.coverImageView.layer.borderColor = [[UIColor blackColor] CGColor];
-    self.coverImageView.layer.borderWidth = .5;
+    self.imageViewScrollView.clipsToBounds = YES;
+    self.imageViewScrollView.layer.borderColor = [[UIColor blackColor] CGColor];
+    self.imageViewScrollView.layer.borderWidth = .5;
     
     // Set up the date scroll view
     [self setupDateScrollView];
@@ -308,7 +311,7 @@ typedef enum meals
 - (void)setupMealScrollView {
     
     // Set the initial content size to be 3 times as wide for 3 meal periods
-    [self.mealScrollView setContentSize:CGSizeMake(self.mealScrollView.width * 3, self.mealScrollView.height)];
+    [self.mealScrollView setContentSize:CGSizeMake(self.mealScrollView.width * 3, 0)];
     
     // Grab the current date, convert it to weekday components
     NSDate *now = [NSDate date];

@@ -89,27 +89,30 @@
     [super viewDidAppear:animated];
     [[self.appDelegate viewController] setLocked:NO];
     
-    VMDListCell *cell = [[VMDListCell alloc] init];
-    UIGraphicsBeginImageContextWithOptions(cell.accessoryView.size, YES, [UIScreen mainScreen].scale);
-    [cell.accessoryView.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    
-    NSString *pngPath = [NSString stringWithFormat:@"%@/%@", documentsDirectory ,@"Test.png"];
-    // Write image to PNG
-    [UIImagePNGRepresentation(image) writeToFile:pngPath atomically:YES];
-    
-    // Create file manager
-    NSError *error;
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
-    
-    // Point to Document directory
-    NSString *docsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-    
-    // Write out the contents of home directory to console
-    NSLog(@"Documents directory: %@", [fileMgr contentsOfDirectoryAtPath:docsDirectory error:&error]);
+//    VMDListCell *cell = [[VMDListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    UIGraphicsBeginImageContextWithOptions(cell.accessoryView.size, YES, [UIScreen mainScreen].scale);
+//    [[cell.layer.sublayers objectAtIndex:1] renderInContext:UIGraphicsGetCurrentContext()];
+//    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    
+//    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+//    
+//    NSString *pngPath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, @"Disclosure.png"];
+//    // Write image to PNG
+//    [UIImagePNGRepresentation(image) writeToFile:pngPath atomically:YES];
+//    
+//    // Create file manager
+//    NSError *error;
+//    NSFileManager *fileMgr = [NSFileManager defaultManager];
+//    
+//    // Point to Document directory
+//    NSString *docsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+//    
+//    // Write out the contents of home directory to console
+//    NSLog(@"Documents directory: %@", [fileMgr contentsOfDirectoryAtPath:docsDirectory error:&error]);
 
 }
 

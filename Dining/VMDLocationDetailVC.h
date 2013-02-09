@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *typeLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *coverImageView;
+@property (strong, nonatomic) IBOutlet UIScrollView *imageViewScrollView;
 
 // Middle
 @property (strong, nonatomic) IBOutlet UIScrollView *dateScrollView;
