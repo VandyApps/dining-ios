@@ -181,103 +181,124 @@
     self.vmdTBC.mapItems = [mapItems copy];
 }
 
+#pragma mark - Data configuration and sorting
+
+- (void)placeLocationInSection:(DLocation *)location
+                  withSections:(NSMutableDictionary *)sections
+         inSectionedDataSource:(NSMutableArray *)sectionedDataSource
+                 andSectionKey:(NSString *)key {
+    
+    NSNumber *sectionExists = [sections objectForKey:key];
+    
+    if (sectionExists) {
+        NSInteger index = [sectionExists integerValue];
+        NSMutableArray *array = [[sectionedDataSource objectAtIndex:index] mutableCopy];
+        [array addObject:location];
+        [sectionedDataSource setObject:[array copy] atIndexedSubscript:index];
+    } else {
+        NSArray *array = [NSArray arrayWithObject:location];
+        [sectionedDataSource addObject:array];
+        [sections setObject:
+         [NSNumber numberWithInt:[sectionedDataSource indexOfObject:array]]
+                     forKey:key];
+    }
+    
+}
+
+- (void)placeLocation:(DLocation *)location
+   nearWithDataSource:(NSMutableArray *)sectionedDataSource {
+    int index;
+    double miles = [location.distance doubleValue] / METERS_PER_MILE;
+    if (miles <= .05) index = 0;
+    else if (miles <= .1) index = 1;
+    else if (miles <= .25) index = 2;
+    else if (miles <= .5) index = 3;
+    else if (miles <= 1) index = 4;
+    else if (miles <= 2) index = 5;
+    else index = 6;
+    
+    NSMutableArray *mutDistArr =
+    [[sectionedDataSource objectAtIndex:index] mutableCopy];
+    [mutDistArr addObject:location];
+    NSArray *newDistArray = [mutDistArr copy];
+    [sectionedDataSource setObject:newDistArray
+                atIndexedSubscript:index];
+}
+
 // Configures the data in the tableView based on the sortIdentifier
 - (void)configureDataWithSortIdentifier:(NSString *)sortIdentifier {
-    
-    NSArray *sortedData;
+
+    // The end-goal sectioned sorted array. Mutable for now.
     NSMutableArray *sectionedDataSource = [NSMutableArray array];
-    NSMutableSet *hash = [NSMutableSet set];
+    
+    // Sorted data array
+    NSArray *sortedData;
     
     // Alphabetical (and Category)
-    if ([sortIdentifier isEqualToString:kSortIdentifierAlphabetical] ||[sortIdentifier isEqualToString:kSortIdentifierCategory]) {
-        sortedData = [self sortDataAlphabetical:[self.oldDataSource mutableCopy]];
+    if ([sortIdentifier isEqualToString:kSortIdentifierAlphabetical] ||
+        [sortIdentifier isEqualToString:kSortIdentifierCategory]) {
+        
+        // Sort the data in alphabetical order
+        sortedData = [self sortDataAlphabetical:
+                      [self.oldDataSource mutableCopy]];
     }
     
     // Near
     else if ([sortIdentifier isEqualToString:kSortIdentifierNear]) {
         
-        // Sort data by nearness, use CoreLocation
+        // Sort data by nearness
         sortedData = [self sortDataNear:[self.oldDataSource mutableCopy]];
         
+        // While we're here, add 7 sections
         for (int i = 0; i < 7; ++i) {
             [sectionedDataSource addObject:[NSArray array]];
         }
     }
     
-    NSMutableDictionary *categories = [NSMutableDictionary dictionary];
+    // Using a hash to remove duplicate locations
+    NSMutableSet *hash = [NSMutableSet set];
+    NSMutableDictionary *sections = [NSMutableDictionary dictionary];
     
     for (DLocation *location in sortedData) {
         if (![hash containsObject:location.name]) {
             [hash addObject:location.name];
             
-            // If alphabetical sort
-            if ([sortIdentifier isEqualToString:kSortIdentifierAlphabetical]) {
-                
-                bool found = false;
-                for (int i = 0; i < sectionedDataSource.count; i++) {
-                    NSArray *letterArray = [sectionedDataSource objectAtIndex:i];
-                    if ([[[letterArray lastObject] name] characterAtIndex:0] ==
-                        [location.name characterAtIndex:0]) {
-                        
-                        NSMutableArray *mutLetArr = [letterArray mutableCopy];
-                        [mutLetArr addObject:location];
-                        NSArray *newLetterArray = [mutLetArr copy];
-                        [sectionedDataSource setObject:newLetterArray atIndexedSubscript:i];
-                        found = true;
-                    }
-                }
-                if (!found) {
-                    [sectionedDataSource addObject:[NSArray arrayWithObject:location]];
-                }
-            }
-            
             // If nearness sort
-            else if ([sortIdentifier isEqualToString:kSortIdentifierNear]) {
-                int index;
-                double miles = [location.distance doubleValue] / METERS_PER_MILE;
-                if (miles <= .05) index = 0;
-                else if (miles <= .1) index = 1;
-                else if (miles <= .25) index = 2;
-                else if (miles <= .5) index = 3;
-                else if (miles <= 1) index = 4;
-                else if (miles <= 2) index = 5;
-                else index = 6;
-                
-                NSMutableArray *mutDistArr =
-                [[sectionedDataSource objectAtIndex:index] mutableCopy];
-                [mutDistArr addObject:location];
-                NSArray *newDistArray = [mutDistArr copy];
-                [sectionedDataSource setObject:newDistArray
-                            atIndexedSubscript:index];
+            if ([sortIdentifier isEqualToString:kSortIdentifierNear]) {
+                [self placeLocation:location
+                 nearWithDataSource:sectionedDataSource];
             }
-            else if ([sortIdentifier isEqualToString:kSortIdentifierCategory]) {
+            else {
+                NSString *key;
+                if ([sortIdentifier isEqualToString:
+                     kSortIdentifierAlphabetical]) {
+                    key = [NSString stringWithFormat:@"%c",
+                           [location.name characterAtIndex:0]];
+                } else if ([sortIdentifier isEqualToString:
+                            kSortIdentifierCategory]) {
+                    key = location.type;
+                }
                 
-                NSMutableArray *arr = [categories objectForKey:location.type];
-                if (!arr) {
-                    [categories setObject:
-                     [NSMutableArray  arrayWithObject:location]
-                                   forKey:location.type];
-                } else [arr addObject:location];
-                
+                [self placeLocationInSection:location
+                                withSections:sections
+                       inSectionedDataSource:sectionedDataSource
+                               andSectionKey:key];
             }
         }
     }
-    
-    if ([sortIdentifier isEqualToString:kSortIdentifierCategory]) {
-        for (id category in categories) {
-            [sectionedDataSource addObject:
-             [[categories objectForKey:category] copy]];
-        }
-    }
-    
-    self.dataSource = [sectionedDataSource copy];
-    for (NSArray *section in self.dataSource) {
-        if ([section count] == 0) {
-            [sectionedDataSource removeObject:section];
-        }
-    }
-    self.dataSource = [sectionedDataSource copy];
+    self.dataSource = [self removeEmptySections:sectionedDataSource];
     self.sortIdentifier = sortIdentifier;
+}
+
+- (NSArray *)removeEmptySections:(NSMutableArray *)dataSource {
+    NSMutableArray *array = [dataSource mutableCopy];
+    // Remove empty sections
+    for (NSArray *section in dataSource) {
+        if ([section count] == 0) {
+            [array removeObject:section];
+        }
+    }
+    return [array copy];
 }
 
 // Sort data in alphabetical order. Takes old dataSource.
