@@ -61,7 +61,7 @@ typedef enum meals
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+    BOOL yo = [self.location isOpen];
     [self customizeUI];
     [self downloadPhoto];
     

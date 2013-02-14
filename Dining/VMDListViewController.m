@@ -25,6 +25,11 @@
 #define kSortIdentifierNear @"SORT_ID_NEAR"
 #define kSortIdentifierCategory @"SORT_ID_CATEGORY"
 
+#define kFilterIdentifierDining @"FILTER_ID_DINING"
+#define kFilterIdentifierMealPlan @"FILTER_ID_MEALPLAN"
+#define kFilterIdentifierMunchie @"FILTER_ID_MUNCHIE"
+#define kFilterIdentifierOpen @"FILTER_ID_OPEN"
+
 
 @interface VMDListViewController ()
 
@@ -181,6 +186,7 @@
     self.vmdTBC.mapItems = [mapItems copy];
 }
 
+<<<<<<< HEAD
 #pragma mark - Data configuration and sorting
 
 - (void)placeLocationInSection:(DLocation *)location
@@ -223,6 +229,36 @@
     NSArray *newDistArray = [mutDistArr copy];
     [sectionedDataSource setObject:newDistArray
                 atIndexedSubscript:index];
+=======
+- (void)filterDataWithFilterString:(NSString *) filterIdentifier
+{
+    for (NSArray *section in self.dataSource) {
+        NSMutableArray *newSection = [section mutableCopy];
+        for (DLocation *location in section) {
+            if ([filterIdentifier isEqualToString:kFilterIdentifierDining]) {
+			
+				if ([location.type isEqualToString:@"Dining Hall"]) [newSection removeObject:location];
+				
+			}else if ([filterIdentifier isEqualToString:kFilterIdentifierMealPlan]) {
+			
+				if (location.isMealPlan)[newSection removeObject:location];
+				
+			}else if ([filterIdentifier isEqualToString:kFilterIdentifierMunchie]) {
+			
+				if ([location.type isEqualToString:@"Munchie Mart"]) [newSection removeObject:location];
+				
+			}else if ([filterIdentifier isEqualToString:kFilterIdentifierOpen]) {
+				if (![location isOpen]) {
+					[newSection removeObject:location];
+				}
+			}
+        }
+		
+        if (!newSection.count) {
+            //
+        }
+    }
+>>>>>>> Filter work
 }
 
 // Configures the data in the tableView based on the sortIdentifier

@@ -35,4 +35,6 @@
 // Non core data properties
 @property (nonatomic, strong) NSNumber * distance;
 
+-(BOOL)isOpen;
+
 @end

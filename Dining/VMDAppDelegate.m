@@ -21,7 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [TestFlight takeOff:@"94720c04471dc3d9f59d1ef2640f82ea_MTgwNDk4MjAxMy0wMS0yOCAxOTo0MTo0Mi4yMTUxNjY"];
+    //[TestFlight takeOff:@"94720c04471dc3d9f59d1ef2640f82ea_MTgwNDk4MjAxMy0wMS0yOCAxOTo0MTo0Mi4yMTUxNjY"];
     
     VMDTabBarController *tabBarController = (VMDTabBarController *)self.window.rootViewController;
     
