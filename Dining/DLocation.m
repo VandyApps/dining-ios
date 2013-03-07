@@ -73,10 +73,42 @@
 			break;
 	}
 	
+	NSArray *hoursArray = [self parseHoursFromString:hours];
+	
 	//NSLog(hours);
 	NSLog(@"Hi");
 	
 	return YES;
+}
+
+// Generates a String array from a String containing a comma- and semicolon-separated list of times
+// Ported from Matt's Android code
+- (NSArray *)parseHoursFromString:(NSString *)string {
+	
+    if ([string isEqualToString:@"null\n"] || [string isEqualToString:@"null"]) {
+        return nil;
+    }
+    
+    NSArray *semicolonArray = [string componentsSeparatedByString:@";"];
+    NSArray *commaArray;
+    NSMutableArray *result = [NSMutableArray array];
+    for (NSString *timeRange in semicolonArray) {
+        commaArray = [timeRange componentsSeparatedByString:@","];
+        for (NSString *time in commaArray) {
+            [result addObject:time];
+        }
+    }
+    
+    // Time formatter to accept those strings
+    NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
+    [timeFormatter setDateFormat:@"k:mm"];
+    
+    NSMutableArray *dateHoursArray = [NSMutableArray array];
+    for (NSString *str in result) {
+        [dateHoursArray addObject:[timeFormatter dateFromString:str]];
+    }
+   
+    return [dateHoursArray copy];
 }
 
 @end

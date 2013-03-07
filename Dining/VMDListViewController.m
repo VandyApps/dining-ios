@@ -186,7 +186,6 @@
     self.vmdTBC.mapItems = [mapItems copy];
 }
 
-<<<<<<< HEAD
 #pragma mark - Data configuration and sorting
 
 - (void)placeLocationInSection:(DLocation *)location
@@ -229,7 +228,8 @@
     NSArray *newDistArray = [mutDistArr copy];
     [sectionedDataSource setObject:newDistArray
                 atIndexedSubscript:index];
-=======
+}
+
 - (void)filterDataWithFilterString:(NSString *) filterIdentifier
 {
     for (NSArray *section in self.dataSource) {
@@ -258,7 +258,7 @@
             //
         }
     }
->>>>>>> Filter work
+// Filter work
 }
 
 // Configures the data in the tableView based on the sortIdentifier
