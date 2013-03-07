@@ -35,50 +35,90 @@
 
 -(BOOL)isOpen
 {
-	NSLog(@"Hi");
 	enum daysofweek {Sunday = 0, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday};
 	
 	NSDate* now = [[NSDate alloc] init];
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	[dateFormatter setDateFormat:@"EEE"];
+	[dateFormatter setDateFormat:@"EEEE"];
 	
 	NSString* day = [dateFormatter stringFromDate:now];
-	NSString* hours;
+	NSString* hoursStr;
+	
+	int dayNum = [self numFromDay:day];
 	
 	enum daysofweek curDay = day;
 	
-	switch (curDay) {
+	switch (dayNum) {
 		case Sunday:
-			hours = self.sundayHours;
+			hoursStr = self.sundayHours;
 			break;
 		case Monday:
-			hours = self.mondayHours;
+			hoursStr = self.mondayHours;
 			break;
 		case Tuesday:
-			hours = self.tuesdayHours;
+			hoursStr = self.tuesdayHours;
 			break;
 		case Wednesday:
-			hours = self.wednesdayHours;
+			hoursStr = self.wednesdayHours;
 			break;
 		case Thursday:
-			hours = self.thursdayHours;
+			hoursStr = self.thursdayHours;
 			break;
 		case Friday:
-			hours = self.fridayHours;
+			hoursStr = self.fridayHours;
 			break;
 		case Saturday:
-			hours = self.saturdayHours;
+			hoursStr = self.saturdayHours;
 			break;
+			
 		default:
 			break;
 	}
 	
-	NSArray *hoursArray = [self parseHoursFromString:hours];
+	NSArray *hoursArray = [self parseHoursFromString:hoursStr];
 	
-	//NSLog(hours);
-	NSLog(@"Hi");
+	NSDate* hours = [hoursArray objectAtIndex:0];
 	
-	return YES;
+	BOOL isOpen = NO;
+	
+	if ([hoursArray count] == 4) {
+		isOpen = [self fourHours:hoursArray];
+	} else if ([hoursArray count] == 2) {
+		isOpen = [self twoHours:hoursArray];
+	}
+
+	return isOpen;
+}
+
+-(BOOL)fourHours:(NSArray*)hours
+{
+	NSDate* now = [[NSDate alloc] init];
+	BOOL isOpen = NO;
+	
+	if ([now compare:[hours objectAtIndex:0]] == NSOrderedSame || [now compare:[hours objectAtIndex:0]] == NSOrderedDescending) {
+		if ([now compare:[hours objectAtIndex:1]] == NSOrderedAscending) {
+			isOpen = YES;
+		}
+	} else if ([now compare:[hours objectAtIndex:2]] == NSOrderedSame || [now compare:[hours objectAtIndex:2]] == NSOrderedDescending) {
+		if ([now compare:[hours objectAtIndex:3]] == NSOrderedAscending) {
+			isOpen = YES;
+		}
+	} 
+	
+	return isOpen;
+}
+
+-(BOOL)twoHours:(NSArray*)hours
+{
+	NSDate* now = [[NSDate alloc] init];
+	BOOL isOpen = NO;
+	if ([now compare:[hours objectAtIndex:0]] == NSOrderedSame || [now compare:[hours objectAtIndex:0]] == NSOrderedDescending) {
+		if ([now compare:[hours objectAtIndex:1]] == NSOrderedAscending) {
+			isOpen = YES;
+		}
+	}
+	
+	return isOpen;
 }
 
 // Generates a String array from a String containing a comma- and semicolon-separated list of times
@@ -109,6 +149,31 @@
     }
    
     return [dateHoursArray copy];
+}
+
+- (int)numFromDay:(NSString*)day
+{
+	int returnNum;
+	
+	if ([day isEqual: @"Sunday"]) {
+		returnNum = 0;
+	} else if ([day isEqual: @"Monday"]) {
+		returnNum = 1;
+	} else if ([day isEqual: @"Tuesday"]) {
+		returnNum = 2;
+	} else if ([day isEqual: @"Wednesday"]) {
+		returnNum = 3;
+	} else if ([day isEqual: @"Thursday"]) {
+		returnNum = 4;
+	} else if ([day isEqual: @"Friday"]) {
+		returnNum = 5;
+	} else if ([day isEqual: @"Saturday"]) {
+		returnNum = 6;
+	} else {
+		returnNum = -1;
+	}
+	
+	return returnNum;
 }
 
 @end

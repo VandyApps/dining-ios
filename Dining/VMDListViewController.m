@@ -413,6 +413,7 @@
 
     // Configure the cell...
     DLocation *location = [[self.dataSource objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+	BOOL test = location.isOpen;
     cell.nameLabel.text = location.name;
     cell.categoryLabel.text = location.type;
     if (indexPath.row % 2) {
