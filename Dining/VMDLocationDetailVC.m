@@ -61,7 +61,6 @@ typedef enum meals
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    BOOL yo = [self.location isOpen];
     [self customizeUI];
     [self downloadPhoto];
     
@@ -409,7 +408,7 @@ typedef enum meals
     VMDItem *breakfastItem1 = [[VMDItem alloc] initWithName:@"Breakfast1" category:@"Category1" nutrition:nil];
     NSArray *mainSection = [NSArray arrayWithObjects:breakfastItem1, nil];
     NSArray *breakfastSections = [NSArray arrayWithObjects:mainSection, nil];
-    NSDictionary *mealPeriods = [NSDictionary dictionaryWithObjectsAndKeys:breakfastSections, @"Breakfast", nil];
+    NSMutableDictionary *mealPeriods = [NSMutableDictionary dictionaryWithObjectsAndKeys:breakfastSections, @"Breakfast", nil];
     VMDMenu *myMenu = [[VMDMenu alloc] initWithLocation:self.location date:[NSDate date] content:mealPeriods];
     return myMenu;
 }
@@ -506,7 +505,8 @@ typedef enum meals
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"MenuSegue"]) {
         VMDMenuTableViewController *vmdmtvc= (VMDMenuTableViewController *)segue.destinationViewController;
-        vmdmtvc.menu = [self loadMenus];
+//        vmdmtvc.menu = [self loadMenus];
+        vmdmtvc.menu = [NSMutableDictionary dictionary];
     }
 }
 

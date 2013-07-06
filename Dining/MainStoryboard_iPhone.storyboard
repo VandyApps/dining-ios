@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -188,22 +188,15 @@
                                 <rect key="frame" x="-1" y="197" width="322" height="170"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <subviews>
-                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lunch" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qjT-wm-Fgz">
-                                        <rect key="frame" x="55" y="6" width="212" height="28"/>
+                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lunch" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qjT-wm-Fgz">
+                                        <rect key="frame" x="32" y="13" width="212" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Specials:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D9V-FV-f3P">
-                                        <rect key="frame" x="125" y="42" width="73" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This lunch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bfj-8T-gUV">
-                                        <rect key="frame" x="61" y="63" width="200" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Scrambled eggs, sausage, bacon, hash browns, grits, orange juice, milk, toast, apples, bananas, oranges" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bfj-8T-gUV">
+                                        <rect key="frame" x="41" y="30" width="241" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -211,13 +204,29 @@
                                     </label>
                                 </subviews>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wPc-cj-qxQ">
+                                <rect key="frame" x="280" y="327" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1UW-0M-X7q" kind="modal" identifier="MenuSegue" modalTransitionStyle="partialCurl" id="UzY-q1-cEB"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wgU-lV-jCD">
                                 <rect key="frame" x="282" y="220" width="39" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <size key="titleShadowOffset" width="0.0" height="2"/>
                                 <state key="normal" title=">">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -229,10 +238,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZTe-ZT-c8F">
                                 <rect key="frame" x="0.0" y="220" width="39" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <size key="titleShadowOffset" width="0.0" height="2"/>
                                 <state key="normal" title="&lt;">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -244,10 +254,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mIe-yD-xAV">
                                 <rect key="frame" x="283" y="133" width="39" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <size key="titleShadowOffset" width="0.0" height="2"/>
                                 <state key="normal" title=">">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -259,31 +270,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ld7-bZ-Q54">
                                 <rect key="frame" x="0.0" y="133" width="39" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <size key="titleShadowOffset" width="0.0" height="2"/>
                                 <state key="normal" title="&lt;">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="dateLeftPressed" destination="57b-sy-ASY" eventType="touchUpInside" id="FaL-2L-pjj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wPc-cj-qxQ">
-                                <rect key="frame" x="128" y="339" width="64" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Menu">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="1UW-0M-X7q" kind="push" identifier="MenuSegue" id="UzY-q1-cEB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -317,7 +314,7 @@
             <objects>
                 <tableViewController id="1UW-0M-X7q" customClass="VMDMenuTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="2i8-NG-aWG">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -367,34 +364,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="1HF-Ag-UVL">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8uz-6f-MQb">
-                                <rect key="frame" x="0.0" y="239" width="320" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="AjM-uQ-32t">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                </subviews>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="3J9-DD-LHb">
-                        <barButtonItem key="leftBarButtonItem" title="Options" id="8qk-8h-0Mp">
-                            <connections>
-                                <action selector="optionsPressed:" destination="3" id="tud-z8-G8s"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="1Kb-Ib-eA9">
-                            <connections>
-                                <action selector="trackPressed:" destination="3" id="MzQ-M0-WYM"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="3J9-DD-LHb"/>
                     <connections>
                         <outlet property="mapView" destination="1HF-Ag-UVL" id="ot8-Of-y9t"/>
                         <segue destination="57b-sy-ASY" kind="push" identifier="Detail" id="9b8-B3-Klc"/>
@@ -560,60 +536,6 @@
         <image name="VMDining_Arrow@2x.png" width="268" height="422"/>
         <image name="VandyMobileBackgroundCanvas@2x.png" width="640" height="734"/>
     </resources>
-    <classes>
-        <class className="VMDListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="directionImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="featuredCellButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="featuredCellContainerView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="nearestCategoryLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nearestDistance" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nearestNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="VMDLocationDetailVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDLocationDetailVC.h"/>
-            <relationships>
-                <relationship kind="outlet" name="coverImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateLeftButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="dateRightButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="dateScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="dayLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="hoursLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="imageViewScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="mealLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mealLeftBurron" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mealRightButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mealScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleOverlayView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="typeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="VMDLoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDLoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="continuePressed:"/>
-            </relationships>
-        </class>
-        <class className="VMDMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDMapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="optionsPressed:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="trackPressed:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="VMDMenuTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDMenuTableViewController.h"/>
-        </class>
-        <class className="VMDTabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMDTabBarController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

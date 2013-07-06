@@ -11,6 +11,10 @@
 #import "DLocation.h"
 #import "VMDLocationDetailVC.h"
 
+#import "UIImage+Color.h"
+#import "UIBarButtonItem+Custom.h"
+#import "SAViewManipulator.h"
+
 #define METERS_PER_MILE 1609.344
 
 @interface VMDMapViewController ()
@@ -31,7 +35,8 @@
     
     // Grab the app delegate for use of the sliding view controller
     self.appDelegate = (VMDAppDelegate *)[[UIApplication sharedApplication] delegate];
-
+    
+    [self customizeUI];
 }
 
 - (void)viewDidUnload
@@ -39,6 +44,14 @@
     [self setMapView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar addSubview:
+     [[UIImageView alloc] initWithImage:
+      [UIImage imageNamed:@"VMDining_NavBar"]]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -86,6 +99,11 @@
     [self.mapView setRegion:MKCoordinateRegionMake(self.center, self.span) animated:YES];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[[self.navigationController.navigationBar subviews] lastObject] removeFromSuperview];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
@@ -93,6 +111,25 @@
     } else {
         return YES;
     }
+}
+
+#pragma mark - UserInterface
+
+- (void)customizeUI {
+    
+    // Custom left bar-button item
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"20-gear2" withColor:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(optionsPressed:)];
+    UIView *lBBIView = self.navigationItem.leftBarButtonItem.customView;
+    
+    // Add a shadow to that bar-button item
+    [SAViewManipulator addShadowToView:lBBIView withOpacity:.8 radius:1 andOffset:CGSizeMake(1, 1)];
+    
+    // Custom right bar-button item
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"71-compass" withColor:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(trackPressed:)];
+    UIView *rBBIView = self.navigationItem.rightBarButtonItem.customView;
+    
+    // Add a shadow to that bar-button item
+    [SAViewManipulator addShadowToView:rBBIView withOpacity:.8 radius:1 andOffset:CGSizeMake(-1, 1)];
 }
 
 #pragma mark - IBAction methods

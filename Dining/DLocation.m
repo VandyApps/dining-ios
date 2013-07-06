@@ -45,9 +45,7 @@
 	NSString* hoursStr;
 	
 	int dayNum = [self numFromDay:day];
-	
-	enum daysofweek curDay = day;
-	
+    
 	switch (dayNum) {
 		case Sunday:
 			hoursStr = self.sundayHours;
@@ -76,8 +74,6 @@
 	}
 	
 	NSArray *hoursArray = [self parseHoursFromString:hoursStr];
-	
-	NSDate* hours = [hoursArray objectAtIndex:0];
 	
 	BOOL isOpen = NO;
 	

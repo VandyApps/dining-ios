@@ -33,15 +33,18 @@
 // One-dimensional array of Dlocations
 @property (strong, nonatomic) NSArray *oldDataSource;
 
+@property (strong, nonatomic) NSArray *filters;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) VMDAppDelegate *appDelegate;
 @property (strong, nonatomic) VMDTabBarController *vmdTBC;
 @property (strong, nonatomic) NSString *sortIdentifier;
 @property (strong, nonatomic) CLLocationManager *locManager;
 @property (strong, nonatomic) CMMotionManager *motionManager;
+@property (strong, nonatomic) UIView *placeholderView;
 
 @property (strong, nonatomic) DLocation *directingLocation;
 
 - (void)configureDataWithSortIdentifier:(NSString *)sortIdentifier;
+- (void)didReturnFromOptionsWithFilters:(NSArray *)filters;
 
 @end

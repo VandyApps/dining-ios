@@ -47,7 +47,6 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.selectedOptions = [NSMutableArray array];
     self.sortSelected = kSortIdentifierNear;
     
     [self customizeInterface];
@@ -57,6 +56,13 @@
     [[self.appDelegate viewController] setDelegate:self];
 }
 
+- (NSMutableArray *)selectedOptions
+{
+    if (!_selectedOptions) {
+        _selectedOptions = [NSMutableArray array];
+    }
+    return _selectedOptions;
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -66,7 +72,8 @@
 
 #pragma mark - Options configuration
 
-- (void)populateOptions {
+- (void)populateOptions
+{
     NSMutableArray *mutableOptions = [NSMutableArray arrayWithCapacity:5];
     
     VMDAppDelegate *aD = self.appDelegate;
@@ -102,26 +109,24 @@
 
 #pragma mark - Interface 
 
-- (void)customizeInterface {
+- (void)customizeInterface
+{
     [SAViewManipulator setGradientBackgroundImageForView:self.view withTopColor:[UIColor colorWithHexString:@"545454"] andBottomColor:nil];
-    self.headerScrollView.contentSize = CGSizeMake(self.headerScrollView.width * 2, self.headerScrollView.height);
-    self.headerScrollView.contentOffset = CGPointMake(self.headerScrollView.width, 0);
-    self.profilePicture.left += self.headerScrollView.width;
-    self.nameLabel.left += self.headerScrollView.width;
-    
     [SAViewManipulator addBorderToView:self.profilePicture withWidth:2 color:[UIColor whiteColor] andRadius:0];
 }
 
 #pragma mark - TableView data source
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return [[[self.options objectAtIndex:section] array] count];
 }
 
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
 // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
@@ -142,7 +147,8 @@
 }
 
 // Called before the user changes the selection. Return a new indexPath, or nil, to change the proposed selection.
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if ([[[self.options objectAtIndex:indexPath.section] header] isEqualToString:kSortByHeader]) {
         
         for (int i = 0; i < self.options.count; ++i) {
@@ -166,7 +172,8 @@
 }
 
 // Called after the user changes the selection.
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if (![[[self.options objectAtIndex:indexPath.section] header]
           isEqualToString:kSortByHeader]) {
         UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
@@ -191,21 +198,25 @@
     }
 }
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(3_0) {
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(3_0)
+{
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     [self.selectedOptions removeObject:cell.textLabel.text];
     cell.accessoryView = nil;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     return self.options.count;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
     return [[self.options objectAtIndex:section] header];
 }
 
-- (UIView *)tableView:(UITableView*)tableView viewForHeaderInSection:(NSInteger)section {
+- (UIView *)tableView:(UITableView*)tableView viewForHeaderInSection:(NSInteger)section
+{
     
     SectionHeaderView *container = [SectionHeaderView new];
     
@@ -225,12 +236,13 @@
     return container;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
 	return 25;
 }
 
-- (void)viewDidUnload {
-    [self setHeaderScrollView:nil];
+- (void)viewDidUnload
+{
     [self setNameLabel:nil];
     [self setProfilePicture:nil];
     [self setInfoView:nil];
@@ -240,7 +252,8 @@
 
 #pragma mark - JSSlidingViewControllerDelegate
 
-- (void)slidingViewControllerDidOpen:(JSSlidingViewController *)viewController {
+- (void)slidingViewControllerDidOpen:(JSSlidingViewController *)viewController
+{
     if ([self.sortSelected isEqualToString:@"Near"]) {
         [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:0];
     } else if ([self.sortSelected isEqualToString:@"A-Z"]) {
@@ -252,15 +265,17 @@
     [self populateOptions];
 }
 
-- (void)slidingViewControllerDidClose:(JSSlidingViewController *)viewController {
-    id tbcsvc = [(UINavigationController *)[[self.appDelegate frontVC] selectedViewController] visibleViewController];
-    if ([tbcsvc isKindOfClass:[VMDListViewController class]]) {
-        VMDListViewController *lvc = tbcsvc;
-        if (![self.sortSelected isEqualToString:lvc.sortIdentifier]) {
+- (void)slidingViewControllerWillClose:(JSSlidingViewController *)viewController
+{
+    if (viewController.isOpen) {
+        id tbcsvc = [(UINavigationController *)[[self.appDelegate frontVC] selectedViewController] visibleViewController];
+        if ([tbcsvc isKindOfClass:[VMDListViewController class]]) {
+            VMDListViewController *lvc = tbcsvc;
             [lvc configureDataWithSortIdentifier:self.sortSelected];
+            [lvc didReturnFromOptionsWithFilters:[self.selectedOptions copy]];
             [lvc.tableView reloadData];
         }
     }
-    
 }
+
 @end

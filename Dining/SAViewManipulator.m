@@ -11,7 +11,8 @@
 
 @implementation SAViewManipulator
 
-+ (UIView *)getPrimaryBackgroundGradientViewForView:(UIView *)view withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot {
++ (UIView *)getPrimaryBackgroundGradientViewForView:(UIView *)view withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot
+{
     
     if (!gradientBot) {
         gradientBot = [UIColor colorWithRed:0.071 green:0.071 blue:0.071 alpha:1] /*#121212*/;
@@ -31,7 +32,8 @@
 	return gradientView;
 }
 
-+ (UIImage *)screenShotOfView:(UIView *)view {
++ (UIImage *)screenShotOfView:(UIView *)view
+{
     // Screenshot of the frame
     view.layer.rasterizationScale = [[UIScreen mainScreen] scale];
     UIGraphicsBeginImageContextWithOptions(view.layer.frame.size, view.opaque, 0.0);
@@ -41,11 +43,13 @@
     return viewImage;
 }
 
-+ (UIImage *)gradientBackgroundImageForView:(UIView *)view withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot {
++ (UIImage *)gradientBackgroundImageForView:(UIView *)view withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot
+{
     return [SAViewManipulator screenShotOfView:[SAViewManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]];
 }
 
-+ (CALayer *)getPrimaryBackgroundGradientViewForLayer:(CALayer *)layer withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot {
++ (CALayer *)getPrimaryBackgroundGradientViewForLayer:(CALayer *)layer withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot
+{
     
     if (!gradientBot) {
         gradientBot = [UIColor colorWithRed:0.071 green:0.071 blue:0.071 alpha:1] /*#121212*/;
@@ -67,7 +71,8 @@
 	return gradientView.layer;
 }
 
-+ (UIImage *)screenShotOfLayer:(CALayer *)layer {
++ (UIImage *)screenShotOfLayer:(CALayer *)layer
+{
     // Screenshot of the frame
     UIGraphicsBeginImageContext(layer.frame.size);
     
@@ -76,11 +81,13 @@
     return viewImage;
 }
 
-+ (UIImage *)gradientBackgroundImageForLayer:(CALayer *)layer withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot {
++ (UIImage *)gradientBackgroundImageForLayer:(CALayer *)layer withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot
+{
     return [SAViewManipulator screenShotOfLayer:[SAViewManipulator getPrimaryBackgroundGradientViewForLayer:layer withTopColor:gradientTop andBottomColor:gradientBot]];
 }
 
-+ (void)setGradientBackgroundImageForView:(id)view withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot {
++ (void)setGradientBackgroundImageForView:(id)view withTopColor:(UIColor *)gradientTop andBottomColor:(UIColor *)gradientBot
+{
     if ([view respondsToSelector:@selector(setBackgroundImage:)]) {
         [view setBackgroundImage:[SAViewManipulator screenShotOfView:[SAViewManipulator getPrimaryBackgroundGradientViewForView:view withTopColor:gradientTop andBottomColor:gradientBot]]];
     } else if ([view respondsToSelector:@selector(setBackgroundImage:forToolbarPosition:barMetrics:)]) {
@@ -98,7 +105,8 @@
     }
 }
 
-+ (void)addShadowToView:(UIView *)view withOpacity:(CGFloat)opacity radius:(CGFloat)radius andOffset:(CGSize)offset {
++ (void)addShadowToView:(UIView *)view withOpacity:(CGFloat)opacity radius:(CGFloat)radius andOffset:(CGSize)offset
+{
     view.layer.shadowColor = [[UIColor blackColor] CGColor];
     if (opacity) {
         if (opacity > 1) opacity = 1;
@@ -111,13 +119,15 @@
     else view.layer.shadowOffset = offset;
 }
 
-+ (void)addBorderToView:(UIView *)view withWidth:(CGFloat)borderWidth color:(UIColor *)borderColor andRadius:(CGFloat)cornerRadius {
++ (void)addBorderToView:(UIView *)view withWidth:(CGFloat)borderWidth color:(UIColor *)borderColor andRadius:(CGFloat)cornerRadius
+{
     if (borderWidth) view.layer.borderWidth = borderWidth;
     if (borderColor) view.layer.borderColor = [borderColor CGColor];
     if (cornerRadius) view.layer.cornerRadius = cornerRadius;
 }
 
-+ (void)roundNavigationBar:(UINavigationBar *)navigationBar {
++ (void)roundNavigationBar:(UINavigationBar *)navigationBar
+{
     UIView *roundView = [navigationBar.subviews objectAtIndex:0];
     
     CALayer *capa = roundView.layer;

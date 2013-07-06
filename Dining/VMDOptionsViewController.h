@@ -12,7 +12,6 @@
 @interface VMDOptionsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, JSSlidingViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) IBOutlet UIScrollView *headerScrollView;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *profilePicture;
 @property (strong, nonatomic) IBOutlet UIView *infoView;

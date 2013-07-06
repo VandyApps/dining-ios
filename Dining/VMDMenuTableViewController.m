@@ -37,6 +37,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [self downloadAndParseMenuForDate:[NSDate date]];
+    [self.tableView reloadData];
 }
 
 - (void)downloadAndParseMenuForDate:(NSDate *)date {
@@ -91,18 +92,33 @@
         // Display that in the log
         NSLog(@"%@ - %@ (%@)", [location text], [subHeader text], [meal text]);
         
-        // Grab the menu list
-        TFHppleElement *menu = [[[menus objectAtIndex:index]
-                                 firstChild]
-                                firstChild];
-        menu = [menu.children objectAtIndex:1];
+        NSString *locName = location.text;
+        if ([locName isEqualToString:@"CHEF JAMES BISTRO/RAND"]) {
+            locName = @"CHEF JAMES BISTRO";
+        }
         
-        // Grab each item in that menu, place them in an array
-        NSArray *menuItems = [menu childrenWithTagName:@"li"];
-        
-        // For each of those items, display it neatly
-        for (TFHppleElement *menuItem in menuItems) {
-            NSLog(@"   * %@", menuItem.text);
+        // If this is the location we want
+        if ([locName isEqualToString:[self.menu.location.name uppercaseString]]) {
+            NSMutableArray *mutableItems = [[self.menu.mealPeriods objectForKey:[meal text]] mutableCopy];
+            if (!mutableItems) {
+                mutableItems = [NSMutableArray array];
+            }
+            
+            // Grab the menu list
+            TFHppleElement *menu = [[[menus objectAtIndex:index]
+                                     firstChild]
+                                    firstChild];
+            menu = [menu.children objectAtIndex:1];
+            
+            // Grab each item in that menu, place them in an array
+            NSArray *menuItems = [menu childrenWithTagName:@"li"];
+            
+            // For each of those items, display it neatly
+            for (TFHppleElement *menuItem in menuItems) {
+                NSLog(@"   * %@", menuItem.text);
+                [mutableItems addObject:[[VMDItem alloc] initWithName:menuItem.text category:subHeader.text nutrition:nil]];
+            }
+            [self.menu.mealPeriods setObject:[mutableItems copy] forKey:[meal text]];
         }
     }
 }
@@ -155,8 +171,7 @@
     //[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
     
     NSArray *items = [self mealItemsForTableViewSection:indexPath.section];
-    NSArray *mainItems = [items lastObject];
-    VMDItem *anItem = [mainItems objectAtIndex:indexPath.row];
+    VMDItem *anItem = [items objectAtIndex:indexPath.row];
     
     cell.textLabel.text = anItem.name;
     cell.detailTextLabel.text = anItem.category;

@@ -30,7 +30,6 @@
 #define kFilterIdentifierMunchie @"FILTER_ID_MUNCHIE"
 #define kFilterIdentifierOpen @"FILTER_ID_OPEN"
 
-
 @interface VMDListViewController ()
 
 
@@ -72,6 +71,7 @@
     self.locManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
     [self.locManager startUpdatingLocation];
     [self.locManager startUpdatingHeading];
+    self.locManager.headingFilter = kCLHeadingFilterNone;
     
     self.motionManager = [CMMotionManager new];
 //    [self.motionManager startAccelerometerUpdates];
@@ -84,15 +84,15 @@
     if ([self.tableView respondsToSelector:@selector(registerClass:forCellReuseIdentifier:)]) {
         [self.tableView registerClass:[VMDListCell class] forCellReuseIdentifier:@"VMDiningCell"];
     }
-    
-    
-    
 //    self.directingLocation = [[self.dataSource objectAtIndex:1] objectAtIndex:1];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated
+{
     [super viewDidAppear:animated];
     [[self.appDelegate viewController] setLocked:NO];
+    
+    
     
 //    VMDListCell *cell = [[VMDListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -159,6 +159,33 @@
     }
 }
 
+- (UIView *)placeholderView
+{
+    if (!_placeholderView) {
+        _placeholderView = [[UIView alloc] initWithFrame:self.tableView.frame];
+//        _placeholderView.backgroundColor = [UIColor lightGrayColor];
+        [SAViewManipulator setGradientBackgroundImageForView:_placeholderView
+                                                withTopColor:[UIColor colorWithHexString:@"6E6E6E"]
+                                              andBottomColor:[UIColor colorWithHexString:@"424242"]];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+        label.numberOfLines = 2;
+        label.text = @"Nothing to eat! Use fewer filters to see more options.";
+        label.font = [UIFont fontWithName:@"Helvetica-Neue" size:30];
+        label.textColor = [UIColor whiteColor];
+        label.shadowOffset = CGSizeMake(0, 1);
+        label.shadowColor = [UIColor darkTextColor];
+        label.size = [label.text sizeWithFont:label.font
+                            constrainedToSize:CGSizeMake(250, 100)
+                                lineBreakMode:UILineBreakModeWordWrap];
+        label.textAlignment = UITextAlignmentCenter;
+        label.backgroundColor = [UIColor clearColor];
+        label.left = _placeholderView.width / 2.0 - label.width / 2.0;
+        label.top = _placeholderView.height / 2.0 - label.height / 2.0;
+        [_placeholderView addSubview:label];
+    }
+    return _placeholderView;
+}
+
 #pragma mark - Core Data
 
 // Grabs the data from Core Data
@@ -211,7 +238,8 @@
 }
 
 - (void)placeLocation:(DLocation *)location
-   nearWithDataSource:(NSMutableArray *)sectionedDataSource {
+   nearWithDataSource:(NSMutableArray *)sectionedDataSource
+{
     int index;
     double miles = [location.distance doubleValue] / METERS_PER_MILE;
     if (miles <= .05) index = 0;
@@ -230,35 +258,45 @@
                 atIndexedSubscript:index];
 }
 
-- (void)filterDataWithFilterString:(NSString *) filterIdentifier
+- (void)filterDataWithFilterString:(NSString *)filterIdentifier
 {
-    for (NSArray *section in self.dataSource) {
+    NSMutableArray *newDataSource = [NSMutableArray array];
+    for (__strong NSArray *section in self.dataSource) {
         NSMutableArray *newSection = [section mutableCopy];
         for (DLocation *location in section) {
-            if ([filterIdentifier isEqualToString:kFilterIdentifierDining]) {
-			
-				if ([location.type isEqualToString:@"Dining Hall"]) [newSection removeObject:location];
-				
-			}else if ([filterIdentifier isEqualToString:kFilterIdentifierMealPlan]) {
-			
-				if (location.isMealPlan)[newSection removeObject:location];
-				
-			}else if ([filterIdentifier isEqualToString:kFilterIdentifierMunchie]) {
-			
-				if ([location.type isEqualToString:@"Munchie Mart"]) [newSection removeObject:location];
-				
-			}else if ([filterIdentifier isEqualToString:kFilterIdentifierOpen]) {
+            if ([filterIdentifier isEqualToString:@"Dining Halls"]) {
+				if (![location.type isEqualToString:@"Dining Hall"])
+                    [newSection removeObject:location];
+			} else if ([filterIdentifier isEqualToString:@"Meal Plan"]) {
+				if (!location.isMealPlan)
+                    [newSection removeObject:location];
+			} else if ([filterIdentifier isEqualToString:@"Munchie Marts"]) {
+				if (![location.type isEqualToString:@"Munchie Mart"])
+                    [newSection removeObject:location];
+			} else if ([filterIdentifier isEqualToString:@"Open"]) {
 				if (![location isOpen]) {
 					[newSection removeObject:location];
 				}
 			}
         }
-		
-        if (!newSection.count) {
-            //
+        if (newSection.count) {
+            [newDataSource addObject:[newSection copy]];
         }
     }
-// Filter work
+    self.dataSource = [newDataSource copy];
+    [self handlePlaceholderView];
+}
+
+- (void)handlePlaceholderView
+{
+    if (!self.dataSource.count) {
+        if (![self.view.subviews containsObject:self.placeholderView]) {
+            [self.view insertSubview:self.placeholderView
+                        aboveSubview:self.tableView];
+        }
+    } else {
+        [self.placeholderView removeFromSuperview];
+    }
 }
 
 // Configures the data in the tableView based on the sortIdentifier
@@ -380,14 +418,14 @@
     UIView *lBBIView = self.navigationItem.leftBarButtonItem.customView;
     
     // Add a shadow to that bar-button item
-    [SAViewManipulator addShadowToView:lBBIView withOpacity:.8 radius:1 andOffset:CGSizeMake(1, 1)];
+    [SAViewManipulator addShadowToView:lBBIView withOpacity:.8 radius:1 andOffset:CGSizeMake(0, 1)];
     
     // Custom right bar-button item
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"71-compass" withColor:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(setWayPointToNearestLocation)];
     UIView *rBBIView = self.navigationItem.rightBarButtonItem.customView;
     
     // Add a shadow to that bar-button item
-    [SAViewManipulator addShadowToView:rBBIView withOpacity:.8 radius:1 andOffset:CGSizeMake(-1, 1)];
+    [SAViewManipulator addShadowToView:rBBIView withOpacity:.8 radius:1 andOffset:CGSizeMake(0, 1)];
 }
 
 #pragma mark - UITableView Data Source
@@ -413,7 +451,6 @@
 
     // Configure the cell...
     DLocation *location = [[self.dataSource objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-	BOOL test = location.isOpen;
     cell.nameLabel.text = location.name;
     cell.categoryLabel.text = location.type;
     if (indexPath.row % 2) {
@@ -507,6 +544,9 @@
 
 - (IBAction)refreshData:(UIBarButtonItem *)sender {
     [self configureDataWithSortIdentifier:self.sortIdentifier];
+    if (self.filters) {
+        [self didReturnFromOptionsWithFilters:self.filters];
+    }
     [self.tableView reloadData];
 }
 
@@ -543,43 +583,6 @@
 - (void)locationManager:(CLLocationManager *)manager
 didUpdateHeading:(CLHeading *)newHeading __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0) {
     
-
-//        // Directed location
-//        DLocation *location = self.directingLocation;
-//        NSLog(@"Pointing to %@", location.name);
-//        
-//        // Me
-//        double x1 = self.locManager.location.coordinate.latitude;
-//        double y1 = self.locManager.location.coordinate.longitude;
-//        
-//        // Location
-//        double x2 = [location.latitude floatValue];
-//        double y2 = [location.longitude floatValue];
-//        
-//        // Third triangle point
-//        double x3 = x1;
-//        double y3 = y2;
-//        
-//        // Sides of the triangle
-//        double meToLocation = [self distanceWithXOne:x1 yOne:y1 xTwo:x2 yTwo:y2];
-//        double meToVertPoint = [self distanceWithXOne:x1 yOne:y1 xTwo:x3 yTwo:y3];
-//        
-//        NSLog(@"Magnetic heading: %f", newHeading.magneticHeading);
-//        NSLog(@"Heading accuracy: %f", newHeading.headingAccuracy);
-//        
-//        // Angle between place and north
-//        double angle = acosf(meToVertPoint/meToLocation);
-//        
-//        if (y2 < y1) {
-//            angle = -angle;
-//        }
-//        if (x2 < x1) {
-//            if (angle >= 0)
-//                angle = M_PI - angle;
-//            else
-//                angle = -M_PI - angle;
-//        }
-
     CLLocation *destination = [CLLocation locationWithCoordinate:
                                CLLocationCoordinate2DMake(self.directingLocation.latitude.doubleValue,
                                                           self.directingLocation.longitude.doubleValue)];
@@ -588,26 +591,15 @@ didUpdateHeading:(CLHeading *)newHeading __OSX_AVAILABLE_STARTING(__MAC_NA,__IPH
     [self.locManager.location bearingInRadiansTowardsLocation:destination] -
     newHeading.magneticHeading * ((double)M_PI/(double)180.0);
     
-    // Create rotation transform based on heading
-//    CGAffineTransform rotationTransform = CGAffineTransformIdentity;
-//    rotationTransform = CGAffineTransformRotate(rotationTransform, rotationAngle);
-    
     // Create 3D Affine Transform based on pitch of device
     CMAttitude *attitude = self.motionManager.deviceMotion.attitude;
-//    CATransform3D transform3D =
-//    CATransform3DMakeRotation(attitude.pitch, 0, 1, 0);
     CATransform3D transform;
     transform = CATransform3DMakeRotation(attitude.pitch, 1, 0, 0);
     transform = CATransform3DRotate(transform, attitude.roll, 0, 1, 0);
     transform = CATransform3DRotate(transform, rotationAngle, 0, 0, 1);
     
-    // Combine the two affine transforms
-//    CGAffineTransform combineTransforms =
-//    CGAffineTransformConcat(CATransform3DGetAffineTransform(transform), rotationTransform);
-    
     // Transform the imageView
     self.directionImageView.transform = CATransform3DGetAffineTransform(transform);
-    
 }
 
 // Location update
@@ -675,6 +667,18 @@ fromLocation:(CLLocation *)oldLocation __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_6
     
     // display it
     return [NSString stringWithFormat:@"%@", [numFormatter stringFromNumber:num]];
+}
+
+- (void)didReturnFromOptionsWithFilters:(NSArray *)filters
+{
+    self.filters = filters;
+    // TODO: Implement
+    for (NSString *filter in filters) {
+        [self filterDataWithFilterString:filter];
+    }
+    if (!filters.count) {
+        [self handlePlaceholderView];
+    }
 }
 
 @end
